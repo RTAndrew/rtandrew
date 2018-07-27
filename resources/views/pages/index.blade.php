@@ -44,7 +44,7 @@
 						</div>
 						
 						<div class="grid__quote-creator">
-							<img src=" {{ asset('img/texto/quote-creator.jpeg') }} ">
+							<img src=" {{ asset('img/texto/quote-creator.JPEG') }} ">
 						</div>
 
 				   </div>
