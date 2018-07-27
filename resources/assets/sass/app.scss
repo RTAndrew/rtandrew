@@ -1,0 +1,32 @@
+// Modules
+@import 'modules/all';
+
+// Vendor
+@import 'vendor/all';
+
+// Partials
+@import 'partials/all';
+
+// Pages
+@import 'pages/all';
+
+
+
+
+
+body{
+  font-family: $sans-serif;
+  line-height: 1.6;
+  background-color: $white;
+}
+
+
+p {
+	font-family: $sans-serif;
+	font-weight: $fw-regular;
+}
+
+h1, h2, h3, h4, h5{
+	font-family: $serif;
+}
+
