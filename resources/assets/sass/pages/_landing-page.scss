@@ -1,105 +1,20 @@
-* {
-	margin: 0;
-	padding: 0;
-}
 
-body{
-	background-color: $black;
-}
 
-.container {
-	width: 90%;
-	margin: 0 auto;
-}
 
-.is-active,
-.is-inactive, 
-img {
-	transition: 0.3s;
-}
-
-img {
-	filter: brightness(60%);
-	&:hover{
-		filter: brightness(100%);
-	}
-}
-
-section {
+.landing-page { 
 	color: $white;
 	background-color: $black;
-	padding-top: $section-padding;
-	padding-bottom: $section-padding/2;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-header {
-	width:100%;
-	height: auto;
-	color: $white;
-	background-color: $black;
-	padding: 0;	
-}
-
-
-.menu {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		li {
-		flex: 0 0 auto;
-		list-style: none;
-			&:nth-child(2) {
-				margin: 0 1em;
-			}
-		}
-
-	}
-
-.menu__logo {
-	margin-left: 0; 
-	margin-right: auto; /*applied only to the right*/
-	& img {
-		width: 9em;
-		height: 6em;
-		overflow: hidden;
-		filter: brightness(100%);
-	}
-}
-
-.menu__link {
-	font-size: ms(3);
-	font-family: $serif;
 	
-	@media (min-width: 550px) {
-		font-size: ms(5);
-	}
-
-	a {
-		text-decoration: none;
-		color: $white;
-	}
-
-	&.is-inactive {
-		opacity: $is-inactive;
-		&:hover {
-			opacity: $is-active;
-			color:$white;
+	img {
+		filter: brightness(60%);
+		&:hover{
+			filter: brightness(100%);
 		}
 	}
 }
+
+
+
 
 
 .grid {
@@ -134,6 +49,7 @@ header {
 
 #e, #i {
 	position: relative;
+	letter-spacing: 1px;
 }
 
 #e {
@@ -143,6 +59,9 @@ header {
 #i {
 	top: 17px;
 	// margin-top: 2em;
+}
+
+.latin-date {
 	opacity: $is-inactive;
 }
 

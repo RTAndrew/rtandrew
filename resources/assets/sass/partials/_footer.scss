@@ -1,0 +1,52 @@
+footer {
+	background-color: $black;
+	// padding-top: $section-padding;
+	padding: $section-padding*2 0;
+}
+
+
+.footer__wrapper {
+	color: $white;
+}
+
+
+.footer__word{
+	opacity: 0.5;
+	text-align: center;
+
+	a { 
+		color: $white;
+		padding-bottom: 1px;
+		border-bottom: 0.5px solid $white;
+	}
+}
+
+
+.footer__social-icons {
+	padding: 2em 0;
+
+
+	&:hover {
+		a {
+		opacity: $is-inactive;
+
+			
+		} 
+	}
+
+	a {
+		transition: 0.3s;
+		margin: 0 0.5em;
+		opacity: 0.7;
+
+		&:hover {
+			opacity: $is-active;
+		}
+		
+		img {
+			width: 1.5em;
+			height: 1.5em;
+		}
+	}
+}
+	 

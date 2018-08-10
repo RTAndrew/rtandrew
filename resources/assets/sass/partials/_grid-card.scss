@@ -1,0 +1,233 @@
+
+.grid-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+	
+    padding: $section-padding 0;
+    padding-top: 0;
+		
+	// Mudar a animacao da 
+	// entrada dos Cards
+
+     .animated {
+	 	-webkit-animation-duration:0.8s;
+	 	animation-duration:0.8s;
+	 }
+
+}
+
+
+.grid-card__card {
+	width: 100%;
+	// height: 200px;
+	// margin: 1em 0em 0em 0;
+	transition: 0.3s;
+
+	overflow: hidden;
+	white-space: wrap;
+	 text-overflow: fade;
+
+	background-color: $light-gray;
+		
+		.wrapper {
+			width: auto;
+			height: auto;
+		}
+
+		
+
+	
+
+	@media (min-width: 768px) {
+		width: 32%;
+		// margin: 0 auto;
+	}
+}
+
+
+
+
+
+
+
+
+	.grid-card--texto {
+		// height: 200px;
+		height: 400px;
+		margin-bottom: 1em;
+
+		
+		&:hover {
+			background-color: $snow-flake;
+		}
+
+		.wrapper {
+			padding: $global-gutter;
+
+			@media (min-width: 400px) {
+				padding: $global-gutter+0.7;
+			}
+		}
+
+		@media (min-width: 650px) {
+			width: 48.7%;
+			margin-bottom: 2.6%;
+			&:nth-child(odd) {
+				margin-right: 1.3%;
+			}
+
+			&:nth-child(even) {
+				margin-left: 1.3%;
+			}
+		}
+
+		@media (min-width: 1220px) {
+			width: 32.466%;
+			margin-bottom: 1.3%;
+
+			&:nth-child(1n),
+			&:nth-child(3n)  {
+				margin-right: 0;
+				margin-left: 0;
+			}
+
+			&:nth-child(3n-1) {
+				margin-right: 1.3%;
+				margin-left: 1.3%;
+			}
+
+			
+
+			// &:nth-child(even) {
+			// 	margin-left: 1%;
+			// }
+		}
+	}
+
+
+
+
+
+
+
+
+	
+	.grid-card--texto-small {
+		// 1em porque escala melhor
+		// Dos dispositivos moveis
+		// Ate aos tablets
+		margin-bottom: 1em;
+
+		@include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.25), $inset: false);
+
+			&:hover {
+				@include box-shadow(0px, 5px, 15px, rgba(0, 0, 0, 0.25), $inset: false);
+			}
+
+		.wrapper {
+			padding: $global-gutter;
+
+			@media (min-width: 400px) {
+				padding: $global-gutter+0.7;
+			}
+		}
+
+
+		// Atingir a perfeicao dos 
+		// Cards ocuparem todo o 
+		// Espaco disponivel
+		// Usando percentagens
+		@media (min-width: 650px) {
+			width: 49%;
+			margin-bottom: 2.1%;
+			&:nth-child(odd) {
+				margin-right: 1%;
+			}
+
+			&:nth-child(even) {
+				margin-left: 1%;
+			}
+		}
+
+
+		.grid-card__titulo {
+			max-height: 5.7em;
+			font-size: ms(5);
+			margin-bottom: 0em;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-card__frame-top {
+	margin-bottom: 1.6em;
+	span {
+		margin-right: 0.5em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.view-count,
+.grid-card__descricao {
+	font-size: ms(3);	
+}
+
+
+.view-count {
+	font-family: $serif;
+	font-weight: $fw-bold;
+	letter-spacing: 0.1em;
+}
+
+
+
+.grid-card__titulo {
+	// height: 11px;
+	// min-height: 12px;
+	max-height: 3.7em;
+	font-size: ms(12);
+	line-height: 1.2;
+	margin-bottom: 1em;
+	text-transform: capitalize;
+
+	white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.grid-card__descricao {
+	max-height: $grid-card-height+-120;
+	// max-height: 180px;
+
+	opacity: 0.8;
+	line-height: 1.35;
+
+	white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+
+    @media (min-width: 650px) {
+    	max-height: $grid-card-height+-170;
+    }
+
+    @media (min-width: 900px) {
+    	max-height: $grid-card-height+-120;
+    }
+}

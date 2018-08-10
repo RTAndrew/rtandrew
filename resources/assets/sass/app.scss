@@ -14,19 +14,81 @@
 
 
 
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
 body{
-  font-family: $sans-serif;
-  line-height: 1.6;
-  background-color: $white;
+  	line-height: 1.6;
+ 	color: $black;
+	font-size: 16px;
+	font-family: $sans-serif;
+	background-color: $white;
 }
 
 
 p {
-	font-family: $sans-serif;
 	font-weight: $fw-regular;
+	font-family: $sans-serif;
 }
 
 h1, h2, h3, h4, h5{
 	font-family: $serif;
 }
+
+a {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+body{
+	
+}
+
+
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	position:relative;
+}
+
+
+
+.is-active,
+.is-inactive, 
+img {
+	transition: 0.3s;
+}
+
+
+
+section {
+	padding-top: $section-padding;
+	padding-bottom: $section-padding/2;
+}
+
+
+.site-logo {
+	width: 60px;
+	height: 60px;
+	filter: brightness(100%);
+}
+
+.site-logo--side-nav {
+	margin-right: 1.5em;
+}
+
+.site-logo--footer {
+	width: 50px;
+	height: 50px;
+	// margin-bottom: 2em;
+}
+
+
 
