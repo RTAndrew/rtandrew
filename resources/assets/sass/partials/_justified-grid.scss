@@ -1,0 +1,25 @@
+#justified-grid {
+	margin: 0 auto;
+
+	padding-bottom: $section-padding;
+
+	@media (min-width: 550px) {
+		img {
+			transition: .3s;
+				filter: brightness(100%);
+			&:hover {
+				filter: brightness(80%);
+			}
+		}
+	}
+
+	
+}
+
+.fotografia-page #justified-grid {
+	width: 92.5%;
+
+	@media (min-width: 1000px) {
+		width: 91.2%;
+	}
+}
