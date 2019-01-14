@@ -1,0 +1,9 @@
+%container {
+	width: 90%;
+	margin: 0 auto;
+	position:relative;
+	
+	@media (min-width: 550px) {
+		width: 80%;		
+	}
+}

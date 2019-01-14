@@ -3,7 +3,7 @@ header {
 	height: auto;
 	color: $white;
 	background-color: $black;
-	padding: 1em 0;	
+	padding: 2em 0;	
 }
 
 
@@ -13,12 +13,11 @@ header {
 		justify-content: center;
 
 		li {
-		flex: 0 0 auto;
-		list-style: none;
-			&:nth-child(2) {
-				margin: 0 1em;
-			}
+			flex: 0 0 auto;
+			list-style: none;
 		}
+
+		
 
 	}
 
@@ -26,8 +25,6 @@ header {
 	margin-left: 0; 
 	margin-right: auto; /*applied only to the right*/
 	& img {
-		width: 9em;
-		height: 6em;
 		overflow: hidden;
 		filter: brightness(100%);
 	}
@@ -36,8 +33,9 @@ header {
 .menu__link {
 	color: $white;
 	font-size: ms(3);
-	font-family: $serif;
-	letter-spacing: 0.6px;
+	font-family: $sans-serif;
+	letter-spacing: 0.2px;
+	margin: 0 0.7em;
 	
 	@media (min-width: 550px) {
 		font-size: ms(4);

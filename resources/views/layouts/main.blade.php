@@ -6,8 +6,6 @@
 
     <title> @yield('titulo-pagina') {{ config('app.name', 'Rtandrew') }} </title>
 	
-    @yield('stylesheet')
-    
 	    <link rel="stylesheet" type="text/css" href=" {{ asset('css/app.css') }} ">
 	    <link href="{{ asset('vendor/cssanimation.min.css') }}" rel="stylesheet">
 	    {{-- <link href="{{ asset('vendor/pushbar/pushbar.css') }}" rel="stylesheet"> --}}
@@ -18,6 +16,8 @@
 	    {{-- JUSTIFIED GRID --}}
 		<link href="{{ asset('vendor/justified-gallery/justifiedGallery.min.css') }}" rel="stylesheet">
 
+    @yield('stylesheet')
+    
 </head>
 <body> 
 		

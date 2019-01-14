@@ -9,7 +9,7 @@
 
 // Pages
 @import 'pages/all';
-
+ 
 
 
 
@@ -24,7 +24,7 @@
 
 
 body{
-  	line-height: 1.6;
+  	line-height: 1.4;
  	color: $black;
 	font-size: 16px;
 	font-family: $sans-serif;
@@ -53,9 +53,7 @@ body{
 
 
 .container {
-	width: 90%;
-	margin: 0 auto;
-	position:relative;
+	@extend %container;
 }
 
 
@@ -75,18 +73,21 @@ section {
 
 
 .site-logo {
-	width: 60px;
-	height: 60px;
+	width: 9em;
+	height: auto;
+	// height: 60px;
 	filter: brightness(100%);
 }
 
 .site-logo--side-nav {
-	margin-right: 1.5em;
+	width: 4em;
+	height: auto;
+	// margin-right: 1.5em;
 }
 
 .site-logo--footer {
 	width: 50px;
-	height: 50px;
+	height: auto;
 	// margin-bottom: 2em;
 }
 
