@@ -1,6 +1,7 @@
 .side-nav {
-	padding: 1em 1em;
 	color: $white;
+	padding: 1em 1em;
+	padding-top: 2em;
 	background: $light-dark;
 
 	.icon-x {
@@ -44,12 +45,9 @@
 .side-nav__link {
 	margin-left: 1em;
 	font-size: ms(2);
-	max-width: 70%;
 	transition: 0.3s;
-	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
+	text-transform: capitalize;
+	@include truncate(70%);
 }
 
 

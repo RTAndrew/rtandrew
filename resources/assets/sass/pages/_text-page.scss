@@ -1,4 +1,62 @@
 
 .text-page{ 
 	background: $light-dark;
+	
+	@media (max-width: 679px) {
+
+		.show-medium {
+			// background-color: black;
+			display: none;
+		}
+	}
+
+	@media (min-width: 679px) {
+		.show-small {
+			// background-color: #fff;
+			display: none;
+		}
+
+		.show-medium {
+			// background-color: black;
+		}
+	}
 }
+
+
+.nota {
+	color: $white;
+	text-align: left;
+	background-color: $black;
+	padding: $section-padding+-1.5 0 $section-padding;
+	.nota__hero {
+
+		@media (min-width: 650px) {
+			max-width: 70%;
+		}
+		@media (min-width: 900px) {
+			max-width: 60%;
+			padding: $section-padding;
+		}
+
+		@media (min-width: 1200px) {
+			max-width: 50%;
+		}
+	}
+}
+
+.nota__titulo {
+	margin: 0 auto;
+	font-size: ms(10);
+	line-height: 1.2;
+	text-transform: capitalize;
+	// padding: 0.4em 0 0.4em 0.8em; 
+	padding-left: 1em;
+	border-left: 5px solid red;
+	// letter-spacing: -1px !important;
+}
+
+.nota__descricao {
+	opacity: 0.7;
+	font-size: ms(4);
+}
+

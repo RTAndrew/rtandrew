@@ -24,7 +24,7 @@
 
 
 
-	<div class="fotografia-page">
+	<div class="foto-page">
 		
 		<div class="container">
 			
@@ -32,7 +32,11 @@
 
 			
 		</div>
+
+		<div class="container">
+			
 			@include('inc.justified-grid')			
+		</div>
 
 	</div>
 
@@ -53,14 +57,14 @@
 		function myFunction(x) {
 		    if (x.matches) { // If media query matches
 		        $('#justified-grid').justifiedGallery({
-					    rowHeight : 130,
+					    rowHeight : 140,
 					    lastRow : 'nojustify',
 					    margins : 5,
 					    captions : false
 					});
 		    } else {
 		        $('#justified-grid').justifiedGallery({
-					    rowHeight : 240,
+					    rowHeight : 235,
 					    lastRow : 'nojustify',
 					    margins : 10,
 					    captions : false

@@ -17,6 +17,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .grid {
 	display: grid;
 	grid-template-areas: 
@@ -32,7 +52,7 @@
 	}
 
 	h3{
-		font-weight: $fw-regular;
+		font-weight: $fw-bold;
 	}
 
 	@media (min-width: 550px) {

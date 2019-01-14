@@ -4,9 +4,8 @@
 	height: 350px;
 	color: $white;
 	margin: 0 auto;
-	background-color: $light-dark;
+	// background-color: $light-dark;
 	padding: $section-padding+-2 $section-padding+-2;
-			
 	
 		@media (min-width: 550px) {
 			max-width: 80%;
@@ -47,10 +46,12 @@
 .texto__content {
 	width: 100%;
 	padding: $section-padding 0;
-	background-color: $light-gray;
+	background-color: $snow-flake;
 
-	.container:nth-child(1) {
-		// width: 100%;
+	.texto__descricao-wrapper {
+		width: 100%;
+		@extend %container;
+		
 		margin-top: -9.5em;
 		position: relative;
 		// margin-bottom: 1em;
@@ -81,7 +82,8 @@
 
 	
 	// Definicoes para todos os container
-	.container {
+	.container, 
+	.texto__descricao-wrapper {
 
 		@media (min-width: 550px) {
 			max-width: 80%;
@@ -108,6 +110,8 @@
 	color: $white;
 	margin-top: 1.5em;
 	line-height: 1.2;
+	letter-spacing: 0.5px;
+	word-spacing: 3px;
 	font-size: ms(10);
 	text-transform: capitalize;
 
@@ -127,22 +131,18 @@
 	margin-top: 2em;
 	margin-bottom: .8em;
 	padding-bottom: 0.3em;
-	border-bottom: 0.1px solid rgba(0, 0, 0, 0.9);
-
-	@media (min-width: 400px) {
-		border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);		
-	}
+	border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
 }
 
 
 
 .texto__descricao {
 	margin-top: 2em;
+	min-height: 200px;
 	p {
 		line-height: 1.6;
 		margin: 1.3em 0;
 		
-
 		@media (min-width: 600px) {
 			line-height: 1.8;
 		}
