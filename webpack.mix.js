@@ -16,4 +16,4 @@ mix.disableNotifications();
    .sass('resources/assets/sass/landing.scss', 'public/css');
 
 
-mix.browserSync('http://rtandrew-stage/');
+mix.browserSync('http://rtandrew/');
