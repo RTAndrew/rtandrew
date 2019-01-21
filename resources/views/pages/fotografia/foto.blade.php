@@ -56,42 +56,40 @@
 
 
 				@endcomponent
-			</div>
+		</div>
+		
 		<div class="foto__hero">
-			<center> <img src=" {{ asset('img/foto/IMAG0010.jpg') }} "></center>
+			<center> <img src="{{ $foto->image_url }}" alt="{{ $foto->titulo }}"> </center>
 		</div>
 
 		<div class="foto__content">
 			<div class="container">
 
-				
-				<div class="foto__album">
-					<span> Presente no álbum: </span>
+				@if ($foto->album->count() > 0 )
+					
+					<div class="foto__album">
+						<span> Presente no álbum: </span>
+						
+						@foreach ($foto->album as $album)
+							<a class="foto__album-link" href="{{ route('album', $album->slug) }}">  {{ $album->titulo }} </a>
+						@endforeach
 
-					<a class="foto__album-link" href="">  Jornadas de BTT no KKasasdsdasddasdsadasdasdas500 </a>
-
-				</div>
+					</div>
+					
+				@endif
 				
 
 				<h1 class="foto__titulo">
-					O Sorriso de uma criança é o maior feitiço contra os maus olhares
+					{{ $foto->titulo }}
 				</h1>
 				
 
 				<div class="foto__descricao">
 					
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tempore commodi provident blanditiis suscipit, laboriosam consectetur quae necessitatibus sed saepe, aut. Vero voluptate, ad voluptatum pariatur explicabo nulla, voluptates corrupti.
+						{{ $foto->descricao }}
 					</p>
 					
-					
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tempore commodi provident blanditiis suscipit, laboriosam consectetur quae necessitatibus sed saepe, aut. Vero voluptate, ad voluptatum pariatur explicabo nulla, voluptates corrupti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum praesentium dicta quam maxime, veniam ipsam quo laborum eveniet dolor libero placeat eum tenetur ea necessitatibus eius, mollitia ut esse laboriosam.
-					</p>
-					
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tempore commodi provident blanditiis suscipit, laboriosam consectetur quae necessitatibus sed saepe, aut. Vero voluptate, ad voluptatum pariatur explicabo nulla, voluptates corrupti.
-					</p>
 
 				</div>
 
@@ -103,7 +101,7 @@
 
 	</div>
 
-
+	
 
 
 

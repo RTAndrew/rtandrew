@@ -15,6 +15,9 @@ class TextoController extends Controller
 	
 
 	public function textoSlug($slug) {
+		$notas = Nota::all();
+		$projectos = Projecto_txt::all();
+
 		$texto = Texto::where('slug', $slug)->firstOrFail();
 
 			// Declarar como um array vazio
@@ -63,9 +66,10 @@ class TextoController extends Controller
 
 			// Armazenar os ids dos textos
 			$txt_array = array();
-			foreach ($txt as $txt) {
-				array_push($txt_array, $txt->id);
-			}
+			
+				foreach ($txt as $txt) {
+					array_push($txt_array, $txt->id);
+				}
 
 
 			// Pegar os textos de acordo com os IDs acima
@@ -97,7 +101,9 @@ class TextoController extends Controller
         return view('pages.texto.texto')
 	        ->with('texto_categoria', $texto_categoria)
 	        ->with('texto', $texto)
-	        ->with('textos', $textosRelacionados);
+	        ->with('textos', $textosRelacionados)
+	        ->with('notas', $notas)
+	        ->with('projectos', $projectos);
 
 	}
 
@@ -134,11 +140,11 @@ class TextoController extends Controller
 			->join('notas', 'notas.id', '=', 'nota_texto.nota_id')
 			
 			// Productos relacionados
-				->whereNot('notas.slug', $slug)
+				->where('notas.slug', $slug)
 			//Excepto aqueles que contem o mesmo nome
-				->whereNotIn('titulo', [$texto->titulo])
+				// ->whereNotIn('titulo', [$texto->titulo])
 
-			->take(4)
+			// ->take(4)
 			->select('textos.id')
 			->get();  
 

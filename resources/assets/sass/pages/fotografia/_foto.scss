@@ -60,8 +60,8 @@
 		}
 
 		@media (min-width: 900px) {
-			max-width: 60%;
-			padding: $section-padding;
+			max-width: 55%;
+			padding-bottom: $section-padding;
 		}
 	}
 }
@@ -74,13 +74,23 @@
 
 .foto__album {
 	max-width: 100%;
-	font-size: ms(1);
+	// font-size: ms(2);
 	font-family: $sans-serif;
-	opacity: $is-inactive;
 	
-
-	span:nth-child(1){
+	
+	span{
+		display: block;
 		font-weight: $fw-bold;
+
+		@media (min-width: 550px) {
+			display: inline-block;
+		}
+	}
+
+	.foto__album-link,
+	span {
+		transition: 0.3s;
+		opacity: $is-inactive;
 	}
 
 }
@@ -89,19 +99,25 @@
 	@include truncate(55%)
 
 	display: inline-block;
-	vertical-align: center;
+	vertical-align: middle;
 }
 
 
 .foto__album-link {	
-	border-bottom: 1px solid $light-dark;
+	margin: 0.3em 0.5em;
+	padding: 0.5em 0.7em;
+	border: 1px solid $light-dark;
+
+	&:hover {
+		opacity: 1;
+	}
 }
 
 
 .foto__titulo {
 	font-size: ms(10);
-	margin-top: 0.1em;
-	line-height: 1.2;
+	margin-top: 1em;
+	// line-height: 1.2;
 	text-transform: capitalize;
 }
 
@@ -109,7 +125,7 @@
 
 .foto__descricao {
 	font-size: ms(3);
-	margin-top: 2em;
+	// margin-top: 2em;
 
 	p {
 		margin: 1.3em 0;

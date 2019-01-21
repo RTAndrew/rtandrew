@@ -17,6 +17,7 @@ class CreateAlbumsTable extends Migration
             $table->increments('id');
             $table->string('titulo')->unique();
             $table->longText('descricao');
+            $table->string('slug');
             $table->string('image_hero_url');
             $table->bigInteger('view_count')->default(0);
             $table->timestamps();

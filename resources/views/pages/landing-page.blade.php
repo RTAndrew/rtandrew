@@ -13,8 +13,8 @@
 		<section class="container">
 					
 			<div class="latin latin--left">
-				<span id="e" class="latin-word"> Nosce et Ipsum </span>	
-				<span id="i" class="latin-date"> XVIII </span>
+				<span id="e" class="latin-word wow fadeInUp" data-wow-duration="1.1s" data-wow-delay="0.8s"> Nosce et Ipsum </span>	
+				<span id="i" class="latin-date wow fadeInUp" data-wow-duration="1.1s" data-wow-delay="1.4s"> XVIII </span>
 			</div>
 
 
@@ -24,11 +24,11 @@
 
 				<div class="above-the-fold">
 
-					<h1>
+					<h1 class="wow animated fadeIn" data-wow-duration="4.3s" data-wow-delay="1.9s">
 						Porque palavras constrõem pontes em lugares inexplorados, e a criatividade é um meio crucial para a sobrevivência.
 					</h1>
 
-					<center> <a class="button primary" href=""> Quem Sou Eu </a> <center>
+					<center> <a href="" class="button primary wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="2.4s"> Quem Sou Eu </a> <center>
 				</div>
 			</div>
 
@@ -46,8 +46,8 @@
 		<div class="container">
 					
 			<div class="latin latin--right">
-				<span id="e" class="latin-word">  Ex Amino  </span>	
-				<span id="i" class="latin-date"> XVIII </span>
+				<span id="e" class="latin-word wow fadeInUp" data-wow-duration="1.1s" data-wow-delay="0.8s"> Ex Amino </span>	
+				<span id="i" class="latin-date wow fadeInUp" data-wow-duration="1.1s" data-wow-delay="1.4s"> XVIII </span>
 			</div>
 		</div>
 
@@ -56,28 +56,28 @@
 				
 				<div class="container">
 					<h1 class="titulo-head titulo-head--vertical">
-						O que há 
+						Conteúdo 
 					</h1>
 				</div>
 
-				<div class="coisas-existentes__blocks flex">
+				<div class="coisas-existentes__blocks container flex">
 
 					<div class="block">
 						<p class="block__bold">01</p>
-						<h3 class="block__titulo">Textos, Notas e Projectos</h3>
-						<p class="block__descricao">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos.</p>
+						<h3 class="block__titulo wow fadeIn" data-wow-duration="1.4s" data-wow-delay="0.7s">Textos, Notas e Projectos</h3>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.5s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos.</p>
 					</div>
 
 					<div class="block">
 						<p class="block__bold">02</p>
-						<h3 class="block__titulo">Fotos e Experiências </h3>
-						<p class="block__descricao"> O grande prazer de <i>fotar</i> é experiência única que reside no processo inteiro. Desde as aventuras de BTT até aos planos antes de fotografar.   </p>
+						<h3 class="block__titulo wow fadeIn" data-wow-duration="1.4s" data-wow-delay="1.1s">Fotos e Experiências </h3>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.9s"> O grande prazer de <i>fotar</i> é experiência única que reside no processo inteiro. Desde as aventuras de BTT até aos planos antes de fotografar.   </p>
 					</div>
 
 					<div class="block">
 						<p class="block__bold">03</p>
-						<h3 class="block__titulo"> E um bocadinho sobre mim. lol </h3>
-						<p class="block__descricao">Entre gargalos, erros, e tentativas frustradas, esforço-me para descrever quem realmente é o Rtandrew, sendo por isso uma das partes mais difíceis do projecto.  </p>
+						<h3 class="block__titulo wow fadeIn" data-wow-duration="1.4s" data-wow-delay="1.5s"> E um bocadinho sobre mim. lol </h3>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.3s">Entre gargalos, erros, e tentativas frustradas, esforço-me para descrever quem realmente é o Rtandrew, sendo por isso uma das partes mais difíceis do projecto.  </p>
 					</div>
 				</div>
 
@@ -94,9 +94,9 @@
 			</h1>
 
 			<center> 
-				<a class="button secondary" href=""> Textos </a>
+				<a class="button secondary latin-word wow fadeInLeft" data-wow-duration="1.4s" data-wow-delay="0.3s" href=""> Textos </a>
 
-				<a class="button button--cta" href=""> Fotografia </a>
+				<a class="button button--cta wow fadeInRight" data-wow-duration="1.4s" data-wow-delay="0.3s" href=""> Fotografia </a>
 			</center>
 		</div>
 	</section>

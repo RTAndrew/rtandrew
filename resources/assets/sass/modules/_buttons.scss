@@ -51,10 +51,12 @@
 }
 
 .button--cta {
-  color: $white;
-  background-color: $black;
+    opacity: 0.8;
+    border: 2px solid $acent;
+    color: $black;
+    background-color: $acent;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 1;
   }
 }

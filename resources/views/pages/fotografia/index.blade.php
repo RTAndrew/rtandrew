@@ -52,12 +52,12 @@
 
 @section('script')
 
-		{{-- Change the Grid based on View Port Height --}}
+		{{-- Change the Grid based on View Port Width --}}
 
 		function myFunction(x) {
 		    if (x.matches) { // If media query matches
 		        $('#justified-grid').justifiedGallery({
-					    rowHeight : 140,
+					    rowHeight : 200,
 					    lastRow : 'nojustify',
 					    margins : 5,
 					    captions : false

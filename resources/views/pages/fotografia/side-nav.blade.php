@@ -11,13 +11,13 @@
 						</span>
 					
 
-						<span class="side-nav__link"> Coleção </span>
+						<span class="side-nav__link"> Destacados </span>
 						
 					</a>
 
 
 
-					<a class="texto-categoria" href=" {{ route('album') }} ">
+					{{-- <a class="texto-categoria" href=" ">
 
 
 						<span class="texto-categoria__midia" > 
@@ -27,7 +27,7 @@
 
 						<span class="side-nav__link"> Exposição </span>
 						
-					</a>
+					</a> --}}
 				
 				
 			</div>	
@@ -39,64 +39,17 @@
 
 						<h3 class="side-nav__titulo"> Álbuns </h3>
 						
-						<a class="texto-categoria" href=" {{ route('album') }} ">
-		
-							<span class="texto-categoria__midia" > 
-								<img class="" src=" {{ asset('img/icons/image.svg') }} " alt="collection-midia--white">
-							</span>
+						@foreach ($albuns as $album)
+							<a class="texto-categoria" href=" {{ route('album', $album->slug)}} ">
+			
+								<span class="texto-categoria__midia" > 
+									<img class="" src=" {{ asset('img/icons/image.svg') }} " alt="collection-midia--white">
+								</span>
 
-							<span class="side-nav__link"> Insolitus </span>
-							
-						</a>
+								<span class="side-nav__link"> {{ $album->titulo }} </span>
+								
+							</a>
+						@endforeach
 						
-						<a class="texto-categoria" href=" {{ route('album') }} ">
-		
-							<span class="texto-categoria__midia" > 
-								<img class="" src=" {{ asset('img/icons/image.svg') }} " alt="collection-midia--white">
-							</span>
-
-							<span class="side-nav__link"> xXx - Radical </span>
-							
-						</a>
-						
-						<a class="texto-categoria" href=" {{ route('album') }} ">
-		
-							<span class="texto-categoria__midia" > 
-								<img class="" src=" {{ asset('img/icons/image.svg') }} " alt="collection-midia--white">
-							</span>
-
-							<span class="side-nav__link"> Insolitus </span>
-							
-						</a>
-						
-						<a class="texto-categoria" href=" {{ route('album') }} ">
-		
-							<span class="texto-categoria__midia" > 
-								<img class="" src=" {{ asset('img/icons/image.svg') }} " alt="collection-midia--white">
-							</span>
-
-							<span class="side-nav__link"> BroTT  </span>
-							
-						</a>
-						
-						<a class="texto-categoria" href=" {{ route('album') }} ">
-		
-							<span class="texto-categoria__midia" > 
-								<img class="" src=" {{ asset('img/icons/image.svg') }} " alt="collection-midia--white">
-							</span>
-
-							<span class="side-nav__link"> Foto - Tese </span>
-							
-						</a>
-						
-						<a class="texto-categoria" href=" {{ route('album') }} ">
-		
-							<span class="texto-categoria__midia" > 
-								<img class="" src=" {{ asset('img/icons/image.svg') }} " alt="collection-midia--white">
-							</span>
-
-							<span class="side-nav__link"> Rio Oficina </span>
-							
-						</a>
 												
 			</div>

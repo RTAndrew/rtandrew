@@ -33,6 +33,12 @@ class DatabaseSeeder extends Seeder
         
         $this->call(FotosTableSeeder::class);
         
+            $this->call(Foto_AlbumTableSeeder::class);
+
+
+
+
+        
         
 
 

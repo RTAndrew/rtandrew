@@ -22,34 +22,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		{{-- TEXT_CONTAINER_PAGE --}}
 		<div class="text-page">
 
@@ -106,9 +78,4 @@
 		</div>
 
 	</div>
-
-
-
-
-
 @endsection
