@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Foto;
 use App\Texto;
 use App\Nota;
 use App\Projecto_txt;
+use App\Album;
 
 class PagesController extends Controller
 {
@@ -39,12 +40,22 @@ class PagesController extends Controller
 
 	}
 
+	
+
 	public function fotografia() {
 		
+		$albuns = Album::all();
+		$fotos = Foto::paginate(15);
+        
+        // return $albuns;
 
-        return view('pages.fotografia.index');
+        return view('pages.fotografia.index')
+        ->with('fotos', $fotos)
+        ->with('albuns', $albuns);
 
 	}
+
+
 
 
 

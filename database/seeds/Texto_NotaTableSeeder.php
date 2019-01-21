@@ -20,19 +20,19 @@ class Texto_NotaTableSeeder extends Seeder
         ]);
 
         
-        DB::table('texto_nota')->insert([
+        DB::table('nota_texto')->insert([
             'texto_id' => '3',
             'nota_id' => '1',
         ]);
 
 
-        DB::table('texto_nota')->insert([
+        DB::table('nota_texto')->insert([
             'texto_id' => '5',
             'nota_id' => '2',
         ]);
 
 
-        DB::table('texto_nota')->insert([
+        DB::table('nota_texto')->insert([
             'texto_id' => '6',
             'nota_id' => '3',
         ]);

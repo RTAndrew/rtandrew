@@ -78,7 +78,7 @@
 			
 			<div class="social-midia__block">
 				
-				<img class="social-midia__icon" src="{{ asset('img/icons/social-midia/Strava.svg') }}" alt="Strava Icon">	
+				<img class="social-midia__icon" src="{{ asset('img/icons/social-midia/strava.svg') }}" alt="Strava Icon">	
 				<h2 class="social-midia__nome"> Strava </h1>
 				<a class="social-midia__link" href="https://www.strava.com/athletes/13278283">RTAndrew Marcus</a>
 			</div>
