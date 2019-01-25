@@ -27,9 +27,18 @@
 	color: $white;
 	text-align: left;
 	background-color: $black;
-	padding: $section-padding+-1.5 0 $section-padding;
+	padding: $section-padding+1 0 $section-padding+2;
+	
 	.nota__hero {
 
+		.wrapper {
+			height: 100%;
+			margin: 0 auto;
+			padding-left: 2em;
+			// border-left: 8px solid $white;
+			// border-bottom: 8px solid $white;
+		}
+		
 		@media (min-width: 650px) {
 			max-width: 70%;
 		}
@@ -45,14 +54,12 @@
 }
 
 .nota__titulo {
-	margin: 0 auto;
 	font-size: ms(10);
 	line-height: 1.2;
-	text-transform: capitalize;
-	// padding: 0.4em 0 0.4em 0.8em; 
 	padding-left: 1em;
-	border-left: 5px solid red;
-	// letter-spacing: -1px !important;
+	text-transform: capitalize;
+	border-left: 8px solid $white;
+
 }
 
 .nota__descricao {
@@ -60,3 +67,15 @@
 	font-size: ms(4);
 }
 
+
+.nota__titulo,
+.nota__descricao {
+	@media (min-width: 900px) {
+		max-width: 70%;
+		// margin: 0 auto;
+	}
+}
+
+.projecto-page {
+	background-color: $light-dark;
+}

@@ -115,9 +115,11 @@
 
 			</div>
 
+
+
+
 			<div class="container">
-				
-			@include('inc.justified-grid')
+				@include('inc.justified-grid')
 			</div>				
 			
 	</div>

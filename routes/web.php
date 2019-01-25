@@ -24,6 +24,7 @@
 		Route::get('/texto/{slug}', 'TextoController@textoSlug')->name('textos.texto');
 		Route::get('/texto/notas/{slug}', 'TextoController@notaSlug')->name('textos.notas');
 		Route::get('/texto/projectos/{slug}', 'TextoController@projectoSlug')->name('textos.projectos');
+		Route::get('/texto/midia/{slug}', 'TextoController@projectoSlug')->name('textos.midia');
 
 
 
