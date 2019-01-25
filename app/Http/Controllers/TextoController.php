@@ -117,14 +117,6 @@ class TextoController extends Controller
 
 
 
-	public function projectoSlug() {
-
-        return view('pages.fotografia.album');
-
-	}
-
-
-
 	public function notaSlug($slug){
 		$notas = Nota::all();
 		$projectos = Projecto_txt::all();
@@ -179,4 +171,38 @@ class TextoController extends Controller
 
 
 
+
+
+
+
+
+	public function projectoSlug($slug) {
+		$notas = Nota::all();
+		$projectos = Projecto_txt::all();
+
+		// Variavel modificada para PROJECTOS
+		$prj = Projecto_txt::where('slug', $slug)->firstOrFail();
+
+		$prjs = DB::table('projecto_txt')
+			->join('texto_projecto', 'texto_projecto.projecto_txt_id', '=', 'projecto_txt.id')
+			
+			// Productos relacionados
+				->where('projecto_txt.slug', $slug)
+			//Excepto aqueles que contem o mesmo nome
+				// ->whereNotIn('titulo', [$texto->titulo])
+
+			// ->take(4)
+			->select('texto_projecto.titulo', 'texto_projecto.slug', 'texto_projecto.image_url')
+			->paginate(9);
+
+			// return $prjs;
+
+        return view('pages.texto.projectos')
+        ->with('projecto_titulo', $prj->nome)
+        ->with('projecto_descricao', $prj->descricao)
+        ->with('prjs', $prjs)
+        ->with('notas', $notas)
+        ->with('projectos', $projectos);
+
+	}
 }
