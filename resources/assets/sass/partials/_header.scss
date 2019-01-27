@@ -53,3 +53,21 @@ header {
 		}
 	}
 }
+
+
+.menu__button {
+	color: $acent;
+	// font-weight: bold;
+	padding: 0.5em 0.9em;
+	border: 2px solid $acent;
+
+	transition: ease-in-out 0.4s;
+	transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+	&.is-active {
+		box-shadow: inset 400px 0 0 0 $acent;
+	}
+	&:hover {
+		color: $black;
+		box-shadow: inset 400px 0 0 0 $acent;
+	}
+}

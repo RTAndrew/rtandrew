@@ -33,7 +33,7 @@
 
   &.secondary {
     color: $white;
-    border: 2px solid $white ;
+    border: 2px solid $white;
     
     &:hover {
       color: $black;
@@ -52,11 +52,13 @@
 
 .button--cta {
     opacity: 0.8;
-    border: 2px solid $acent;
     color: $black;
+    border: 2px solid $acent;
     background-color: $acent;
+    box-shadow: inset 0 0 0 0 $acent;
 
   &:hover {
     opacity: 1;
+    color: $black;
   }
 }

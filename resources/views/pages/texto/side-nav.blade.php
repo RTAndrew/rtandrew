@@ -57,7 +57,7 @@
 
 
 
-<div class="side-nav__section">
+{{-- <div class="side-nav__section">
 	<h3 class="side-nav__titulo"> Midia </h3>
 	
 	@foreach( $projectos as $projecto )
@@ -75,4 +75,4 @@
 		</a>
 	
 	@endforeach
-</div>	
+</div>	 --}}

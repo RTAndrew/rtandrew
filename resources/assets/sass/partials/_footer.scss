@@ -58,13 +58,13 @@ footer {
 
 .footer__wrapper--desktop {
 	 
-	 .site-logo--footer {
-	 	width: 10em;
-	 	height: auto;
-	 }
+	.site-logo--footer {
+		width: 10em;
+		height: auto;
+	}
+
 
 	.footer__word {
-		margin-top: 1em;
 		text-align: left;
 	}
 
@@ -74,10 +74,14 @@ footer {
 
 	
 
-
+	.footer__left-block,
+	.footer__right-block {
+		margin-top: 2em;
+	}
 
 	.footer__left-block {
 		width: 50%;
+
 	}
 
 	.footer__right-block {

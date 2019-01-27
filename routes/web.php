@@ -15,6 +15,7 @@
 // Routes para paginas
 	Route::get('/', 'PagesController@index')->name('landing-page');
 	Route::get('/test', 'PagesController@test')->name('test');
+	Route::get('/quem-sou-eu', 'PagesController@sobre')->name('quem-sou-eu');
 	
 	
 
@@ -25,14 +26,6 @@
 		Route::get('/texto/notas/{slug}', 'TextoController@notaSlug')->name('textos.notas');
 		Route::get('/texto/projectos/{slug}', 'TextoController@projectoSlug')->name('textos.projectos');
 		Route::get('/texto/midia/{slug}', 'TextoController@projectoSlug')->name('textos.midia');
-
-
-
-
-
-
-
-
 
 
 

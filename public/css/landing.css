@@ -85,13 +85,16 @@
 
 .button--cta {
   opacity: 0.8;
-  border: 2px solid #67DDD1;
   color: #000000;
+  border: 2px solid #67DDD1;
   background-color: #67DDD1;
+  -webkit-box-shadow: inset 0 0 0 0 #67DDD1;
+          box-shadow: inset 0 0 0 0 #67DDD1;
 }
 
 .button--cta:hover {
   opacity: 1;
+  color: #000000;
 }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -659,6 +662,27 @@ header {
   color: #fff;
 }
 
+.menu__button {
+  color: #67DDD1;
+  padding: 0.5em 0.9em;
+  border: 2px solid #67DDD1;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+          transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+}
+
+.menu__button.is-active {
+  -webkit-box-shadow: inset 400px 0 0 0 #67DDD1;
+          box-shadow: inset 400px 0 0 0 #67DDD1;
+}
+
+.menu__button:hover {
+  color: #000000;
+  -webkit-box-shadow: inset 400px 0 0 0 #67DDD1;
+          box-shadow: inset 400px 0 0 0 #67DDD1;
+}
+
 footer {
   background-color: #000000;
   padding: 6rem 0;
@@ -709,12 +733,16 @@ footer {
 }
 
 .footer__wrapper--desktop .footer__word {
-  margin-top: 1em;
   text-align: left;
 }
 
 .footer__wrapper--desktop .footer__word--dmca {
   margin-top: 1em;
+}
+
+.footer__wrapper--desktop .footer__left-block,
+.footer__wrapper--desktop .footer__right-block {
+  margin-top: 2em;
 }
 
 .footer__wrapper--desktop .footer__left-block {
@@ -1456,7 +1484,7 @@ button {
 
 .coisas-existentes__blocks {
   color: #000000;
-  margin-top: 10em;
+  margin-top: 12em;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: start;
@@ -1471,7 +1499,7 @@ button {
 
 @media (min-width: 650px) {
   .coisas-existentes__blocks {
-    margin-top: 12em;
+    margin-top: 16em;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1496,7 +1524,7 @@ button {
 .coisas-existentes__blocks .block {
   width: 100%;
   position: relative;
-  margin-bottom: 6em;
+  margin-bottom: 7em;
   padding: 0.7em 2em;
 }
 
@@ -1530,7 +1558,6 @@ button {
 
 .coisas-existentes__blocks .block__titulo {
   color: #5c5c5c;
-  margin-top: 1em;
   font-family: Source Sans Pro, sans-serif;
 }
 
@@ -1550,18 +1577,20 @@ button {
 }
 
 .coisas-existentes__blocks .block__bold {
-  top: -0.7em;
+  top: -0.8em;
   left: -0.2em;
   opacity: 0.2;
   z-index: 0;
   color: #67DDD1;
-  font-size: 13.43603975em;
-  position: absolute;
+  font-size: 16.25760809em;
+  font-weight: bold;
+  letter-spacing: -17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  position: absolute;
 }
 
 @media (max-width: 650px) {
@@ -1572,7 +1601,8 @@ button {
 
 @media (min-width: 650px) {
   .coisas-existentes__blocks .block__bold {
-    left: 0em;
+    font-size: 19.67170579em;
+    left: -.2em;
   }
 }
 
