@@ -20,6 +20,11 @@ class PagesController extends Controller
         return view('pages.landing-page');
 
 	}
+	public function sobre() {
+
+        return view('pages.quem-sou-eu');
+
+	}
 
 	public function test() {
 

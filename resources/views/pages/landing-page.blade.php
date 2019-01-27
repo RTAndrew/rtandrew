@@ -28,7 +28,7 @@
 						Porque palavras constrõem pontes em lugares inexplorados, e a criatividade é um meio crucial para a sobrevivência.
 					</h1>
 
-					<center> <a href="" class="button primary wow animated fadeInUp" data-wow-duration="1.8s" data-wow-delay="2.5s"> Quem Sou Eu </a> <center>
+					{{-- <center> <a href="" class="button primary wow animated fadeInUp" data-wow-duration="1.8s" data-wow-delay="2.5s"> Quem Sou Eu </a> <center> --}}
 				</div>
 			</div>
 
@@ -94,9 +94,9 @@
 			</h1>
 
 			<center> 
-				<a class="button secondary latin-word wow fadeInLeft" data-wow-duration="1.4s" data-wow-delay="0.5s" href=""> Textos </a>
+				<a class="button secondary latin-word wow fadeInLeft" data-wow-duration="1.4s" data-wow-delay="0.5s" href="{{ route('texto') }}"> Textos </a>
 
-				<a class="button button--cta wow fadeInRight" data-wow-duration="1.4s" data-wow-delay="0.5s" href=""> Fotografia </a>
+				<a class="button button--cta wow fadeInRight" data-wow-duration="1.4s" data-wow-delay="0.5s" href="{{ route('fotografia') }}"> Fotografia </a>
 			</center>
 		</div>
 	</section>
