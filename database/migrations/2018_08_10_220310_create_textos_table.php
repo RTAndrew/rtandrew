@@ -15,7 +15,7 @@ class CreateTextosTable extends Migration
     {
         Schema::create('textos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
+            $table->string('titulo')->unique();
             $table->longText('descricao');
             $table->string('slug')->unique();
             $table->boolean('featured')->default(false);

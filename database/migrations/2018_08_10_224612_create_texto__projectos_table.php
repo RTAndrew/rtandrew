@@ -15,7 +15,7 @@ class CreateTextoProjectosTable extends Migration
     {
         Schema::create('texto_projecto', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
+            $table->string('titulo')->unique();
             $table->string('image_url');
             $table->longText('descricao');
             $table->string('slug')->unique();

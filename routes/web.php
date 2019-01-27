@@ -41,3 +41,8 @@
 		//Album 
 			Route::get('/fotografia/album/{slug}', 'FotografiaController@album')->name('album');
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
