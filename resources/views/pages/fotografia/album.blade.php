@@ -100,7 +100,7 @@
 
 							<span class="album__num-photo">
 								<img class="icon" src=" {{ asset('img/icons/image--filled.svg') }} " alt="photo count icon">
-								{{ $contagem_foto }}
+								{{ $numberOfPhotos }}
 							
 							</span>
 
