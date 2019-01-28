@@ -18,6 +18,8 @@ class TextoController extends Controller
 		$notas = Nota::all();
 		$projectos = Projecto_txt::all();
 
+
+
 		$texto = Texto::where('slug', $slug)->firstOrFail();
 
 			// Declarar como um array vazio
@@ -26,24 +28,18 @@ class TextoController extends Controller
 		
 			// Pegar Simplesmente uma unica categoria
 			foreach ($texto->notas as $nota) {
-				$i = 0;
-
-					if ($i == 0) {
-						$texto_categoria = $nota;
-						// $texto_categoriai = $nota->id;
-						$i++;
-						break;
-					}
+				$texto_categoria = $nota;
+				break;
 			}
 
 
 			// Pegar os IDs das Notas
-			$a = array();
-			foreach ($texto->notas as $nota) {
-				
-			array_push($a, $nota->id);
+				$notaArrayOfIds = array();
 
+			foreach ($texto->notas as $nota) {
+				array_push($notaArrayOfIds, $nota->id);
 			}
+
 
 
 
@@ -51,12 +47,12 @@ class TextoController extends Controller
 
 		if ($texto_categoria != null) {
 
-			$txt = DB::table('nota_texto')
+			$texto_fetch = DB::table('nota_texto')
 			->join('textos', 'textos.id', '=', 'nota_texto.texto_id')
 			->join('notas', 'notas.id', '=', 'nota_texto.nota_id')
 			
 			// Productos relacionados
-				->where('nota_id', array_values($a))
+				->where('nota_id', array_values($notaArrayOfIds))
 			//Excepto aqueles que contem o mesmo nome
 				->whereNotIn('titulo', [$texto->titulo])
 
@@ -65,23 +61,18 @@ class TextoController extends Controller
 			->get();  
 
 			// Armazenar os ids dos textos
-			$txt_array = array();
+			$textoArrayOfIds = array();
 			
-				foreach ($txt as $txt) {
-					array_push($txt_array, $txt->id);
+				foreach ($texto_fetch as $txt) {
+					array_push($textoArrayOfIds, $txt->id);
 				}
 
 
 			// Pegar os textos de acordo com os IDs acima
-			$textosRelacionados = Texto::whereIn('id', array_values($txt_array))
+			$textosRelacionados = Texto::whereIn('id', array_values($textoArrayOfIds))
 				->take(4)
 				->inRandomOrder()
 				->get();
-
-			// Caso não haver textos da mesma categoria
-			
-				// return $textosRelacionados;
-			
 
 
 		} else {
@@ -121,13 +112,15 @@ class TextoController extends Controller
 		$notas = Nota::all();
 		$projectos = Projecto_txt::all();
 
+
+
 		$categoria = Nota::where('slug', $slug)->firstOrFail();
 			$categoria_color = $categoria->background_color_fallback;
 			$categoria_nome = $categoria->nome;
 			$categoria_descricao = $categoria->descricao;
 
 		// return $categoria_nome;
-		$txt = DB::table('nota_texto')
+		$texto_fetch = DB::table('nota_texto')
 			->join('textos', 'textos.id', '=', 'nota_texto.texto_id')
 			->join('notas', 'notas.id', '=', 'nota_texto.nota_id')
 			
@@ -142,15 +135,15 @@ class TextoController extends Controller
 
 
 			// Armazenar os ids dos textos
-			$txt_array = array();
-			foreach ($txt as $txt) {
-				array_push($txt_array, $txt->id);
+			$textoArrayOfIds = array();
+			foreach ($texto_fetch as $txt) {
+				array_push($textoArrayOfIds, $txt->id);
 			}
 
 				// return array_values($txt_array);
 
 			// Pegar os textos de acordo com os IDs acima
-			$textos = Texto::whereIn('id', array_values($txt_array))
+			$textos = Texto::whereIn('id', array_values($textoArrayOfIds))
 				->paginate(9);
 
 			// return $textos;
@@ -162,7 +155,6 @@ class TextoController extends Controller
 	        ->with('textos', $textos)
 	        ->with('projectos', $projectos);
 
-				// return $textosRelacionados;
 	}
 
 	
@@ -181,9 +173,9 @@ class TextoController extends Controller
 		$projectos = Projecto_txt::all();
 
 		// Variavel modificada para PROJECTOS
-		$prj = Projecto_txt::where('slug', $slug)->firstOrFail();
+		$projecto_find = Projecto_txt::where('slug', $slug)->firstOrFail();
 
-		$prjs = DB::table('projecto_txt')
+		$projecto_fetch = DB::table('projecto_txt')
 			->join('texto_projecto', 'texto_projecto.projecto_txt_id', '=', 'projecto_txt.id')
 			
 			// Productos relacionados
@@ -195,12 +187,11 @@ class TextoController extends Controller
 			->select('texto_projecto.titulo', 'texto_projecto.slug', 'texto_projecto.image_url')
 			->paginate(9);
 
-			// return $prjs;
-
+				
         return view('pages.texto.projectos')
-        ->with('projecto_titulo', $prj->nome)
-        ->with('projecto_descricao', $prj->descricao)
-        ->with('prjs', $prjs)
+        ->with('projecto_titulo', $projecto_find->nome)
+        ->with('projecto_descricao', $projecto_find->descricao)
+	    ->with('projecto_fetch', $projecto_fetch)
         ->with('notas', $notas)
         ->with('projectos', $projectos);
 
