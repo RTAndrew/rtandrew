@@ -33,7 +33,7 @@ class FotografiaController extends Controller
 
 		$album = Album::where('slug', $slug)->firstOrFail();
 
-			$ft = DB::table('albuns')
+			$fotoAlbumFetch = DB::table('albuns')
 				->join('foto_album', 'foto_album.album_id', '=', 'albuns.id')
 				->join('fotos', 'fotos.id', '=', 'foto_album.foto_id')
 				->where('albuns.slug', $slug)
@@ -41,23 +41,25 @@ class FotografiaController extends Controller
 				->get();
 			
 			
-
-			$ft_array = array();
-				foreach ($ft as $ph) {
-					array_push($ft_array, $ph->id);
+			// Empty Array Inicialization
+			$fotoAlbum_arrayOfIds = array();
+				foreach ($fotoAlbumFetch as $ph) {
+					array_push($fotoAlbum_arrayOfIds, $ph->id);
 				}
 
-			$contagem_foto = $ft->count();
 
+			// Number of Photos in Album
+			$numberOfPhotos = $fotoAlbumFetch->count();
+				
 				// Pegar os textos de acordo com os IDs acima
-				$fotos = Foto::whereIn('id', array_values($ft_array))
+				$fotos = Foto::whereIn('id', array_values($fotoAlbum_arrayOfIds))
 					->paginate(15);
 
 		$album->increment('view_count');
         return view('pages.fotografia.album')
         ->with('fotos', $fotos)
         ->with('album', $album)
-        ->with('contagem_foto', $contagem_foto)
+        ->with('numberOfPhotos', $numberOfPhotos)
         ->with('albuns', $albuns);
 
 	}
