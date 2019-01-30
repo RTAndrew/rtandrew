@@ -59,7 +59,7 @@
 		</div>
 		
 		<div class="foto__hero">
-			<center> <img src="{{ $foto->image_url }}" alt="{{ $foto->titulo }}"> </center>
+			<center> <img src="{{ cloudinaryImagePath($foto->image_url, '') }}" alt="{{ $foto->titulo }}"> </center>
 		</div>
 
 		<div class="foto__content">
