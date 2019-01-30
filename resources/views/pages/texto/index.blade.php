@@ -1,61 +1,27 @@
-@extends('layouts.main')
+@extends('layouts.textos')
 
 
+@section('titulo-pagina')
+ Texto - 
+@endsection
 
 
-@section('main')
+@section('content')
 
-	{{-- MAIN CONTENT  --}}
-	{{-- PUSH BAR --}}
-	<div class="pushbar_main_content">
-		
-
-
-		@section('side-navigation')
-
-			@include('pages.texto.side-nav')
-
-		@endsection
-
-
-
-
-
-
-
-
-		{{-- TEXT_CONTAINER_PAGE --}}
-		<div class="text-page">
-	
-
+		<div class="container">
 			
-			<div class="container">
-				
-				@include('inc.navigation.nav-categoria')			
-
-			
-			</div>
-
-			
-			<div class="container">
-
-				{{-- Grid Card --}}
-				@include('components.cards.fullcard')
-
-
-			</div>
-
-
-
-
-
+			@include('inc.navigation.nav-categoria')			
 
 
 		</div>
 
-	</div>
+		<div class="container">
+
+			{{-- Grid Card --}}
+			@include('components.cards.fullcard')
 
 
+		</div>
 
 
 

@@ -1,32 +1,18 @@
-@extends('layouts.main')
+@extends('layouts.textos')
 
 
 
 
-@section('main')
+@section('content')
 
 @section('titulo-pagina')
 {{ $texto->titulo }} - 
 @endsection
 
-{{-- MAIN CONTENT  --}}
-	{{-- PUSH BAR --}}
-	<div class="pushbar_main_content">
-		
 
 
-		@section('side-navigation')
 
-			@include('pages.texto.side-nav')
-
-		@endsection
-	
-
-	<div class="text-page">
-		
-
-
-		<div class="texto">
+<div class="texto">
 			
 
 			<div class="container">
@@ -185,19 +171,6 @@
 
 
 		</div>
-
-
-
-
-
-
-
-	</div>
-
-
-
-
-</div>
 
 
 
