@@ -1,46 +1,21 @@
-@extends('layouts.main')
+@extends('layouts.fotografia')
 
 
 
-@section('main')
+@section('content')
 
-
-{{-- MAIN CONTENT  --}}
-	{{-- PUSH BAR --}}
-	<div class="pushbar_main_content">
-		
-
-		@section('side-navigation')
-
-			@include('pages.fotografia.side-nav')
-
-
-		@endsection
 	
+	<div class="container">
+			
+		@include('inc.navigation.nav-categoria')
 
+			
 	</div>
 
 
-
-
-
-	<div class="foto-page">
-		
-		<div class="container">
-			
-			@include('inc.navigation.nav-categoria')
-
-			
-		</div>
-
-
-		<div class="container">
-			@include('inc.justified-grid')			
-		</div>
-
+	<div class="container">
+		@include('inc.justified-grid')			
 	</div>
-
-
 
 
 
