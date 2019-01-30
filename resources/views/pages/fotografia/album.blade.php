@@ -1,131 +1,107 @@
-@extends('layouts.main')
+@extends('layouts.fotografia')
 
 
 
-@section('main')
+@section('content')
 
 
-{{-- MAIN CONTENT  --}}
-	{{-- PUSH BAR --}}
-	<div class="pushbar_main_content">
+	<div class="container">
+		@component('components.nav-categoria--full')
 		
-
-		@section('side-navigation')
-
-			@include('pages.fotografia.side-nav')
-
-
-		@endsection
-	
-
-	</div>
-
-
-	<div class="foto-page">
-		
-
-			<div class="container">
-				@component('components.nav-categoria--full')
-				
-				{{-- Lado Esquerdo --}}					
-					@slot('categoria')
-						 Menu
-					@endslot
-					
-					@slot('icon')
-						<svg class="icon icon-align" width="26" height="26" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="26" height="3" fill="white"/>
-							<rect width="13" height="3" transform="translate(0 8)" fill="white"/>
-							<rect width="26" height="3" transform="translate(0 16)" fill="white"/>
-						</svg>
-					@endslot
-
-
-
-
-
-				{{-- Lado Direito --}}
-					@slot('categoria2')
-						
-					@endslot
-					
-					@slot('icon2')
-						
-					@endslot
-
-
-				@endcomponent
-			</div>
-		
-
-
-
-			<div class="album">
-					
-				<div class="album__hero" style="background: linear-gradient(
-				      rgba(0, 0, 0, 0.85),
-				      rgba(0, 0, 0, 0.85)
-				    ), url('{{ cloudinaryImagePath($album->image_hero_url, '20') }}') no-repeat center center fixed; 
-				  -webkit-background-size: cover;">
-				
-					<div class="container">
-						
-						<h1 id="e" class="album__titulo e">
-							{{ $album->titulo }}
-						</h1>
-						
-
-
-
-						<p id="i" class="album__descricao e">
-							
-							{{ $album->titulo }}
-
-						</p>
-						
-
-
-
-						<div id="i" class="album__detalhe e">
-							
-							<span class="album__views">
-								<img class="icon" src=" {{ asset('img/icons/eye.svg') }} " alt="eye icon">
-								{{ $album->view_count }}
-							
-							</span>
-
-							<span class="middot-spacer">
-								&middot;
-							</span>
-
-							<span class="album__num-photo">
-								<img class="icon" src=" {{ asset('img/icons/image--filled.svg') }} " alt="photo count icon">
-								{{ $numberOfPhotos }}
-							
-							</span>
-
-							
-						</div>
-
-						<span class="i"></span>
-
-					</div>
-
-				</div>	
-
-			</div>
-
-
-
-
-			<div class="container">
-				@include('inc.justified-grid')
-			</div>				
+		{{-- Lado Esquerdo --}}					
+			@slot('categoria')
+				 Menu
+			@endslot
 			
+			@slot('icon')
+				<svg class="icon icon-align" width="26" height="26" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="26" height="3" fill="white"/>
+					<rect width="13" height="3" transform="translate(0 8)" fill="white"/>
+					<rect width="26" height="3" transform="translate(0 16)" fill="white"/>
+				</svg>
+			@endslot
+
+
+
+
+
+		{{-- Lado Direito --}}
+			@slot('categoria2')
+				
+			@endslot
+			
+			@slot('icon2')
+				
+			@endslot
+
+
+		@endcomponent
 	</div>
 
 
 
+
+	<div class="album">
+			
+		<div class="album__hero" style="background: linear-gradient(
+		      rgba(0, 0, 0, 0.85),
+		      rgba(0, 0, 0, 0.85)
+		    ), url('{{ cloudinaryImagePath($album->image_hero_url, '20') }}') no-repeat center center fixed; 
+		  -webkit-background-size: cover;">
+		
+			<div class="container">
+				
+				<h1 id="e" class="album__titulo e">
+					{{ $album->titulo }}
+				</h1>
+				
+
+
+
+				<p id="i" class="album__descricao e">
+					
+					{{ $album->titulo }}
+
+				</p>
+				
+
+
+
+				<div id="i" class="album__detalhe e">
+					
+					<span class="album__views">
+						<img class="icon" src=" {{ asset('img/icons/eye.svg') }} " alt="eye icon">
+						{{ $album->view_count }}
+					
+					</span>
+
+					<span class="middot-spacer">
+						&middot;
+					</span>
+
+					<span class="album__num-photo">
+						<img class="icon" src=" {{ asset('img/icons/image--filled.svg') }} " alt="photo count icon">
+						{{ $numberOfPhotos }}
+					
+					</span>
+
+					
+				</div>
+
+				<span class="i"></span>
+
+			</div>
+
+		</div>	
+
+	</div>
+
+
+
+
+	<div class="container">
+		@include('inc.justified-grid')
+	</div>
 
 
 @endsection

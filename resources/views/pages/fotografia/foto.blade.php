@@ -1,29 +1,9 @@
-@extends('layouts.main')
+@extends('layouts.fotografia')
 
 
 
 
-@section('main')
-
-{{-- MAIN CONTENT  --}}
-	{{-- PUSH BAR --}}
-	<div class="pushbar_main_content">
-		
-
-		@section('side-navigation')
-
-			@include('pages.fotografia.side-nav')
-
-
-		@endsection
-	
-
-	</div>
-
-
-
-<div class="foto-page">
-	
+@section('content')
 
 
 	<div class="foto">
@@ -100,25 +80,6 @@
 
 
 	</div>
-
-	
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
