@@ -45,7 +45,6 @@
 
 			</div>
 
-			{{ $textos->links() }}
 
 
 

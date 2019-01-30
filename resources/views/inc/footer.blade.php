@@ -16,27 +16,28 @@
   		<div class="footer__social-icons">
 			<center> 
 
-				<a href="">
+				<a href="https://www.instagram.com/alkhemy.zavua/">
 		  			<img src=" {{ asset('img/icons/social-midia/instagram.svg') }} " alt="Instagram">	
 				</a>
 				
-				<a href="">
-		  			<img src=" {{ asset('/img/icons/social-midia/github.svg') }} " alt="Github">	
+				<a href="https://dribbble.com/Rtandrew">
+		  			<img src=" {{ asset('/img/icons/social-midia/dribbble.svg') }} " alt="Dribbble">	
 				</a>
 				
-				<a href="">
+				<a href="https://www.pinterest.com/anderson_rodax/">
 		  			<img src=" {{ asset('/img/icons/social-midia/pinterest.svg') }} " alt="Pinterest">	
 				</a>
 
-				<a href="">
+				<a href="https://www.strava.com/athletes/13278283">
 		  			<img src=" {{ asset('/img/icons/social-midia/strava.svg') }} " alt="Strava">	
 				</a>
 			</center>
 
   		</div>
-
-		<p class="footer__word"> Este site foi criado à imagem do Rtandrew. </p>
-		<p class="footer__word"> For copyright infrigment, please use the <a href="footer__word--link"> DMCA </a>.  </p>
+		<p class="footer__word"> ©2015 - {{ date('Y') }} <br> Todos os Direitos Reservados.</p>
+		
+		<p class="footer__word">Este site foi à mão pelo Rtandrew. 😎</p>
+		<p class="footer__word"> <a href="footer__word--link"> DMCA </a>  </p>
 
 	</div>
 </div>

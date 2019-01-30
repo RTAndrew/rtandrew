@@ -4,14 +4,13 @@
 					{{-- CARDS --}}
 
 
-
 						@php
 			              $i = 0;
 			            @endphp
 						
 						@foreach ($textos as $texto)
 						    {{-- WRAPPER --}}
-							<a href="{{ route('textos.texto', $texto->slug)}}" class="grid-card__card grid-card--texto wow animated slideInUp" data-wow-duration="1.3s" data-wow-delay="{{$i}}s">
+							<a href="{{ route('textos.texto', $texto->slug) }}" class="grid-card__card grid-card--texto wow animated slideInUp" data-wow-duration="1.3s" data-wow-delay="{{$i}}s">
 								<div class="wrapper">
 									
 									<div class="grid-card__frame-top flex">
@@ -62,18 +61,8 @@
 
 			          
 
-						
-			            
-
-
-
-						
-						
-
-						
-
-						
-						
-					
-
+		
 				</div>
+
+
+{{ $textos->appends(request()->input())->onEachSide(5)->links() }}

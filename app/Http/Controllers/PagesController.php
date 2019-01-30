@@ -20,11 +20,22 @@ class PagesController extends Controller
         return view('pages.landing-page');
 
 	}
+
+
+
+
+
+
 	public function sobre() {
 
         return view('pages.quem-sou-eu');
 
 	}
+
+
+
+
+
 
 	public function test() {
 
@@ -32,11 +43,25 @@ class PagesController extends Controller
 
 	}
 
+
+
+
+
+
 	public function texto() {
 
-		$textos = Texto::with('notas')->paginate(9);
 		$notas = Nota::all();
 		$projectos = Projecto_txt::all();
+
+		// Ordenar os resultados
+		// Caso o REQUEST for recent, nao fazer nada
+		if(request()->order == 'popular'){
+			$textos = Texto::with('notas')
+			->orderBy('view_count', 'desc')
+			->paginate(9);
+		} else {
+			$textos = Texto::with('notas')->paginate(9);
+		}
 
         return view('pages.texto.index')
 	        ->with('textos', $textos)
@@ -47,12 +72,21 @@ class PagesController extends Controller
 
 	
 
+
+
+
 	public function fotografia() {
 		
 		$albuns = Album::all();
-		$fotos = Foto::paginate(15);
         
-        // return $albuns;
+        // Ordenar os resultados
+		// Caso o REQUEST for recent, nao fazer nada
+		if(request()->order == 'popular'){
+			$fotos = Foto::orderBy('view_count', 'desc')
+			->paginate(15);
+		} else {
+			$fotos = Foto::paginate(15);
+		}
 
         return view('pages.fotografia.index')
         ->with('fotos', $fotos)

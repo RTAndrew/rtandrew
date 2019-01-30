@@ -11,7 +11,7 @@
 			<rect width="26" height="3" transform="translate(0 16)" fill="white"/>
 		</svg>
 		
-		<h3 class="nav-categoria__nome"> Menu </h3>
+		<a class="nav-categoria__nome"> Menu </a>
 		
 
 	</div>
@@ -19,12 +19,19 @@
 	
 
 	<div class="nav-categoria__right align-right">
+		@php
+			$url = url()->current();
+		@endphp
 		
-		<select>
-			<option value="mais-visto">Popular</option>
-			<option value="mais-recente">Recente</option>
-		</select> 		
+			<a href="{{ url()->current() .'?order=recente' }}" class="nav-categoria__ordem {{(request()->order == 'recente' or request()->order == '' ) ? 'is-active' : ''}}">
+				Recente
+			</a> 
 
+			<span> | </span>		
+
+			<a href="{{ url()->current() .'?order=popular' }}" class="nav-categoria__ordem {{request()->order == 'popular' ? 'is-active' : ''}}">
+				Popular
+			</a>
 	</div>
 	
 	

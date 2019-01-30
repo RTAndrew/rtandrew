@@ -829,15 +829,17 @@ button {
 }
 
 .nav-categoria {
-  opacity: 0.7;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   color: #fff;
+  font-size: 1.02487em;
+  letter-spacing: 0.5px;
+  font-weight: 700;
   font-family: Source Sans Pro, sans-serif;
 }
 
-.nav-categoria:hover {
-  opacity: 1;
+@media (min-width: 550px) {
+  .nav-categoria {
+    font-size: 1.127357em;
+  }
 }
 
 .nav-categoria .icon {
@@ -846,7 +848,7 @@ button {
 }
 
 .nav-categoria__left {
-  width: 60%;
+  width: 40%;
   cursor: pointer;
   max-width: 90%;
   white-space: nowrap;
@@ -854,7 +856,29 @@ button {
   text-overflow: ellipsis;
 }
 
-.nav-categoria__left:active {
+.nav-categoria__right span {
+  margin: 0 0.5em;
+  opacity: 0.5;
+}
+
+.nav-categoria__ordem.is-active {
+  opacity: 1;
+  color: #67DDD1;
+}
+
+.nav-categoria__ordem:hover {
+  color: #67DDD1;
+}
+
+.nav-categoria__left,
+.nav-categoria__ordem {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.nav-categoria__left:hover,
+.nav-categoria__ordem:hover {
   opacity: 1;
 }
 
@@ -865,10 +889,8 @@ button {
 }
 
 .nav-categoria__nome {
-  letter-spacing: 1px;
   margin-left: 0.5em;
   font-family: Source Sans Pro, sans-serif;
-  font-weight: 700;
 }
 
 .nav-categoria--simple {
@@ -1306,18 +1328,18 @@ button {
 }
 
 .pagination a {
+  opacity: 0.5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  opacity: 0.5;
 }
 
 .pagination a:hover {
   opacity: 1;
 }
 
-.pagination .icon:nth-child(odd) {
-  margin-right: 0.2em;
-  margin-left: 0.2em;
+.pagination .icon {
+  margin-right: 0.6em;
+  margin-left: 0.4em;
 }
 
 .pagination img {
@@ -1325,9 +1347,14 @@ button {
 }
 
 .pagination .active {
+  color: #67DDD1;
   padding-bottom: 0.18em;
-  border-bottom: 3px solid #fff;
-  border-top: 3px solid #fff;
+  border-bottom: 3px solid #67DDD1;
+  border-top: 3px solid #67DDD1;
+}
+
+.pagination .disabled {
+  opacity: 0.5;
 }
 
 .landing-page {
