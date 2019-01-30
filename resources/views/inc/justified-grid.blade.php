@@ -14,7 +14,7 @@
 			</div>
 
 
-			{{ $fotos->links() }}
+			{{ $fotos->appends(request()->input())->onEachSide(5)->links() }}
 		
 		@endisset
 
@@ -35,6 +35,6 @@
 			</div>
 
 
-			{{ $prjs->links() }}
+			{{ $prjs->appends(request()->input())->onEachSide(5)->links() }}
 		
 		@endisset

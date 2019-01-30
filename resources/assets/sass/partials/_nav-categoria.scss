@@ -1,14 +1,15 @@
 
 .nav-categoria {
-    opacity: 0.7;
-	transition: 0.3s;
 	color: $white;
+	font-size: ms(3); 
+	letter-spacing: 0.5px;
+	font-weight: $fw-bold;
 	font-family: $sans-serif;
 	
-		
-	&:hover{
-		opacity: 1;
+	@media (min-width: 550px) {
+		font-size: ms(4);
 	}
+
 
 	.icon {
 		width: 26px;
@@ -17,27 +18,53 @@
 }
 
 .nav-categoria__left {
-	width: 60%;
+	width: 40%;
 	cursor: pointer;
 	@include truncate(90%);
 	
-	&:active {
-		opacity: 1;
+}
+
+.nav-categoria__right {
+
+	span {
+		margin: 0 0.5em;
+		opacity: $is-inactive;
 	}
 }
 
-.nav-categoria__left > *,
-.nav-categoria__right > * { 
-	display: inline;
-	vertical-align: middle;
+.nav-categoria__ordem {
+
+	&.is-active {
+		opacity: 1;
+		color: $acent;
+	}
+
+	&:hover {
+		color: $acent;
+	}	
 }
+
+				.nav-categoria__left,
+				.nav-categoria__ordem {
+					transition: 0.3s;
+					opacity: $is-inactive;
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+
+
+				.nav-categoria__left > *,
+				.nav-categoria__right > * {
+					display: inline;
+					vertical-align: middle;
+				}
 
 
 .nav-categoria__nome {
-	letter-spacing: 1px;
 	margin-left: 0.5em;
 	font-family: $sans-serif;
-	font-weight: $fw-bold;
 }
 
 
