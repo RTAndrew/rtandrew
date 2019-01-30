@@ -65,7 +65,7 @@
 				<div class="album__hero" style="background: linear-gradient(
 				      rgba(0, 0, 0, 0.85),
 				      rgba(0, 0, 0, 0.85)
-				    ), url('{{ $album->image_hero_url }}') no-repeat center center fixed; 
+				    ), url('{{ cloudinaryImagePath($album->image_hero_url, '20') }}') no-repeat center center fixed; 
 				  -webkit-background-size: cover;">
 				
 					<div class="container">

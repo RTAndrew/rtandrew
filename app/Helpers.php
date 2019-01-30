@@ -109,3 +109,19 @@ $tamanho = 0;
 
 }
 
+
+
+function cloudinaryImagePath($image, $quality) {
+
+    $cloudinary_url = "http://res.cloudinary.com/db9ha9ox6/image/upload/";
+    
+        if($quality != null ?? $quality != "") {
+            $quality_of_transformation = "q_" . '' . $quality . '/';
+            return $cloudinary_url . '' . $quality_of_transformation . '' . $image; 
+        }
+
+    return $cloudinary_url . '' . $image;
+
+
+}
+
