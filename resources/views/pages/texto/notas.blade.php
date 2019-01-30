@@ -1,31 +1,11 @@
-@extends('layouts.main')
+@extends('layouts.textos')
 
 
 
 
-@section('main')
+@section('content')
 
-	{{-- MAIN CONTENT  --}}
-	{{-- PUSH BAR --}}
-	<div class="pushbar_main_content">
-		
-
-
-		@section('side-navigation')
-
-			@include('pages.texto.side-nav')
-
-		@endsection
-	
-
-
-
-
-
-		{{-- TEXT_CONTAINER_PAGE --}}
-		<div class="text-page">
-
-			<div class="nota">
+	<div class="nota">
 					
 				<div class="container nota__hero">
 				
@@ -71,11 +51,4 @@
 			{{ $textos->links() }}
 
 
-
-
-
-
-		</div>
-
-	</div>
 @endsection
