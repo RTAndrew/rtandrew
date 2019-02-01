@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Texto_Projecto extends Model
 {
     //
-    $protected = 'texto_projecto';
+    protected $table = 'texto_projecto';
 
 
 
