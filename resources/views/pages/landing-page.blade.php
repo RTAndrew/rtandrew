@@ -65,19 +65,20 @@
 					<div class="block">
 						<p class="block__bold">01</p>
 						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">Textos, Notas e Projectos</h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.3s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos.</p>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.3s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos. Para além disso, será aqui onde irei publicar pela primeira vez as minhas <i> mini-estórias</i>.</p>
 					</div>
 
 					<div class="block">
 						<p class="block__bold">02</p>
 						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s">Fotos e Experiências </h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.6s"> O grande prazer de <i>fotar</i> é experiência única que reside no processo inteiro. Desde as aventuras de BTT até aos planos antes de fotografar.   </p>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.6s"> O grande prazer de <i>fotar</i> é experiência única que reside no processo inteiro. Desde as experiências e aventuras de BTT até aquilo que vivi ou senti ao pressionar o botão de <i>fotar</i>.    </p>
 					</div>
 
 					<div class="block">
 						<p class="block__bold">03</p>
-						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="2s"> E um bocadinho sobre mim. lol </h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.9s">Entre gargalos, erros, e tentativas frustradas, esforço-me para descrever quem realmente é o Rtandrew, sendo por isso uma das partes mais difíceis do projecto.  </p>
+						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="2s"> A Entrevista & <i>Ex Umbra In Solem</i> </h3>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.9s">Em uma entrevista, cheia de gargalos e pensamentos profundos, esforço-me para descrever quem realmente é o Rtandrew. E por fim, uma exposição com trabalhos que de alguma forma me embarcam para uma reminiscência divina. </p>
+						<span class="coming-soon wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="3.3s"> Brevemente... </span>
 					</div>
 				</div>
 

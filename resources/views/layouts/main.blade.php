@@ -2,6 +2,8 @@
 <html  lang="pt" dir="ltr">
 <head>
 
+
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122144612-1"></script>
 		<script>
@@ -32,6 +34,13 @@
 		        a.appendChild(r);
 		    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
+
+
+
+
+
+
+
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
