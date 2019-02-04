@@ -14,6 +14,17 @@
 		
 	</a> --}}
 
+	<a class="texto-categoria" href="{{ route('texto') }}">
+
+		<span class="texto-categoria__midia" > 
+			<img class="" src=" {{ asset('img/icons/text.svg') }} " alt="collection-midia--white">
+		</span>
+	
+
+		<span class="side-nav__link active"> Todos Textos </span>
+		
+	</a>
+
 	<a class="texto-categoria" href="#">
 
 		<span class="texto-categoria__midia" > 

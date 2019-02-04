@@ -902,24 +902,15 @@ button {
   opacity: 0.5;
 }
 
-.nav-categoria__ordem.is-active {
-  opacity: 1;
-  color: #67DDD1;
-}
-
-.nav-categoria__ordem:hover {
-  color: #67DDD1;
-}
-
 .nav-categoria__left,
-.nav-categoria__ordem {
+.nav-categoria__right--full-opacity {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0.5;
 }
 
 .nav-categoria__left:hover,
-.nav-categoria__ordem:hover {
+.nav-categoria__right--full-opacity:hover {
   opacity: 1;
 }
 
@@ -927,6 +918,22 @@ button {
 .nav-categoria__right > * {
   display: inline;
   vertical-align: middle;
+}
+
+.nav-categoria__ordem {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.nav-categoria__ordem.is-active {
+  opacity: 1 !important;
+  color: #67DDD1;
+}
+
+.nav-categoria__ordem:hover {
+  color: #67DDD1;
+  opacity: 1;
 }
 
 .nav-categoria__nome {
@@ -989,6 +996,11 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.side-nav__link.active {
+  color: #67DDD1;
+  font-weight: bold;
 }
 
 .texto-categoria {
@@ -1368,13 +1380,13 @@ button {
   }
 }
 
-.pagination a {
+.pagination .number {
   opacity: 0.5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.pagination a:hover {
+.pagination .number:hover {
   opacity: 1;
 }
 
@@ -1388,6 +1400,7 @@ button {
 }
 
 .pagination .active {
+  opacity: 1;
   color: #67DDD1;
   padding-bottom: 0.18em;
   border-bottom: 3px solid #67DDD1;

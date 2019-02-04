@@ -48,6 +48,11 @@
 	transition: 0.3s;
 	text-transform: capitalize;
 	@include truncate(70%);
+
+	&.active {
+		color: $acent;
+		font-weight: bold;
+	}
 }
 
 

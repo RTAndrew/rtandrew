@@ -19,7 +19,7 @@
 		}
 	}
 
-	a {
+	.number {
 		opacity: 0.5;
 		transition: 0.5s;
 		&:hover {
@@ -39,6 +39,7 @@
 	}
 
 	.active {
+		opacity: 1;
 		color: $acent;
 		padding-bottom: 0.18em;
 		border-bottom: 3px solid $acent;

@@ -32,20 +32,10 @@
 	}
 }
 
-.nav-categoria__ordem {
 
-	&.is-active {
-		opacity: 1;
-		color: $acent;
-	}
-
-	&:hover {
-		color: $acent;
-	}	
-}
 
 				.nav-categoria__left,
-				.nav-categoria__ordem {
+				.nav-categoria__right--full-opacity {
 					transition: 0.3s;
 					opacity: $is-inactive;
 
@@ -55,11 +45,29 @@
 				}
 
 
+
+
+
 				.nav-categoria__left > *,
 				.nav-categoria__right > * {
 					display: inline;
 					vertical-align: middle;
 				}
+
+.nav-categoria__ordem {
+	transition: 0.3s;
+	opacity: $is-inactive;
+
+	&.is-active {
+		opacity: 1 !important;
+		color: $acent;
+	}
+
+	&:hover {
+		color: $acent;
+		opacity: 1;
+	}	
+}
 
 
 .nav-categoria__nome {

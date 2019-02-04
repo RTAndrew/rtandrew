@@ -18,7 +18,14 @@ class FotografiaController extends Controller
 
 		$foto = Foto::where('slug', $slug)->with('album')->firstOrFail();
 
-		$foto->increment('view_count');
+		
+		// $foto->increment('view_count');
+		views($foto)
+		    ->delayInSession(viewDelayTime())
+		    ->record();
+
+		    $foto->view_count = views($foto)->count();
+		    $foto->save();
         
 		// return $foto;
 
@@ -55,7 +62,13 @@ class FotografiaController extends Controller
 				$fotos = Foto::whereIn('id', array_values($fotoAlbum_arrayOfIds))
 					->paginate(15);
 
-		$album->increment('view_count');
+		// $album->increment('view_count');
+			views($album)
+		    ->delayInSession(viewDelayTime())
+		    ->record();
+
+		    $album->view_count = views($album)->count();
+		    $album->save();
         return view('pages.fotografia.album')
         ->with('fotos', $fotos)
         ->with('album', $album)

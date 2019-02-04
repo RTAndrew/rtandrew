@@ -87,7 +87,14 @@ class TextoController extends Controller
 
 
 		// Incrementar o numero de view
-    		$texto->increment('view_count');
+			// deprecated code
+    		// $texto->increment('view_count');
+			views($texto)
+		    ->delayInSession(viewDelayTime())
+		    ->record();
+
+		    $texto->view_count = views($texto)->count();
+		    $texto->save();
 
         return view('pages.texto.texto')
 	        ->with('texto_categoria', $texto_categoria)
@@ -119,6 +126,9 @@ class TextoController extends Controller
 			$categoria_nome = $categoria->nome;
 			$categoria_descricao = $categoria->descricao;
 
+
+
+
 		// return $categoria_nome;
 		$texto_fetch = DB::table('nota_texto')
 			->join('textos', 'textos.id', '=', 'nota_texto.texto_id')
@@ -140,11 +150,17 @@ class TextoController extends Controller
 				array_push($textoArrayOfIds, $txt->id);
 			}
 
-				// return array_values($txt_array);
 
 			// Pegar os textos de acordo com os IDs acima
-			$textos = Texto::whereIn('id', array_values($textoArrayOfIds))
+
+			if(request()->order == 'popular'){
+				$textos = Texto::whereIn('id', array_values($textoArrayOfIds))
+				->orderBy('view_count', 'desc')
 				->paginate(9);
+			} else {
+				$textos = Texto::whereIn('id', array_values($textoArrayOfIds))
+				->paginate(9);
+			}
 
 			// return $textos;
 			return view('pages.texto.notas')

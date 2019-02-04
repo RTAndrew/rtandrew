@@ -39,17 +39,17 @@
 			// border-bottom: 8px solid $white;
 		}
 		
-		@media (min-width: 650px) {
-			max-width: 70%;
-		}
+		// @media (min-width: 650px) {
+		// 	max-width: 70%;
+		// }
 		@media (min-width: 900px) {
-			max-width: 60%;
+			// max-width: 60%;
 			padding: $section-padding;
 		}
 
-		@media (min-width: 1200px) {
-			max-width: 50%;
-		}
+		// @media (min-width: 1200px) {
+		// 	max-width: 50%;
+		// }
 	}
 }
 
@@ -58,7 +58,7 @@
 	line-height: 1.2;
 	padding-left: 1em;
 	text-transform: capitalize;
-	border-left: 8px solid $white;
+	border-left: 12px solid $white;
 
 }
 

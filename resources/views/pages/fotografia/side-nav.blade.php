@@ -3,6 +3,19 @@
 				
 				
 
+					<a class="texto-categoria" href="{{ route('fotografia') }}">
+
+
+						<span class="texto-categoria__midia" > 
+							<img class="" src=" {{ asset('img/icons/foto.svg') }} " alt="collection-midia--white">
+						</span>
+					
+
+						<span class="side-nav__link active"> Todas as Fotos </span>
+						
+					</a>
+
+
 					<a class="texto-categoria" href="">
 
 
@@ -14,20 +27,6 @@
 						<span class="side-nav__link"> Destacados </span>
 						
 					</a>
-
-
-
-					{{-- <a class="texto-categoria" href=" ">
-
-
-						<span class="texto-categoria__midia" > 
-							<img class="" src=" {{ asset('img/icons/exposition.svg') }} " alt="collection-midia--white">
-						</span>
-					
-
-						<span class="side-nav__link"> Exposição </span>
-						
-					</a> --}}
 				
 				
 			</div>	

@@ -60,7 +60,9 @@ class PagesController extends Controller
 			->orderBy('view_count', 'desc')
 			->paginate(9);
 		} else {
-			$textos = Texto::with('notas')->paginate(9);
+			$textos = Texto::with('notas')
+			->orderBy('created_at', 'desc')
+			->paginate(9);
 		}
 
         return view('pages.texto.index')
@@ -85,7 +87,8 @@ class PagesController extends Controller
 			$fotos = Foto::orderBy('view_count', 'desc')
 			->paginate(15);
 		} else {
-			$fotos = Foto::paginate(15);
+			$fotos = Foto::orderBy('created_at', 'desc')
+			->paginate(15);
 		}
 
         return view('pages.fotografia.index')

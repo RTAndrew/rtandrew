@@ -1,0 +1,17 @@
+{
+    "slugify": {
+        "origin": "titulo",
+        "forceUpdate": true
+    }
+}
+
+
+
+
+
+{
+    "on" : "Yes",
+    "off" : "No",
+    "checked" : "true"
+}
+

@@ -67,7 +67,7 @@
 				<div class="foto__descricao">
 					
 					<p>
-						{{ $foto->descricao }}
+						{!! $foto->descricao !!}
 					</p>
 					
 
