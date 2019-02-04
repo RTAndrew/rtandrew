@@ -10,7 +10,7 @@
 
 	</div>
 
-	<div class="nav-categoria__right align-right">
+	<div class="nav-categoria__right nav-categoria__right--full-opacity align-right">
 		
 		{{-- Adicionar sempre a classe "icon-align" no svg --}}
 		{{ $icon2 }}

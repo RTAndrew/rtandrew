@@ -64,21 +64,21 @@
 
 					<div class="block">
 						<p class="block__bold">01</p>
-						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">Textos, Notas e Projectos</h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.3s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos. Para além disso, será aqui onde irei publicar pela primeira vez as minhas <i> mini-estórias</i>.</p>
+						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">Textos, Notas e Projectos</h3>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.3s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos. Para além disso, será aqui onde irei publicar pela primeira vez as minhas <i> mini-estórias</i>.</p>
 					</div>
 
 					<div class="block">
 						<p class="block__bold">02</p>
-						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s">Fotos e Experiências </h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.6s"> O grande prazer de <i>fotar</i> é experiência única que reside no processo inteiro. Desde as experiências e aventuras de BTT até aquilo que vivi ou senti ao pressionar o botão de <i>fotar</i>.    </p>
+						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s">Fotos e Experiências </h3>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.6s"> O grande prazer de <i>fotar</i> é experiência única que reside no processo inteiro. Desde as experiências e aventuras de BTT até aquilo que vivi ou senti ao pressionar o botão de <i>fotar</i>.    </p>
 					</div>
 
 					<div class="block">
 						<p class="block__bold">03</p>
-						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="2s"> A Entrevista & <i>Ex Umbra In Solem</i> </h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2.9s">Em uma entrevista, cheia de gargalos e pensamentos profundos, esforço-me para descrever quem realmente é o Rtandrew. E por fim, uma exposição com trabalhos que de alguma forma me embarcam para uma reminiscência divina. </p>
-						<span class="coming-soon wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="3.3s"> Brevemente... </span>
+						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s"> Entrevista & Exposição Virtual </h3>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.9s">Em uma entrevista, cheia de gargalos e pensamentos profundos, esforço-me para descrever quem realmente é o Rtandrew. E por fim, uma exposição, intitulada <i>Ex Umbra In Solem</i>, com trabalhos que de alguma forma me embarcam para uma reminiscência divina. </p>
+						<span class="coming-soon wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2s"> Brevemente... </span>
 					</div>
 				</div>
 
@@ -95,9 +95,9 @@
 			</h1>
 
 			<center> 
-				<a class="button secondary latin-word wow fadeInLeft" data-wow-duration="1.4s" data-wow-delay="0.5s" href="{{ route('texto') }}"> Textos </a>
+				<a class="button secondary latin-word wow fadeInLeft" data-wow-duration="1.4s" data-wow-delay="0.3s" href="{{ route('texto') }}"> Textos </a>
 
-				<a class="button button--cta wow fadeInRight" data-wow-duration="1.4s" data-wow-delay="0.5s" href="{{ route('fotografia') }}"> Fotografia </a>
+				<a class="button button--cta wow fadeInRight" data-wow-duration="1.4s" data-wow-delay="0.3s" href="{{ route('fotografia') }}"> Fotografia </a>
 			</center>
 		</div>
 	</section>

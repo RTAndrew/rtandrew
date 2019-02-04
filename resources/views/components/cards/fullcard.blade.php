@@ -42,9 +42,9 @@
 
 									<div class="grid-card__mask">
 										
-										<p class="grid-card__descricao">
-											{{ truncarDescricao( $texto->descricao) }}	
-										</p>
+										<div class="grid-card__descricao">
+											{!! $texto->descricao !!}	
+										</div>
 
 									</div>
 

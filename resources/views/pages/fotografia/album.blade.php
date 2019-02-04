@@ -44,9 +44,9 @@
 	<div class="album">
 			
 		<div class="album__hero" style="background: linear-gradient(
-		      rgba(0, 0, 0, 0.85),
-		      rgba(0, 0, 0, 0.85)
-		    ), url('{{ cloudinaryImagePath($album->image_hero_url, '20') }}') no-repeat center center fixed; 
+		      rgba(0, 0, 0, 0.70),
+		      rgba(0, 0, 0, 0.70)
+		    ), url('{{ cloudinaryImagePath($album->image_hero_url, '10') }}') no-repeat center center fixed; 
 		  -webkit-background-size: cover;">
 		
 			<div class="container">
@@ -60,7 +60,7 @@
 
 				<p id="i" class="album__descricao e">
 					
-					{{ $album->titulo }}
+					{!! $album->descricao !!}
 
 				</p>
 				
