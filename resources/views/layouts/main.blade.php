@@ -131,10 +131,69 @@
           new WOW().init();
     </script>
 
+{{-- Broken Image --}}
+	<script>
+		$('img').on("error", function() {
+			$(this).attr('src', '{{ asset('img/image-not-found.png') }}');
+		});	
+	</script>
 
 
+<script>
+	var nav = document.getElementById("topNav");
+	var main = document.getElementById("main");
+	var menu = document.getElementsByClassName("menuitems");
+	var close = document.getElementById("closebtn");
+	var menulist = document.getElementById("menulist");
+	var anim = document.getElementsByClassName("animate-header");
 
+	var navDefaultSize = "30px";
+	var navExtendedSize = "170px";
+//default to measure if/else from
+nav.style.height = navDefaultSize;
 
+// for (i = 0; i < menu.length; i++){menu[i].style.marginTop="100px";};
+
+close.addEventListener("click", function(){
+  var menuIcon = close.children;
+  for (i = 0; i < menuIcon.length; i++){
+  menuIcon[i].classList.toggle("active");
+  }   
+});
+
+function navToggle() {
+	
+	//to close
+	if (nav.style.height <= navExtendedSize) {
+			menulist.classList.add("is-inactive");
+			nav.style.height = "30px";
+			for (i = 0; i < anim.length; i++){anim[i].classList.remove("anim");};
+			
+			var i = 0;
+			for (i = 0; i < menu.length; i++){
+				menu[i].style.opacity="0.0";
+				// menu[i].style.marginTop="100px";
+			};
+		
+	} 
+	
+	//to open
+	else if (nav.style.height <= "30px") {
+		menulist.classList.remove("is-inactive");
+		for (i = 0; i < anim.length; i++){anim[i].classList.add("anim");};
+		nav.style.height = navExtendedSize;
+		// main.style.marginTop = "275px";
+		var i = 0;
+		for (i = 0; i < menu.length; i++){
+			menu[i].style.opacity="1.0";
+			// menu[i].style.marginTop="0px";
+		};
+		
+	}
+
+};
+
+</script>
 
 
 
