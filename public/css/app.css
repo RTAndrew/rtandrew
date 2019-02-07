@@ -1,49 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya:400,700|Source+Sans+Pro:400,600);.c-quem-ela-era-quem-ela-foi {
-  background: #ee9ca7;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#ffdde1), to(#ee9ca7));
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.c-poesia-suja {
-  background: #FF416C;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#FF4B2B), to(#FF416C));
-  background: linear-gradient(to right, #FF4B2B, #FF416C);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.c-o-que-o-tempo-nunca-disse {
-  background: #a8ff78;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#78ffd6), to(#a8ff78));
-  background: linear-gradient(to right, #78ffd6, #a8ff78);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.c-carpe-diem {
-  background: #CAC531;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#F3F9A7), to(#CAC531));
-  background: linear-gradient(to right, #F3F9A7, #CAC531);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.c-uma-especie-de-autobiografia {
-  background: #bdc3c7;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#2c3e50), to(#bdc3c7));
-  background: linear-gradient(to right, #2c3e50, #bdc3c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.texto__content .texto__descricao-wrapper,
+@import url(https://fonts.googleapis.com/css?family=Alegreya:400,700|Source+Sans+Pro:400,600);.texto__content .texto__descricao-wrapper,
 .container {
   width: 90%;
   margin: 0 auto;
@@ -734,14 +689,220 @@ header {
 }
 
 @media (max-width: 799px) {
-  .header--mobile {
+  .header--desktop {
     display: none;
   }
 }
 
 @media (min-width: 799px) {
-  .header--desktop {
+  .header--mobile {
     display: none;
+  }
+}
+
+.navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.navigation div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  list-style: none;
+  display: inline-block;
+}
+
+#topNav a {
+  text-decoration: none;
+}
+
+#topNav ul {
+  margin-top: 40px;
+  list-style: none;
+}
+
+.logo {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.line1,
+.line2,
+.line3 {
+  margin-top: 5px;
+  background-color: #fff;
+  width: 25px;
+  height: 3px;
+  display: block;
+  position: relative;
+  opacity: 1.0;
+  border-radius: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.line1.active {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  opacity: 0.0;
+  background-color: #67DDD1;
+  top: 5px;
+}
+
+.line2.active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #67DDD1;
+}
+
+.line3.active {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: #67DDD1;
+  top: -7px;
+}
+
+.menulist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.menulist.is-inactive {
+  display: none;
+}
+
+.menuitems {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.50051217em;
+  display: inline-block;
+  text-align: right !important;
+  opacity: 0.0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.menuitems.is-inactive:hover {
+  color: #67DDD1;
+}
+
+.menuitems.is-active {
+  color: #67DDD1;
+  font-weight: bold;
+}
+
+.animate-header {
+  width: 100%;
+}
+
+.menulist li a {
+  width: 100%;
+}
+
+.menulist li:nth-child(1) {
+  -webkit-animation-delay: .2s !important;
+          animation-delay: .2s !important;
+}
+
+.menulist li:nth-child(2) {
+  -webkit-animation-delay: 0.3s !important;
+          animation-delay: 0.3s !important;
+}
+
+.menulist li:nth-child(3) {
+  -webkit-animation-delay: 0.4s !important;
+          animation-delay: 0.4s !important;
+}
+
+.menulist li:nth-child(4) {
+  -webkit-animation-delay: 0.5s !important;
+          animation-delay: 0.5s !important;
+}
+
+#closebtn {
+  height: 25px;
+  width: 25px;
+  text-decoration: none;
+  z-index: 100;
+  color: #fff;
+  cursor: pointer;
+  trainsition: background-position .5s;
+}
+
+#topNav {
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+.anim {
+  -webkit-animation: b .8s both;
+          animation: b .8s both;
+  -webkit-animation-name: b;
+          animation-name: b;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes b {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes b {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
@@ -1333,7 +1494,7 @@ button {
   font-weight: 400;
   text-align: center;
   line-height: 1.2;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   text-transform: capitalize;
 }
 
@@ -1960,9 +2121,9 @@ button {
 
 .foto__hero img {
   margin: 0 auto;
-  min-width: 35%;
+  min-width: auto;
   max-width: 100%;
-  min-heght: 200px;
+  min-height: 200px;
   max-height: 550px;
 }
 

@@ -6,7 +6,7 @@
 				
 				@foreach ($fotos as $foto)
 					<a href=" {{ route('foto', $foto->slug)}} ">
-				        <img src="{{ cloudinaryImagePath($foto->image_url, '20') }}" alt="{{ $foto->titulo }}">
+				        <img src="{{ cloudinaryImagePath($foto->image_url, '20') }}" alt="{{ $foto->titulo }}" title="{{ $foto->titulo }}">
 				    </a>
 				@endforeach
 				
@@ -27,7 +27,7 @@
 				
 				@foreach ($prjs as $projecto)
 					<a href=" {{ route('textos.projectos', $projecto->slug)}} ">
-				        <img src="{{ cloudinaryImagePath($projecto->image_url, '20') }}" alt="{{ $projecto->titulo }}">
+				        <img src="{{ cloudinaryImagePath($projecto->image_url, '20') }}" alt="{{ $projecto->titulo }}" title="{{ $projecto->titulo }}">
 				    </a>
 				@endforeach
 				
