@@ -14,11 +14,11 @@
 	<!--FACEBOOK-->
 	    <meta property="og:image" content="{{ cloudinaryImagePath($foto->image_url, '') }}">
 	    
-	    <meta property="og:type" content="image" />
+	    <meta property="og:type" content="website" />
 	    
 	    <meta property="og:title" content="{{ $foto->titulo }}" />
 		<meta property="og:description" content="{!! truncarMetaDescription($foto->descricao) !!}" />
-	    <meta property="og:url" content="{{ route('foto', '$foto->slug') }}"/>
+	    <meta property="og:url" content="{{ route('foto', $foto->slug) }}"/>
 
 
 	<!-- TWITTER -->
