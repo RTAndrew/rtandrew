@@ -1,13 +1,43 @@
 @extends('layouts.textos')
 
+@section('titulo-pagina')
+	{{ $texto->titulo }} - 
+@endsection
+
+
+@section('metatags')
+
+
+	<!--FACEBOOK-->
+	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image:type" content="image/png">
+	    
+	    <meta property="og:type" content="article" />
+
+	    <meta property="og:title" content="{{ $texto->titulo }}" />
+		<meta property="og:description" content="{!! truncarMetaDescription($texto->descricao) !!}">
+	    <meta property="og:url" content="{{ route('textos.notas', $texto->slug) }}"/>
+
+
+			<meta property="article:author" content="Rtandrew Paul" />
+			<meta property="article:published_time" content="{{ $texto->created_at }}" />
+			<meta property="article:modified_time" content="{{ $texto->updated_at }}" />
+			<meta property="article:author" content="Rtandrew Paul" />
+
+
+	<!-- TWITTER -->
+		<meta name="twitter:card" content="summary" />
+		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
+		<meta name="twitter:title" content="{{ $texto->titulo }}" />
+		<meta name="twitter:description" content="{!! truncarMetaDescription($texto->descricao) !!}" />
+		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+@endsection
+
 
 
 
 @section('content')
 
-@section('titulo-pagina')
-{{ $texto->titulo }} - 
-@endsection
 
 
 
