@@ -37,16 +37,32 @@
 
 
 
+    <title> @yield('titulo-pagina') {{ config('app.name', 'Rtandrew Paul') }} @yield('titulo-pagina-after') </title>
 
 
 
 
 
-    <meta charset="utf-8">
+    <meta charset="text/html; utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="textos, contos, poemas, prosas, pensamentos, fotos, fotografias, aventuras, experiências">
+   
+    <meta property="og:locality" content="Luanda" />
+    <meta property="og:Angola" content="Angola" />
+    <meta property="og:locale" content="pt_PT" />
 
-    <title> @yield('titulo-pagina') {{ config('app.name', 'Rtandrew') }} </title>
-	
+			<meta property="og:site_name" content="{{ config('app.name', 'Rtandrew Paul') }}" />
+			<meta property="og:see_also" content="https://www.instagram.com/alkhemy.zavua/" />
+			<meta property="og:see_also" content="https://dribbble.com/Rtandrew" />
+			<meta property="og:see_also" content="https://www.pinterest.com/anderson_rodax/" />
+			<meta property="og:see_also" content="https://www.strava.com/athletes/13278283" />
+
+
+
+    @yield('metatags')
+
+
+
 	    <link rel="stylesheet" type="text/css" href=" {{ asset('css/app.css') }} ">
 	    <link href="{{ asset('vendor/cssanimation.min.css') }}" rel="stylesheet">
 	    {{-- <link href="{{ asset('vendor/pushbar/pushbar.css') }}" rel="stylesheet"> --}}

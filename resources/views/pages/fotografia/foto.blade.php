@@ -3,6 +3,38 @@
 
 
 
+@section('titulo-pagina')
+ {{ $foto->titulo }} - 
+@endsection
+
+
+@section('metatags')
+
+
+	<!--FACEBOOK-->
+	    <meta property="og:image" content="{{ cloudinaryImagePath($foto->image_url, '') }}">
+	    
+	    <meta property="og:type" content="image" />
+	    
+	    <meta property="og:title" content="{{ $foto->titulo }}" />
+		<meta property="og:description" content="{!! truncarMetaDescription($foto->descricao) !!}" />
+	    <meta property="og:url" content="{{ route('foto', '$foto->slug') }}"/>
+
+
+	<!-- TWITTER -->
+		<meta name="twitter:card" content="summary" />
+		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
+		<meta name="twitter:title" content="{{ $foto->titulo }}" />
+		<meta name="twitter:description" content="{!! truncarMetaDescription($foto->descricao) !!}" />
+		<meta name="twitter:image" content="{{ cloudinaryImagePath($foto->image_url, '') }}" />
+
+
+@endsection
+
+
+
+
+
 @section('content')
 
 

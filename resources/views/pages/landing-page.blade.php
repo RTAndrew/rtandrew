@@ -1,5 +1,39 @@
 @extends('layouts.main')
 
+
+
+@section('titulo-pagina-after')
+ - Textos, Contos, Fotografias, Aventuras e Experiências
+@endsection
+
+
+@section('metatags')
+
+	<meta name="description" content="Um acervo com as obras do Rtandrew Paul, desde textos, notas, contos, até fotografias, aventuras e experiências vividas ao pressionar o click para fotar.">
+
+	<!--FACEBOOK-->
+	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image:type" content="image/png">
+	    <meta property="og:type" content="website" />
+	    <meta property="og:url" content="{{ route('landing-page') }}"/>
+	    <meta property="og:title" content="{{ config('app.name', 'Rtandrew Paul') }}" />
+		<meta property="og:description" content="Desfrute de um acervo de textos criados em diferentes intensidades, e aprecie também aventuras e experiências vividas através da fotografia." />
+
+	<!-- TWITTER -->
+		<meta name="twitter:card" content="summary" />
+		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
+		<meta name="twitter:title" content="{{ config('app.name', 'Rtandrew Paul') }}" />
+		<meta name="twitter:description" content="Desfrute de um acervo de textos criados em diferentes intensidades, e aprecie também aventuras e experiências vividas através da fotografia." />
+		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+
+
+@endsection
+
+
+
+
+
+
 @section('stylesheet')
 
 	<link rel="stylesheet" type="text/css" href=" {{ asset('css/landing.css') }} ">
@@ -65,7 +99,7 @@
 					<div class="block">
 						<p class="block__bold">01</p>
 						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">Textos, Notas e Projectos</h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.3s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos. Para além disso, será aqui onde irei publicar pela primeira vez as minhas <i> mini-estórias</i>.</p>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.3s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos. Para além disso, será aqui onde irei publicar pela primeira vez os meus contos.</p>
 					</div>
 
 					<div class="block">

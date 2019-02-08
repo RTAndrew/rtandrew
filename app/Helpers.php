@@ -45,7 +45,13 @@ function romanNumerals($num) {
 
 
 
-
+// Truncar a descricao para o uso no METATAG
+function truncarMetaDescription($descricao) {
+    $strip_html_markup = strip_tags($descricao, '<br>');
+    $truncar = str_limit($strip_html_markup, 150);
+    $result_utf8 = html_entity_decode($truncar, ENT_QUOTES, "utf-8");
+    return str_replace("<br />", " ", $result_utf8);
+}
 
 
 
@@ -53,7 +59,7 @@ function romanNumerals($num) {
 // Truncar a descricao dos textos
 // Retornar String em formato UTF-8
 function truncarDescricao($descricao) {
-    $strip_html_markup = strip_tags($descricao, '<br />');
+    $strip_html_markup = strip_tags($descricao, '');
     $truncar = str_limit($strip_html_markup, 340);
     // $result_utf8 = html_entity_decode($truncar, ENT_QUOTES, "utf-8");
     return $truncar;
