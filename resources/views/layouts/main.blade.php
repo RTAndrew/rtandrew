@@ -45,10 +45,8 @@
 
     <meta charset="text/html; utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="textos, contos, poemas, prosas, pensamentos, fotos, fotografias, aventuras, experiências">
-   
-    <meta property="og:locality" content="Luanda" />
-    <meta property="og:Angola" content="Angola" />
+    <meta name="keywords" content="poesias, prosas, poemas, pensamentos, rtandrew paul, textos de rtandrew, textos angolanos, frases de escritores angolanos, poetas angolanos, poetas amadores em angola, escritores angolanos, escritores amadores em angola, artistas angolanos, contos de poetas angolanos, poesia suja, poemas sujos, poemas angolanos, poesia angolana, poesia de angola, fotos, fotar, fotos de luanda, fotos da cidade de luanda, fotos de angola, fotografias de angola, fotografos de angola, fotografos amadores em angola, fotografias de rtandrew, btt angola, aventuras de btt, experiencias de btt, exposição virtual, exposição de fotografia angola">
+
     <meta property="og:locale" content="pt_PT" />
 
 			<meta property="og:site_name" content="{{ config('app.name', 'Rtandrew Paul') }}" />
