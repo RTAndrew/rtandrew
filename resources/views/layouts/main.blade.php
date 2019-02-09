@@ -48,7 +48,7 @@
 					{ 
 					  "@context": "http://schema.org", 
 					  "@type": "WebSite", 
-					  "url": "http://www.rtandrew.com", 
+					  "url": "{{ url('/') }}", 
 					  "name": "Rtandrew Paul",
 					  "inLanguage": "pt",
 					  "additionalType": ["CreativeWork", "Person", "Organization"],
@@ -107,10 +107,10 @@
 					  "@context" : "http://schema.org",
 					  "@type": "Organization",
 					  "name": "Rtandrew Paul",
-					  "url" : "http://rtandrew.com",
+					  "url" : "{{ url('/') }}",
 					  "logo": {
 					    "@type": "ImageObject",
-					    "url": "http://rtandrew.com/img/logo-black.svg"
+					    "url": "{{ asset('img/logo-black.svg') }}"
 					  },
 					  "founders": {
 					    "@type": "Person",

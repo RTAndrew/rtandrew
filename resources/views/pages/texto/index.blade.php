@@ -2,6 +2,18 @@
 
 
 
+
+
+{{-- An ItemList to display rich snippets on google --}}
+@section('json-ld')
+	@include('components.json-ld.texto.to-render')
+@endsection
+
+
+
+
+
+
 @section('titulo-pagina-after')
  - Textos
 @endsection
