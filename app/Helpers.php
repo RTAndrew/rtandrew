@@ -45,6 +45,16 @@ function romanNumerals($num) {
 
 
 
+//Convert Text to HTML UTF-8
+function convertText2UTF($text) {
+    $convertion = html_entity_decode($text, ENT_QUOTES, "utf-8");
+    $arrayOfChars = array("\r", "\n", '"', '<div>', '</div>', '<p>', '</p>');
+    $removeChar = str_replace($arrayOfChars, '', $convertion);
+    return $removeChar;
+}
+
+
+
 // Truncar a descricao para o uso no METATAG
 function truncarMetaDescription($descricao) {
     $strip_html_markup = strip_tags($descricao, '<br>');
