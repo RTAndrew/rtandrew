@@ -7,7 +7,7 @@
 
 		<div class="navigation">
 			<div class="menu__logo">
-				<img class="site-logo" src="http://rtandrew.tk/img/logo-white.svg" alt="Logo Image">
+				<img class="site-logo" src="http://rtandrew.tk/img/logo-white.svg" alt="Website Logo Image">
 			</div>
 
 			<div id="closebtn" onclick="navToggle()">
@@ -61,7 +61,7 @@
 	</div>
 			
     <ul class="menu-header header--desktop">
-			<li class="menu__logo"> <a href="{{ route('landing-page') }}"> <img class="site-logo" src="{{ asset('img/logo-white.svg') }}" alt="Logo Image"> </a> </li>
+			<li class="menu__logo"> <a href="{{ route('landing-page') }}"> <img class="site-logo" src="{{ asset('img/logo-white.svg') }}" alt="Website Logo Image"> </a> </li>
 			{{-- <li class="menu__link {{ Request::is('texto' or 'texto/*') ? 'is-active' : 'is-inactive' }}"> <a href="{{ route('texto') }}"> Textos </a> </li> --}}
 			
 			<li class="menu__link 

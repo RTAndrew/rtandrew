@@ -5,7 +5,7 @@
 					<center> 
 						<div class="side-nav__header">
 							
-						<center> <img class="site-logo site-logo--side-nav" src=" {{ asset('img/rw-white.svg') }} "> </center>
+						<center> <img class="site-logo site-logo--side-nav" src=" {{ asset('img/rw-white.svg') }} " alt="Website Logo Image Alternative"> </center>
 
 						{{-- <img data-pushbar-close class="icon icon-x" src=" {{ asset('img/icons/x.svg') }} " alt="x-icon"> --}}
 						
@@ -32,7 +32,7 @@
 					<center> 
 						<div class="side-nav__header">
 							
-						<center> <img class="site-logo site-logo--side-nav" src=" {{ asset('img/rw-white.svg') }} "> </center>
+						<center> <img class="site-logo site-logo--side-nav" src=" {{ asset('img/rw-white.svg') }} " alt="Website Logo Image Alternative"> </center>
 
 						{{-- <img data-pushbar-close class="icon icon-x" src=" {{ asset('img/icons/x.svg') }} " alt="x-icon"> --}}
 						

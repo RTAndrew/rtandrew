@@ -1,6 +1,48 @@
 @extends('layouts.fotografia')
 
+@section('json-ld')
 
+	
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type":["ImageObject", "CreativeWork"],
+		"author": {
+			"@type": "Person",
+			"name": "Rtandrew Paul"
+		},
+		"url":"{{ route('foto', $foto->slug)}}",
+		"name":"{{ $foto->titulo }}",
+		"caption": "{!! convertText2UTF($foto->descricao) !!}",
+		"description": "{!! convertText2UTF($foto->descricao) !!}",
+		"copyrightHolder": {
+			"@type": "Person",
+			"name": "Rtandrew Paul"
+		},
+		"keywords": [
+	      "fotografia",
+	      "cidade de luanda",
+	      "fotografos angolanos",
+	      "images of luanda"
+	    ],
+		"representativeOfPage": "True",
+		"uploadDate": "{{ $foto->created_at }}",
+		"dateCreated": "{{ $foto->created_at }}",
+		"contentUrl": "{{ route('foto', $foto->slug)}}",
+		"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}",
+		"thumbnail": "{{ cloudinaryImagePath($foto->image_url, '') }}",
+		"interactionStatistic": {
+		    "@type": "InteractionCounter",
+		    "userInteractionCount": "{{ $foto->view_count }}"
+		},
+		"primaryImageOfPage": {
+		    "@type": "ImageObject",
+		    "thumbnail": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+		}
+	}
+	</script>
+
+@endsection
 
 
 @section('titulo-pagina')

@@ -37,6 +37,165 @@
 
 
 
+
+
+
+
+		<!-- Structered Markup -->
+			
+			<!-- Site Identification -->
+				<script type="application/ld+json">
+					{ 
+					  "@context": "http://schema.org", 
+					  "@type": "WebSite", 
+					  "url": "http://www.rtandrew.com", 
+					  "name": "Rtandrew Paul",
+					  "inLanguage": "pt",
+					  "additionalType": ["CreativeWork", "Person", "Organization"],
+					  "author": {
+						    "@type": "Person",
+						    "name": "Rtandrew Paul"
+					  },
+					  "description": "Rtandrew Paul is an alias used by Anderson K. Lando as a signature for his creative works.",
+					  "disambiguatingDescription": "Personal website of Anderson K. Lando",
+					  "publisher": "Anderson K. Lando",
+					  "keywords":[
+							"Poesias",
+							"Prosa",
+							"Poemas de Escritores Angolanos",
+							"Textos",
+							"Poemas",
+							"Contos",
+							"Information",
+							"Blog",
+							"BTT em Angola",
+							"BTT",
+							"Mountain Bike",
+							"Fotos de Luanda",
+							"Aventuras de BTT"
+					  	], 
+					  "hasPart": [
+							{
+								"@context": "http://schema.org/",
+								"@type": "WPHeader",
+								"@id": "#header",
+								"headline": "headline-string",
+								"cssSelector": "#header"
+								
+							},
+							{
+								"@context": "http://schema.org/",
+								"@type": "WPSidebar",
+								"cssSelector": ".sidebar"
+							},
+							{
+								"@context": "http://schema.org/",
+								"@type": "WPFooter",
+								"cssSelector": ".footer",
+								"@id": "#footer",
+								"copyrightHolder":"Rtandrew Paul",
+								"publisher": "Rtandrew Paul",
+								"copyrightYear":"{{ date('Y') }}"
+							}
+						]
+					}
+				</script>		
+
+			<!-- Organization Identification -->
+				<script type="application/ld+json">
+					{
+					  "@context" : "http://schema.org",
+					  "@type": "Organization",
+					  "name": "Rtandrew Paul",
+					  "url" : "http://rtandrew.com",
+					  "logo": {
+					    "@type": "ImageObject",
+					    "url": "http://rtandrew.com/img/logo-black.svg"
+					  },
+					  "founders": {
+					    "@type": "Person",
+					    "name": "Anderson K. Lando"
+					  },
+					  "sameAs" : [
+					            "https://www.instagram.com/alkhemy.zavua/",
+					            "https://www.pinterest.com/anderson_rodax/",
+					            "https://www.strava.com/athletes/13278283",
+					            "https://dribbble.com/Rtandrew",
+					            "https://github.com/RTAndrew"
+					  ],
+					   "address": {
+					    "@type": "PostalAddress",
+					    "addressLocality": "Luanda",
+					    "addressCountry": "AO"
+					  }
+					}
+				</script>
+
+
+
+			<!-- Person Identification -->
+			<script type="application/ld+json">
+				{
+				  "@context": "http://schema.org",
+				  "@type": "Person",
+				  "name": "Rtandrew Paul",
+				  "sameAs" : [
+				            "https://www.instagram.com/alkhemy.zavua/",
+				            "https://www.pinterest.com/anderson_rodax/",
+				            "https://www.strava.com/athletes/13278283",
+				            "https://dribbble.com/Rtandrew",
+				            "https://github.com/RTAndrew"
+				  ],
+				  "address": {
+				    "@type": "PostalAddress",
+				    "addressLocality": "Luanda",
+				    "addressCountry": "AO"
+				  }
+				}
+			</script>
+
+			
+
+
+
+
+
+			@yield('json-ld')
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <title> @yield('titulo-pagina') {{ config('app.name', 'Rtandrew Paul') }} @yield('titulo-pagina-after') </title>
 
 
@@ -45,7 +204,7 @@
 
     <meta charset="text/html; utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="poesias, prosas, poemas, pensamentos, rtandrew paul, textos de rtandrew, textos angolanos, frases de escritores angolanos, poetas angolanos, poetas amadores em angola, escritores angolanos, escritores amadores em angola, artistas angolanos, contos de poetas angolanos, poesia suja, poemas sujos, poemas angolanos, poesia angolana, poesia de angola, fotos, fotar, fotos de luanda, fotos da cidade de luanda, fotos de angola, fotografias de angola, fotografos de angola, fotografos amadores em angola, fotografias de rtandrew, btt angola, aventuras de btt, experiencias de btt, exposição virtual, exposição de fotografia angola">
+    <meta name="keywords" content="poesias, prosas, poemas, pensamentos, rtandrew paul, textos de rtandrew, textos angolanos, frases de escritores angolanos, poetas angolanos, poetas amadores em angola, escritores angolanos, escritores amadores em angola, artistas angolanos, contos de poetas angolanos, poesia suja, poemas sujos, poemas angolanos, poesia angolana, poesia de angola, fotos, fotar, fotos de luanda, fotos da cidade de luanda, fotos de angola, fotografias de angola, fotografos de angola, fotografos amadores em angola, btt angola, aventuras de btt, experiencias de btt, exposição virtual, exposição de fotografia angola">
 
     <meta property="og:locale" content="pt_PT" />
 
@@ -111,7 +270,7 @@
 
 
 	{{-- FOOTER --}}
-	<footer>
+	<footer id="footer" class="footer">
 		
 		{{-- RECEBER O FOOTER --}}
 			@include('inc.footer')
