@@ -3,6 +3,18 @@
 
 
 
+
+{{-- An ItemList to display rich snippets on google --}}
+@section('json-ld')
+	@include('components.json-ld.fotografia.to-render')
+@endsection
+
+
+
+
+
+
+
 @section('titulo-pagina-after')
  - Fotografias
 @endsection

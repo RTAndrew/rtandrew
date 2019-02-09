@@ -2,6 +2,59 @@
 
 
 
+
+
+{{-- An ItemList to display rich snippets on google --}}
+{{-- ImageGallery --}}
+@section('json-ld')
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type": "CollectionPage",
+			
+			"id": "{{ URL::current() }}",
+			"url": "{{ URL::current() }}",
+			
+			"description":"Um album de fotografia intitulado {{ $album->titulo }}",
+			    "mainEntityOfPage": {  
+					"@type": "ImageGallery",
+					"image": [
+						@foreach ($fotos as $foto)
+						@if ($loop->first)
+							{
+								"@type": "ImageObject",
+								"name": "{{ $foto->titulo }}",
+								"url": "{{ route('foto', $foto->slug)}}",
+								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+							},
+						@elseif ($loop->last)
+							{
+								"@type": "ImageObject",
+								"name": "{{ $foto->titulo }}",
+								"url": "{{ route('foto', $foto->slug)}}",
+								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+							}
+						@else
+							{
+								"@type": "ImageObject",
+								"name": "{{ $foto->titulo }}",
+								"url": "{{ route('foto', $foto->slug)}}",
+								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+							},
+						@endif
+						@endforeach
+					]
+			 	} 
+		}
+	</script>
+@endsection
+
+
+
+
+
+
+
 @section('titulo-pagina')
  {{ $album->titulo }} - 
 @endsection

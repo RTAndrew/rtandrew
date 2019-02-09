@@ -3,56 +3,57 @@
 @section('json-ld')
 
 	<script type="application/ld+json">
-	  {
-	    "@context":"http://schema.org",
-	    "@type": ["BlogPosting", "CreativeWork"],
-	    "image": "http://rtandrew.com/img/opengraph-image.png",
-	    "url": "{{ route('textos.texto', $texto->slug) }}",
-	    "headline": "{{ $texto->titulo }}",
-	    "dateCreated": "{{ $texto->created_at }}",
-	    "datePublished": "{{ $texto->created_at }}",
-	    "dateModified": "{{ $texto->updated_at }}",
-	    "inLanguage": "pt",
-	    "copyrightYear": "{{ date('Y') }}",
-	    "copyrightHolder": "Rtandrew Paul",
-	    "contentLocation": {
-	      "@type": "Place",
-	      "name": "Luanda, Angola"
-	    },
-	    "author": {
-	      "@type": "Organization",
-	      "name": "Rtandrew Paul"
-	    },
-	    "creator": {
-	      "@type": "Person",
-	      "name": "Rtandrew Paul"
-	    },
-	    "publisher": {
-			"@type": "Organization",
-			"name": "Rtandrew Paul",
-			"url": "http://rtandrew.com",
-			"logo": {
-				"@type": "ImageObject",
-				"url": "http://rtandrew.com/img/logo-black.svg"
+		{
+		    "@context":"http://schema.org",
+		    "@type": ["BlogPosting", "CreativeWork"],
+		    "image": "http://rtandrew.com/img/opengraph-image.png",
+		    "url": "{{ route('textos.texto', $texto->slug) }}",
+		    "headline": "{{ $texto->titulo }}",
+		    "dateCreated": "{{ $texto->created_at }}",
+		    "datePublished": "{{ $texto->created_at }}",
+		    "dateModified": "{{ $texto->updated_at }}",
+		    "inLanguage": "pt",
+		    "copyrightYear": "{{ date('Y') }}",
+		    "copyrightHolder": {
+				"@type": "Person",
+				"name": "Rtandrew Paul"
+			},
+		    "contentLocation": {
+		      "@type": "Place",
+		      "name": "Luanda, Angola"
+		    },
+		    "author": {
+		      "@type": "Organization",
+		      "name": "Rtandrew Paul"
+		    },
+		    "creator": {
+		      "@type": "Person",
+		      "name": "Rtandrew Paul"
+		    },
+		    "publisher": {
+				"@type": "Organization",
+				"name": "Rtandrew Paul",
+				"url": "{{ url('/') }}",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "{{ asset('img/logo-black.svg') }}"
+				}
+			},
+		    "mainEntityOfPage": "True",
+		    "keywords": [
+		      "textos",
+		      "poemas angolanos",
+		      "pensamentos",
+		      "poesia",
+		      "poema de escritores angolanos",
+		      "prosa"
+		    ],
+		    "articleBody": "{!! convertText2UTF($texto->descricao) !!}",
+		    "interactionStatistic": {
+			    "@type": "InteractionCounter",
+			    "userInteractionCount": "{{ $texto->view_count }}"
 			}
-		},
-	    "mainEntityOfPage": "True",
-	    "keywords": [
-	      "textos",
-	      "poemas angolanos",
-	      "pensamentos",
-	      "poesia",
-	      "poema de escritores angolanos",
-	      "prosa"
-	    ],
-	    "genre":["Inspirational","Projects", "Fiction Writing"],
-	    "articleSection": "Uncategorized posts",
-	    "articleBody": "{!! convertText2UTF($texto->descricao) !!}",
-	    "interactionStatistic": {
-		    "@type": "InteractionCounter",
-		    "userInteractionCount": "{{ $texto->view_count }}"
 		}
-	}
 	</script>
 
 @endsection
