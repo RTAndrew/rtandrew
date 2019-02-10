@@ -41,12 +41,185 @@
 
 
 
+		<!-- Structered Markup -->
+			
+			<!-- Site Identification -->
+				<script type="application/ld+json">
+					{ 
+					  "@context": "http://schema.org", 
+					  "@type": "WebSite", 
+					  "url": "{{ url('/') }}", 
+					  "name": "Rtandrew Paul",
+					  "inLanguage": "pt",
+					  "additionalType": ["CreativeWork", "Person", "Organization"],
+					  "author": {
+						    "@type": "Person",
+						    "name": "Rtandrew Paul"
+					  },
+					  "description": "Rtandrew Paul is an alias used by Anderson K. Lando as a signature for his creative works.",
+					  "disambiguatingDescription": "Personal website of Anderson K. Lando",
+					  "publisher": "Anderson K. Lando",
+					  "keywords":[
+							"Poesias",
+							"Prosa",
+							"Poemas de Escritores Angolanos",
+							"Textos",
+							"Poemas",
+							"Contos",
+							"Information",
+							"Blog",
+							"BTT em Angola",
+							"BTT",
+							"Mountain Bike",
+							"Fotos de Luanda",
+							"Aventuras de BTT"
+					  	], 
+					  "hasPart": [
+							{
+								"@context": "http://schema.org/",
+								"@type": "WPHeader",
+								"@id": "#header",
+								"headline": "headline-string",
+								"cssSelector": "#header"
+								
+							},
+							{
+								"@context": "http://schema.org/",
+								"@type": "WPSidebar",
+								"cssSelector": ".sidebar"
+							},
+							{
+								"@context": "http://schema.org/",
+								"@type": "WPFooter",
+								"cssSelector": ".footer",
+								"@id": "#footer",
+								"copyrightHolder":"Rtandrew Paul",
+								"publisher": "Rtandrew Paul",
+								"copyrightYear":"{{ date('Y') }}"
+							}
+						]
+					}
+				</script>		
 
-    <meta charset="utf-8">
+			<!-- Organization Identification -->
+				<script type="application/ld+json">
+					{
+					  "@context" : "http://schema.org",
+					  "@type": "Organization",
+					  "name": "Rtandrew Paul",
+					  "url" : "{{ url('/') }}",
+					  "logo": {
+					    "@type": "ImageObject",
+					    "url": "{{ asset('img/logo-black.svg') }}"
+					  },
+					  "founders": {
+					    "@type": "Person",
+					    "name": "Anderson K. Lando"
+					  },
+					  "sameAs" : [
+					            "https://www.instagram.com/alkhemy.zavua/",
+					            "https://www.pinterest.com/anderson_rodax/",
+					            "https://www.strava.com/athletes/13278283",
+					            "https://dribbble.com/Rtandrew",
+					            "https://github.com/RTAndrew"
+					  ],
+					   "address": {
+					    "@type": "PostalAddress",
+					    "addressLocality": "Luanda",
+					    "addressCountry": "AO"
+					  }
+					}
+				</script>
+
+
+
+			<!-- Person Identification -->
+			<script type="application/ld+json">
+				{
+				  "@context": "http://schema.org",
+				  "@type": "Person",
+				  "name": "Rtandrew Paul",
+				  "sameAs" : [
+				            "https://www.instagram.com/alkhemy.zavua/",
+				            "https://www.pinterest.com/anderson_rodax/",
+				            "https://www.strava.com/athletes/13278283",
+				            "https://dribbble.com/Rtandrew",
+				            "https://github.com/RTAndrew"
+				  ],
+				  "address": {
+				    "@type": "PostalAddress",
+				    "addressLocality": "Luanda",
+				    "addressCountry": "AO"
+				  }
+				}
+			</script>
+
+			
+
+
+
+
+
+			@yield('json-ld')
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <title> @yield('titulo-pagina') {{ config('app.name', 'Rtandrew Paul') }} @yield('titulo-pagina-after') </title>
+
+
+
+
+
+    <meta charset="text/html; utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="poesias, prosas, poemas, pensamentos, rtandrew paul, textos de rtandrew, textos angolanos, frases de escritores angolanos, poetas angolanos, poetas amadores em angola, escritores angolanos, escritores amadores em angola, artistas angolanos, contos de poetas angolanos, poesia suja, poemas sujos, poemas angolanos, poesia angolana, poesia de angola, fotos, fotar, fotos de luanda, fotos da cidade de luanda, fotos de angola, fotografias de angola, fotografos de angola, fotografos amadores em angola, btt angola, aventuras de btt, experiencias de btt, exposição virtual, exposição de fotografia angola">
 
-    <title> @yield('titulo-pagina') {{ config('app.name', 'Rtandrew') }} </title>
-	
+    <meta property="og:locale" content="pt_PT" />
+
+			<meta property="og:site_name" content="{{ config('app.name', 'Rtandrew Paul') }}" />
+			<meta property="og:see_also" content="https://www.instagram.com/alkhemy.zavua/" />
+			<meta property="og:see_also" content="https://dribbble.com/Rtandrew" />
+			<meta property="og:see_also" content="https://www.pinterest.com/anderson_rodax/" />
+			<meta property="og:see_also" content="https://www.strava.com/athletes/13278283" />
+
+
+
+    @yield('metatags')
+
+
+
 	    <link rel="stylesheet" type="text/css" href=" {{ asset('css/app.css') }} ">
 	    <link href="{{ asset('vendor/cssanimation.min.css') }}" rel="stylesheet">
 	    {{-- <link href="{{ asset('vendor/pushbar/pushbar.css') }}" rel="stylesheet"> --}}
@@ -97,7 +270,7 @@
 
 
 	{{-- FOOTER --}}
-	<footer>
+	<footer id="footer" class="footer">
 		
 		{{-- RECEBER O FOOTER --}}
 			@include('inc.footer')
@@ -131,10 +304,69 @@
           new WOW().init();
     </script>
 
+{{-- Broken Image --}}
+	<script>
+		$('img').on("error", function() {
+			$(this).attr('src', '{{ asset('img/image-not-found.png') }}');
+		});	
+	</script>
 
 
+<script>
+	var nav = document.getElementById("topNav");
+	var main = document.getElementById("main");
+	var menu = document.getElementsByClassName("menuitems");
+	var close = document.getElementById("closebtn");
+	var menulist = document.getElementById("menulist");
+	var anim = document.getElementsByClassName("animate-header");
 
+	var navDefaultSize = "30px";
+	var navExtendedSize = "170px";
+//default to measure if/else from
+nav.style.height = navDefaultSize;
 
+// for (i = 0; i < menu.length; i++){menu[i].style.marginTop="100px";};
+
+close.addEventListener("click", function(){
+  var menuIcon = close.children;
+  for (i = 0; i < menuIcon.length; i++){
+  menuIcon[i].classList.toggle("active");
+  }   
+});
+
+function navToggle() {
+	
+	//to close
+	if (nav.style.height <= navExtendedSize) {
+			menulist.classList.add("is-inactive");
+			nav.style.height = "30px";
+			for (i = 0; i < anim.length; i++){anim[i].classList.remove("anim");};
+			
+			var i = 0;
+			for (i = 0; i < menu.length; i++){
+				menu[i].style.opacity="0.0";
+				// menu[i].style.marginTop="100px";
+			};
+		
+	} 
+	
+	//to open
+	else if (nav.style.height <= "30px") {
+		menulist.classList.remove("is-inactive");
+		for (i = 0; i < anim.length; i++){anim[i].classList.add("anim");};
+		nav.style.height = navExtendedSize;
+		// main.style.marginTop = "275px";
+		var i = 0;
+		for (i = 0; i < menu.length; i++){
+			menu[i].style.opacity="1.0";
+			// menu[i].style.marginTop="0px";
+		};
+		
+	}
+
+};
+
+</script>
 
 
 

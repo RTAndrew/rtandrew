@@ -1,5 +1,39 @@
 @extends('layouts.main')
 
+
+
+@section('titulo-pagina-after')
+- Textos, Fotografias e Experiências
+@endsection
+
+
+@section('metatags')
+
+	<meta name="description" content="Um acervo com as obras do Rtandrew Paul, desde textos, notas, contos, até fotografias, aventuras e experiências vividas ao pressionar o click para fotar.">
+
+	<!--FACEBOOK-->
+	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image:type" content="image/png">
+	    <meta property="og:type" content="website" />
+	    <meta property="og:url" content="{{ route('landing-page') }}"/>
+	    <meta property="og:title" content="{{ config('app.name', 'Rtandrew Paul') }}" />
+		<meta property="og:description" content="Desfrute de um acervo com as obras do Rtandrew Paul, desde textos, notas, contos, até fotografias, aventuras e experiências vividas ao pressionar o click para fotar." />
+
+	<!-- TWITTER -->
+		<meta name="twitter:card" content="summary" />
+		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
+		<meta name="twitter:title" content="{{ config('app.name', 'Rtandrew Paul') }}" />
+		<meta name="twitter:description" content="Desfrute de um acervo com as obras do Rtandrew Paul, desde textos, notas, contos, até fotografias, aventuras e experiências vividas ao pressionar o click para fotar." />
+		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+
+
+@endsection
+
+
+
+
+
+
 @section('stylesheet')
 
 	<link rel="stylesheet" type="text/css" href=" {{ asset('css/landing.css') }} ">
@@ -64,20 +98,20 @@
 
 					<div class="block">
 						<p class="block__bold">01</p>
-						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">Textos, Notas e Projectos</h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.3s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos. Para além disso, será aqui onde irei publicar pela primeira vez as minhas <i> mini-estórias</i>.</p>
+						<h1 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">Textos, Notas e Contos</h1>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.3s">Todos os textos, novos ou actualizados, serão enviados sempre que concluídos. Para além disso, será aqui onde irei publicar pela primeira vez os meus contos.</p>
 					</div>
 
 					<div class="block">
 						<p class="block__bold">02</p>
-						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s">Fotos e Experiências </h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.6s"> O grande prazer de <i>fotar</i> é experiência única que reside no processo inteiro. Desde as experiências e aventuras de BTT até aquilo que vivi ou senti ao pressionar o botão de <i>fotar</i>.    </p>
+						<h1 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s">Fotos e Experiências </h1>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.6s"> O grande prazer de <i>fotar</i> é experiência única que reside no processo inteiro. Desde as experiências e aventuras de BTT até aquilo que vivi ao pressionar o botão de <i>fotar</i>.    </p>
 					</div>
 
 					<div class="block">
 						<p class="block__bold">03</p>
-						<h3 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s"> Entrevista & Exposição Virtual </h3>
-						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.9s">Em uma entrevista, cheia de gargalos e pensamentos profundos, esforço-me para descrever quem realmente é o Rtandrew. E por fim, uma exposição, intitulada <i>Ex Umbra In Solem</i>, com trabalhos que de alguma forma me embarcam para uma reminiscência divina. </p>
+						<h1 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s"> Entrevista & Exposição Virtual </h1>
+						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.9s">Em uma entrevista, cheia de gargalos e pensamentos profundos, esforço-me para descrever quem realmente é o Rtandrew. E por fim, uma exposição virtual, intitulada <i>Ex Umbra In Solem</i>, com trabalhos que de alguma forma me embarcam para uma reminiscência divina. </p>
 						<span class="coming-soon wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2s"> Brevemente... </span>
 					</div>
 				</div>

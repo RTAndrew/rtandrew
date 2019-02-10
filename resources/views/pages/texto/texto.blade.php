@@ -1,13 +1,102 @@
 @extends('layouts.textos')
 
+@section('json-ld')
+
+	<script type="application/ld+json">
+		{
+		    "@context":"http://schema.org",
+		    "@type": ["BlogPosting", "CreativeWork"],
+		    "image": "http://rtandrew.com/img/opengraph-image.png",
+		    "url": "{{ route('textos.texto', $texto->slug) }}",
+		    "headline": "{{ $texto->titulo }}",
+		    "dateCreated": "{{ $texto->created_at }}",
+		    "datePublished": "{{ $texto->created_at }}",
+		    "dateModified": "{{ $texto->updated_at }}",
+		    "inLanguage": "pt",
+		    "copyrightYear": "{{ date('Y') }}",
+		    "copyrightHolder": {
+				"@type": "Person",
+				"name": "Rtandrew Paul"
+			},
+		    "contentLocation": {
+		      "@type": "Place",
+		      "name": "Luanda, Angola"
+		    },
+		    "author": {
+		      "@type": "Organization",
+		      "name": "Rtandrew Paul"
+		    },
+		    "creator": {
+		      "@type": "Person",
+		      "name": "Rtandrew Paul"
+		    },
+		    "publisher": {
+				"@type": "Organization",
+				"name": "Rtandrew Paul",
+				"url": "{{ url('/') }}",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "{{ asset('img/logo-black.svg') }}"
+				}
+			},
+		    "mainEntityOfPage": "True",
+		    "keywords": [
+		      "textos",
+		      "poemas angolanos",
+		      "pensamentos",
+		      "poesia",
+		      "poema de escritores angolanos",
+		      "prosa"
+		    ],
+		    "articleBody": "{!! convertText2UTF($texto->descricao) !!}",
+		    "interactionStatistic": {
+			    "@type": "InteractionCounter",
+			    "userInteractionCount": "{{ $texto->view_count }}"
+			}
+		}
+	</script>
+
+@endsection
+
+
+@section('titulo-pagina')
+	{{ $texto->titulo }} - 
+@endsection
+
+
+@section('metatags')
+
+
+	<!--FACEBOOK-->
+	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image:type" content="image/png">
+	    
+	    <meta property="og:type" content="article" />
+
+	    <meta property="og:title" content="{{ $texto->titulo }}" />
+		<meta property="og:description" content="{!! truncarMetaDescription($texto->descricao) !!}">
+	    <meta property="og:url" content="{{ route('textos.notas', $texto->slug) }}"/>
+
+
+			<meta property="article:author" content="Rtandrew Paul" />
+			<meta property="article:published_time" content="{{ $texto->created_at }}" />
+			<meta property="article:modified_time" content="{{ $texto->updated_at }}" />
+			<meta property="article:author" content="Rtandrew Paul" />
+
+
+	<!-- TWITTER -->
+		<meta name="twitter:card" content="summary" />
+		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
+		<meta name="twitter:title" content="{{ $texto->titulo }}" />
+		<meta name="twitter:description" content="{!! truncarMetaDescription($texto->descricao) !!}" />
+		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+@endsection
+
 
 
 
 @section('content')
 
-@section('titulo-pagina')
-{{ $texto->titulo }} - 
-@endsection
 
 
 
