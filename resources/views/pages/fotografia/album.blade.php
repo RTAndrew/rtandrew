@@ -69,7 +69,7 @@
 	    <meta property="og:type" content="website" />
 	    
 	    <meta property="og:title" content="{{ $album->titulo }}" />
-		<meta property="og:description" content="{!! truncarMetaDescription($album->descricao) !!}" />
+		<meta property="og:description" content="Veja este album de fotos e muito mais outros criados pelo Rtandrew Paul" />
 	    <meta property="og:url" content="{{ route('album', $album->slug) }}"/>
 
 
@@ -77,7 +77,7 @@
 		<meta name="twitter:card" content="summary" />
 		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
 		<meta name="twitter:title" content="{{ $album->titulo }}" />
-		<meta name="twitter:description" content="{!! truncarMetaDescription($album->descricao) !!}" />
+		<meta name="twitter:description" content="Veja este album de fotos e muito mais outros criados pelo Rtandrew Paul" />
 		<meta name="twitter:image" content="{{ cloudinaryImagePath($album->image_url, '') }}" />
 
 
