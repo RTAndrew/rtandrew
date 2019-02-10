@@ -23,13 +23,13 @@
 			$url = url()->current();
 		@endphp
 		
-			<a href="{{ url()->current() .'?order=recente' }}" class="nav-categoria__ordem {{(request()->order == 'recente' or request()->order == '' ) ? 'is-active' : ''}}">
+			<a href="{{ url()->current()}}" class="nav-categoria__ordem {{(request()->order == 'recente' or request()->order == '' ) ? 'is-active' : ''}}">
 				Recente
 			</a> 
 
 			<span> | </span>		
 
-			<a href="{{ url()->current() .'?order=popular' }}" class="nav-categoria__ordem {{request()->order == 'popular' ? 'is-active' : ''}}">
+			<a rel="canonical" href="{{ url()->current() .'?order=popular' }}" class="nav-categoria__ordem {{request()->order == 'popular' ? 'is-active' : ''}}">
 				Popular
 			</a>
 	</div>

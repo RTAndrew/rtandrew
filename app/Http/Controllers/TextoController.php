@@ -162,11 +162,11 @@ class TextoController extends Controller
 				->paginate(9);
 			}
 
+			// return $categoria;	
+
 			// return $textos;
 			return view('pages.texto.notas')
-	        ->with('categoria_color', $categoria_color)
-	        ->with('categoria_nome', $categoria_nome)
-	        ->with('categoria_descricao', $categoria_descricao)
+	        ->with('categoria', $categoria)
 	        ->with('notas', $notas)
 	        ->with('textos', $textos)
 	        ->with('projectos', $projectos);

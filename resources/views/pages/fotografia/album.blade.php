@@ -2,6 +2,90 @@
 
 
 
+
+
+{{-- An ItemList to display rich snippets on google --}}
+{{-- ImageGallery --}}
+@section('json-ld')
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type": "CollectionPage",
+			
+			"id": "{{ URL::current() }}",
+			"url": "{{ URL::current() }}",
+			
+			"description":"Um album de fotografia intitulado {{ $album->titulo }}",
+			    "mainEntityOfPage": {  
+					"@type": "ImageGallery",
+					"image": [
+						@foreach ($fotos as $foto)
+						@if ($loop->first)
+							{
+								"@type": "ImageObject",
+								"name": "{{ $foto->titulo }}",
+								"url": "{{ route('foto', $foto->slug)}}",
+								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+							},
+						@elseif ($loop->last)
+							{
+								"@type": "ImageObject",
+								"name": "{{ $foto->titulo }}",
+								"url": "{{ route('foto', $foto->slug)}}",
+								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+							}
+						@else
+							{
+								"@type": "ImageObject",
+								"name": "{{ $foto->titulo }}",
+								"url": "{{ route('foto', $foto->slug)}}",
+								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+							},
+						@endif
+						@endforeach
+					]
+			 	} 
+		}
+	</script>
+@endsection
+
+
+
+
+
+
+
+@section('titulo-pagina')
+ {{ $album->titulo }} - 
+@endsection
+
+
+@section('metatags')
+
+
+	<!--FACEBOOK-->
+	    <meta property="og:image" content="{{ cloudinaryImagePath($album->image_hero_url, '') }}">
+	    
+	    <meta property="og:type" content="website" />
+	    
+	    <meta property="og:title" content="{{ $album->titulo }}" />
+		<meta property="og:description" content="{!! truncarMetaDescription($album->descricao) !!}" />
+	    <meta property="og:url" content="{{ route('album', $album->slug) }}"/>
+
+
+	<!-- TWITTER -->
+		<meta name="twitter:card" content="summary" />
+		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
+		<meta name="twitter:title" content="{{ $album->titulo }}" />
+		<meta name="twitter:description" content="{!! truncarMetaDescription($album->descricao) !!}" />
+		<meta name="twitter:image" content="{{ cloudinaryImagePath($album->image_url, '') }}" />
+
+
+@endsection
+
+
+
+
 @section('content')
 
 
