@@ -7,7 +7,7 @@
 	"position":"{{ $loop->iteration }}",
 	"item": {
         "@type": ["BlogPosting", "CreativeWork"],
-	    "image": "http://rtandrew.com/img/opengraph-image.png",
+	    "image": "{{ asset('img/opengraph-image.png') }}",
 	    "url": "{{ route('textos.texto', $texto->slug) }}",
 	    "headline": "{{ $texto->titulo }}",
 	    "dateCreated": "{{ $texto->created_at }}",
