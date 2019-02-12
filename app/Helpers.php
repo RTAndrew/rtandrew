@@ -44,7 +44,7 @@ function romanNumerals($num) {
 }
 
 function getSiteIdentityImage() {
-    $image = 'public/img/opengraph-image.jpg';
+    $image = 'img/opengraph-image.jpg';
     return $image;
 }
 
