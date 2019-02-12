@@ -26,7 +26,7 @@
 		
 	
 
-	<a class="social-media-share__icon" href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="{{ {{ asset('img/opengraph-image.jpg') }} }}" target="_blank">
+	<a class="social-media-share__icon" href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="{{ asset('img/opengraph-image.jpg') }}" target="_blank">
 		{{-- <img src="{{ asset('img/icons/social-midia/c-pinterest.svg') }}" alt="Pinterest Icon" title="Share on Pinterest"> --}}
 	</a>
 </div>
