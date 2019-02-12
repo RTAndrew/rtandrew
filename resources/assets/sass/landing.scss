@@ -121,17 +121,17 @@
 	  // background-position: 50px 1150px 700px;
 	  // background-position: right 10em bottom 3em;
 
-	  @media (min-width: 600px) {
-	  	background: url('../img/topography-bg--768.svg') no-repeat center center; 
-	  }
-
-	  @media (min-width: 770px) {
-	  	background: url('../img/topography-bg--1440.svg') no-repeat center center; 
-	  }
-
-	  @media (min-width: 1441px) {
+	  @media (min-width: 800px) {
 	  	background: url('../img/topography-bg--superwide.svg') no-repeat center center; 
 	  }
+
+	  // @media (min-width: 770px) {
+	  // 	background: url('../img/topography-bg--1440.svg') no-repeat center center; 
+	  // }
+
+	  // @media (min-width: 1441px) {
+	  // 	background: url('../img/topography-bg--superwide.svg') no-repeat center center; 
+	  // }
 }
 
 
@@ -317,21 +317,21 @@
 		background: linear-gradient(
 				      rgba(0, 0, 0, 0.55),
 				      rgba(0, 0, 0, 0.55)
-				    ), url('../img/photocollage-bg--768.png') no-repeat center center;
+				    ), url('../img/photocollage-bg--768.jpg') no-repeat center center;
 	}
 	
 	@media (min-width: 769px) {
 		background:  linear-gradient(
 				      rgba(0, 0, 0, 0.55),
 				      rgba(0, 0, 0, 0.55)
-				    ), url('../img/photocollage-bg--1200.png') no-repeat center center;
+				    ), url('../img/photocollage-bg--1200.jpg') no-repeat center center;
 	}
 	
 	@media (min-width: 1201px) {
 		background:  linear-gradient(
 				      rgba(0, 0, 0, 0.55),
 				      rgba(0, 0, 0, 0.55)
-				    ),  url('../img/photocollage-bg--superwide.png') no-repeat center center;
+				    ),  url('../img/photocollage-bg--superwide.jpg') no-repeat center center;
 	}
 
 	.button {

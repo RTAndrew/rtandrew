@@ -134,6 +134,14 @@
 			line-height: 1.8;
 		}
 	}
+
+	a {
+		border-bottom: 2px solid $acent;
+		&:hover{
+			color: $acent-strong;
+			transition: 0.2s;
+		}
+	}
 }
 
 

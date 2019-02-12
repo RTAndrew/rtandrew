@@ -295,6 +295,12 @@
 	</script>
 
 
+{{-- Pinterest Buttom --}}
+<script
+    type="text/javascript"
+    async defer
+    src="//assets.pinterest.com/js/pinit.js"
+></script>
 
 
 <!-- SCROLL REVEAL -->
@@ -311,7 +317,7 @@
 		});	
 	</script>
 
-
+{{-- JS for the Mobile Header --}}
 <script>
 	var nav = document.getElementById("topNav");
 	var main = document.getElementById("main");
