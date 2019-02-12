@@ -119,6 +119,26 @@
 		<div class="foto__content">
 			<div class="container">
 
+				<div>
+					@component('components.social-media-share')
+						@slot('link')
+							{{ route('foto', $foto->slug) }}
+						@endslot
+						
+						@slot('titulo')
+							{{ $foto->titulo }}
+						@endslot
+						
+						@slot('descricao')
+							{{ truncarMetaDescription($foto->descricao) }}
+						@endslot
+
+						@slot('imagem')
+							{{ cloudinaryImagePath($foto->image_url, '') }}
+						@endslot
+					@endcomponent
+				</div>
+
 				@if ($foto->album->count() > 0 )
 					
 					<div class="foto__album">
