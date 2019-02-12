@@ -24,7 +24,7 @@
 	<meta name="description" content="Textos em diferentes intensidades e categorizados em notas, e, como também, contos para apreciar em qualquer mood. ">
 
 	<!--FACEBOOK-->
-	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image" content="{{ asset(getSiteIdentityImage()) }}">
 	    <meta property="og:image:type" content="image/png">
 	    <meta property="og:type" content="website" />
 	    <meta property="og:url" content="{{ route('texto') }}"/>
@@ -36,7 +36,7 @@
 		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
 		<meta name="twitter:title" content="{{ config('app.name', 'Rtandrew Paul') }}" />
 		<meta name="twitter:description" content="Textos em diferentes intensidades e categorizados em notas, e, como também, contos para apreciar em qualquer mood." />
-		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+		<meta name="twitter:image" content="{{ asset(getSiteIdentityImage()) }}" />
 
 
 @endsection
