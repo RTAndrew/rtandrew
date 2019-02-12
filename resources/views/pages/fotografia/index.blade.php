@@ -24,7 +24,7 @@
 	<meta name="description" content="Fotografias capturadas com a câmera e telemóvel, junto de sua experiência ou aventura vivida.">
 
 	<!--FACEBOOK-->
-	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image" content="{{ asset(getSiteIdentityImage()) }}">
 	    <meta property="og:image:type" content="image/png">
 	    <meta property="og:type" content="website" />
 	    <meta property="og:url" content="{{ route('fotografia') }}"/>
@@ -36,7 +36,7 @@
 		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
 		<meta name="twitter:title" content="{{ config('app.name', 'Rtandrew Paul') }}" />
 		<meta name="twitter:description" content="Fotografias capturadas com a câmera e telemóvel, junto de sua experiência ou aventura vivida." />
-		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+		<meta name="twitter:image" content="{{ asset(getSiteIdentityImage()) }}" />
 
 
 @endsection

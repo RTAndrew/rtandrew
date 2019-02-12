@@ -6,7 +6,7 @@
 		{
 		    "@context":"http://schema.org",
 		    "@type": ["BlogPosting", "CreativeWork"],
-		    "image": "http://rtandrew.com/img/opengraph-image.png",
+		    "image": "http://rtandrew.com/img/opengraph-image.jpg",
 		    "url": "{{ route('textos.texto', $texto->slug) }}",
 		    "headline": "{{ $texto->titulo }}",
 		    "dateCreated": "{{ $texto->created_at }}",
@@ -68,7 +68,7 @@
 
 
 	<!--FACEBOOK-->
-	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image" content="{{ asset(getSiteIdentityImage()) }}">
 	    <meta property="og:image:type" content="image/png">
 	    
 	    <meta property="og:type" content="article" />
@@ -89,7 +89,7 @@
 		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
 		<meta name="twitter:title" content="{{ $texto->titulo }}" />
 		<meta name="twitter:description" content="{!! truncarMetaDescription($texto->descricao) !!}" />
-		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+		<meta name="twitter:image" content="{{ asset(getSiteIdentityImage()) }}" />
 @endsection
 
 
@@ -227,7 +227,7 @@
 							@endslot
 
 							@slot('imagem')
-							
+								{{ asset('img/opengraph-image.jpg') }}
 							@endslot
 						@endcomponent
 					</div>
