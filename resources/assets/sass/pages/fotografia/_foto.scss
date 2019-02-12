@@ -73,7 +73,7 @@
 
 .foto__album {
 	max-width: 100%;
-	// font-size: ms(2);
+	margin: 1em 0 3em;
 	font-family: $sans-serif;
 	
 	
@@ -115,16 +115,12 @@
 
 .foto__titulo {
 	font-size: ms(10);
-	margin-top: 1em;
-	// line-height: 1.2;
 	text-transform: capitalize;
 }
 
 
 
 .foto__descricao {
-	font-size: ms(4);
-	// margin-top: 2em;
 
 	p {
 		margin: 1.3em 0;
@@ -132,7 +128,9 @@
 
 		@media (min-width: 600px) {
 			line-height: 1.8;
+			font-size: ms(4);
 		}
+
 	}
 
 	a {
