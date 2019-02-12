@@ -21,10 +21,16 @@
 		<img src="{{ asset('img/icons/social-midia/c-facebook.svg') }}" alt="Facebook Icon" title="Share on Facebook">
 	</a>
 	
-	<a class="social-media-share__icon" href="https://www.pinterest.com/pin/create/button/" data-pin-id="" data-pin-do="buttonPin" 
+	{{-- <a class="social-media-share__icon" href="https://www.pinterest.com/pin/create/button/" data-pin-id="" data-pin-do="buttonPin" 
 	data-pin-media="@if ($imagem == '' || $imagem == null) {{ asset('img/opengraph-image.jpg') }} @else	{{ $imagem }} @endif" target="_blank">
-		{{-- <img src="{{ asset('img/icons/social-midia/c-pinterest.svg') }}" alt="Pinterest Icon" title="Share on Pinterest"> --}}
+		<img src="{{ asset('img/icons/social-midia/c-pinterest.svg') }}" alt="Pinterest Icon" title="Share on Pinterest">
 	</a>
+	 --}}
+	<a class="social-media-share__icon" href="http://pinterest.com/pin/create/button/?url={{ $link }}&media={{ $imagem }}&description={{ $titulo }} - Rtandrew Paul" target="_blank">
+		<img src="{{ asset('img/icons/social-midia/c-pinterest.svg') }}" alt="Pinterest Icon" title="Share on Pinterest">
+	</a>
+
+
 </div>
 
 

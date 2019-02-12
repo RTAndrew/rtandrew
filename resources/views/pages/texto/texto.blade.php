@@ -227,7 +227,7 @@
 							@endslot
 
 							@slot('imagem')
-								{{ asset('img/opengraph-image.jpg') }}
+								{{ asset(getSiteIdentityImage()) }}
 							@endslot
 						@endcomponent
 					</div>
