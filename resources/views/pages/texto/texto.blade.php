@@ -226,8 +226,6 @@
 								{{ truncarMetaDescription($texto->descricao) }}
 							@endslot
 
-							@slot('imagem')
-							@endslot
 						@endcomponent
 					</div>
 				
