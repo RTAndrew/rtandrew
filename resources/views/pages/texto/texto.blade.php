@@ -211,6 +211,25 @@
 
 						</div>
 					@endif
+					
+					<div class=" wow animated fadeIn" data-wow-duration="1.4s" data-wow-delay="0.7s">	
+						@component('components.social-media-share')
+							@slot('link')
+								{{ route('textos.texto', $texto->slug) }}
+							@endslot
+							
+							@slot('titulo')
+								{{ $texto->titulo }}
+							@endslot
+							
+							@slot('descricao')
+								{{ truncarMetaDescription($texto->descricao) }}
+							@endslot
+
+							@slot('imagem')
+							@endslot
+						@endcomponent
+					</div>
 				
 				
 			
@@ -223,7 +242,7 @@
 
 				<div class="texto__descricao-wrapper wow slideInUp"  data-wow-duration="1.3s" data-wow-delay="0s">
 						
-					<div class="texto__descricao wow fadeIn"  data-wow-duration="0.50s" data-wow-delay="1.14s">
+					<div class="texto__descricao wow fadeIn"  data-wow-duration="1s" data-wow-delay="1.18s">
 						
 						{{-- <h2 class="texto__titulo--small"> Valeria </h2> --}}
 						<p >
