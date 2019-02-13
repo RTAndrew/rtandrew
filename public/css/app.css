@@ -1622,7 +1622,7 @@ button {
 .social-media-share__icon {
   width: 1.8em;
   height: 1.8em;
-  margin-right: 0.5em;
+  padding: 0 0.8em;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
