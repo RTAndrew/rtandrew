@@ -14,7 +14,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+        // Force HTTPS when on 
+        if(config('app.env') !== 'local') {
+            \URL::forceScheme('https');
+        }
+
         Schema::defaultStringLength(191);
     }
 

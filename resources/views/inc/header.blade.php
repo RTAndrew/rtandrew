@@ -7,7 +7,7 @@
 
 		<div class="navigation">
 			<div class="menu__logo">
-				<img class="site-logo" src="http://rtandrew.tk/img/logo-white.svg" alt="Website Logo Image">
+				<img class="site-logo" src="{{ asset('img/logo-white.svg') }}" alt="Website Logo Image">
 			</div>
 
 			<div id="closebtn" onclick="navToggle()">
