@@ -172,6 +172,26 @@
 					
 				</div>
 
+				<div id="i" class="e">
+					@component('components.social-media-share')
+						@slot('link')
+							{{ route('foto', $foto->slug) }}
+						@endslot
+						
+						@slot('titulo')
+							{{ $foto->titulo }}
+						@endslot
+						
+						@slot('descricao')
+							{{ truncarMetaDescription($foto->descricao) }}
+						@endslot
+
+						@slot('imagem')
+							{{ cloudinaryImagePath($foto->image_url, '') }}
+						@endslot
+					@endcomponent
+				</div>
+
 				<span class="i"></span>
 
 			</div>
@@ -281,8 +301,8 @@
 		    e.css('top', eTop + 0.00001);
 	    	eTop++;
 	    		// Stop the letter passing
-		    	if (eTop > 50){
-		    		eTop = 50;
+		    	if (eTop > 60){
+		    		eTop = 60;
 		    	}
 
 		  } else {

@@ -22,7 +22,7 @@
 
 
 	<!--FACEBOOK-->
-	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image" content="{{ asset(getSiteIdentityImage()) }}">
 	    <meta property="og:image:type" content="image/png">
 	    
 	    <meta property="og:locale" content="pt_PT" />

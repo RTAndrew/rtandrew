@@ -43,14 +43,11 @@
 	@media (min-width: 650px) {
 		height: 35em;
 	}
-	  
+		
 
-
-		// background: linear-gradient(
-	 //      rgba(0, 0, 0, 0.7),
-	 //      rgba(0, 0, 0, 0.7)
-	 //    ), url('../img/landscape.jpg') no-repeat center center; 
-	 //  -webkit-background-size: cover;
+	.social-media-share__text {
+		display: none;
+	}
 
 	.container {
 	
@@ -107,10 +104,13 @@
 
 .album__descricao {
 	text-align: center;
+	@media (min-width: 600px) {
+		font-size: ms(4);
+	}
 }
 
 .album__detalhe {
-	margin-top: 2em;
+	margin: 2em 0 2em;
 
 	.icon {
 		with: 18px;
