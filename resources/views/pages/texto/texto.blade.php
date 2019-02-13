@@ -6,7 +6,7 @@
 		{
 		    "@context":"http://schema.org",
 		    "@type": ["BlogPosting", "CreativeWork"],
-		    "image": "http://rtandrew.com/img/opengraph-image.png",
+		    "image": "http://rtandrew.com/img/opengraph-image.jpg",
 		    "url": "{{ route('textos.texto', $texto->slug) }}",
 		    "headline": "{{ $texto->titulo }}",
 		    "dateCreated": "{{ $texto->created_at }}",
@@ -68,7 +68,7 @@
 
 
 	<!--FACEBOOK-->
-	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image" content="{{ asset(getSiteIdentityImage()) }}">
 	    <meta property="og:image:type" content="image/png">
 	    
 	    <meta property="og:type" content="article" />
@@ -89,7 +89,7 @@
 		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
 		<meta name="twitter:title" content="{{ $texto->titulo }}" />
 		<meta name="twitter:description" content="{!! truncarMetaDescription($texto->descricao) !!}" />
-		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+		<meta name="twitter:image" content="{{ asset(getSiteIdentityImage()) }}" />
 @endsection
 
 
@@ -211,6 +211,26 @@
 
 						</div>
 					@endif
+					
+					<div class=" wow animated fadeIn" data-wow-duration="1.4s" data-wow-delay="0.7s">	
+						@component('components.social-media-share')
+							@slot('link')
+								{{ route('textos.texto', $texto->slug) }}
+							@endslot
+							
+							@slot('titulo')
+								{{ $texto->titulo }}
+							@endslot
+							
+							@slot('descricao')
+								{{ truncarMetaDescription($texto->descricao) }}
+							@endslot
+
+							@slot('imagem')
+								{{ asset(getSiteIdentityImage()) }}
+							@endslot
+						@endcomponent
+					</div>
 				
 				
 			
@@ -223,7 +243,7 @@
 
 				<div class="texto__descricao-wrapper wow slideInUp"  data-wow-duration="1.3s" data-wow-delay="0s">
 						
-					<div class="texto__descricao wow fadeIn"  data-wow-duration="0.50s" data-wow-delay="1.14s">
+					<div class="texto__descricao wow fadeIn"  data-wow-duration="1s" data-wow-delay="1.18s">
 						
 						{{-- <h2 class="texto__titulo--small"> Valeria </h2> --}}
 						<p >

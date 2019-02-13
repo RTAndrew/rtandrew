@@ -43,6 +43,10 @@ function romanNumerals($num) {
     return $res;
 }
 
+function getSiteIdentityImage() {
+    $image = 'img/opengraph-image.jpg';
+    return $image;
+}
 
 
 //Convert Text to HTML UTF-8
@@ -56,6 +60,7 @@ function convertText2UTF($text) {
 
 
 // Truncar a descricao para o uso no METATAG
+// 150 Characteres allowed
 function truncarMetaDescription($descricao) {
     $strip_html_markup = strip_tags($descricao, '<br>');
     $truncar = str_limit($strip_html_markup, 150);
