@@ -331,7 +331,7 @@ function navToggle() {
 	//to close
 	if (nav.style.height <= navExtendedSize) {
 			menulist.classList.add("is-inactive");
-			nav.style.height = "30px";
+			nav.style.height = navDefaultSize;
 			for (i = 0; i < anim.length; i++){anim[i].classList.remove("anim");};
 			
 			var i = 0;
