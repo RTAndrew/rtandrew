@@ -21,11 +21,11 @@
 		</span>
 	
 
-		<span class="side-nav__link active"> Todos Textos </span>
+		<span class="side-nav__link active"> Ver Todos Textos </span>
 		
 	</a>
 
-	<a class="texto-categoria" href="#">
+	{{-- <a class="texto-categoria" href="#">
 
 		<span class="texto-categoria__midia" > 
 			<img class="" src=" {{ asset('img/icons/star.svg') }} " alt="collection-midia--white">
@@ -34,7 +34,7 @@
 
 		<span class="side-nav__link"> Destacados </span>
 		
-	</a>
+	</a> --}}
 	
 	
 </div>	
