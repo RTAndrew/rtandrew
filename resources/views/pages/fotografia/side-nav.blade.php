@@ -11,12 +11,12 @@
 						</span>
 					
 
-						<span class="side-nav__link active"> Todas as Fotos </span>
+						<span class="side-nav__link active"> Ver Todas as Fotos </span>
 						
 					</a>
 
 
-					<a class="texto-categoria" href="">
+					{{-- <a class="texto-categoria" href="">
 
 
 						<span class="texto-categoria__midia" > 
@@ -26,7 +26,7 @@
 
 						<span class="side-nav__link"> Destacados </span>
 						
-					</a>
+					</a> --}}
 				
 				
 			</div>	
