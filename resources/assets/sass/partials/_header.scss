@@ -44,11 +44,11 @@ header {
 }
 
 .menu__link {
-	color: $white;
 	font-size: ms(3);
 	font-family: $sans-serif;
 	letter-spacing: 0.5px;
 	margin: 0 0.7em;
+
 
 	&:last-child(){
 		margin: 0 0;
@@ -60,7 +60,40 @@ header {
 
 	a {
 		text-decoration: none;
-			&::after {
+			
+	}
+
+	&.is-active {
+		font-weight: bold;
+		&::after {
+			content: '';
+			width: 6px;
+			height: 6px;
+			right: 50%;
+			left: 50%;
+			margin-top: 5px;
+
+			opacity: 1;
+			z-index: 2;
+			display: block;
+			border-radius: 100%;
+			position: relative;
+			background-color: transparent;
+		}
+
+	}	
+
+	&.is-inactive {
+		a {
+			color: $white--30;
+
+			&:hover {
+				transition: 0.2s;
+				color:$white;
+			}
+		}
+
+		&::after {
 			content: '';
 			width: 6px;
 			height: 6px;
@@ -75,22 +108,7 @@ header {
 			position: relative;
 			background-color: $acent;
 		}
-	}
 
-	&.is-active {
-		font-weight: bold;
-	}	
-
-	&.is-inactive {
-		a {
-			color: $white--30;
-
-		}
-
-		&:hover {
-			opacity: $is-active;
-			color:$white;
-		}
 	}
 }
 

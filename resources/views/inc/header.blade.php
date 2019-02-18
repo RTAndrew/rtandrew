@@ -7,7 +7,7 @@
 
 		<div class="navigation">
 			<div class="menu__logo">
-				<img class="site-logo" src="{{ asset('img/logo-white.svg') }}" alt="Website Logo Image">
+				<a href="{{ route('landing-page') }}"> <img class="site-logo" src="{{ asset('img/logo-white.svg') }}" alt="Website Logo Image"> </a>
 			</div>
 
 			<div id="closebtn" onclick="navToggle()">
