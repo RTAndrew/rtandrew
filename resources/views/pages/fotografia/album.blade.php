@@ -20,28 +20,28 @@
 					"@type": "ImageGallery",
 					"image": [
 						@foreach ($fotos as $foto)
-						@if ($loop->first)
-							{
-								"@type": "ImageObject",
-								"name": "{{ $foto->titulo }}",
-								"url": "{{ route('foto', $foto->slug)}}",
-								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
-							},
-						@elseif ($loop->last)
-							{
-								"@type": "ImageObject",
-								"name": "{{ $foto->titulo }}",
-								"url": "{{ route('foto', $foto->slug)}}",
-								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
-							}
-						@else
-							{
-								"@type": "ImageObject",
-								"name": "{{ $foto->titulo }}",
-								"url": "{{ route('foto', $foto->slug)}}",
-								"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
-							},
-						@endif
+							@if ($loop->first)
+								{
+									"@type": "ImageObject",
+									"name": "{{ $foto->titulo }}",
+									"url": "{{ route('foto', $foto->slug)}}",
+									"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+								},
+							@elseif ($loop->last)
+								{
+									"@type": "ImageObject",
+									"name": "{{ $foto->titulo }}",
+									"url": "{{ route('foto', $foto->slug)}}",
+									"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+								}
+							@else
+								{
+									"@type": "ImageObject",
+									"name": "{{ $foto->titulo }}",
+									"url": "{{ route('foto', $foto->slug)}}",
+									"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
+								},
+							@endif
 						@endforeach
 					]
 			 	} 
@@ -175,19 +175,19 @@
 				<div id="i" class="e">
 					@component('components.social-media-share')
 						@slot('link')
-							{{ route('foto', $foto->slug) }}
+							{{ route('album', $album->slug) }}
 						@endslot
 						
 						@slot('titulo')
-							{{ $foto->titulo }}
+							{{ $album->titulo }}
 						@endslot
 						
 						@slot('descricao')
-							{{ truncarMetaDescription($foto->descricao) }}
+							{{ truncarMetaDescription($album->descricao) }}
 						@endslot
 
 						@slot('imagem')
-							{{ cloudinaryImagePath($foto->image_url, '') }}
+							{{ cloudinaryImagePath($album->image_url, '') }}
 						@endslot
 					@endcomponent
 				</div>
