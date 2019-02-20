@@ -272,7 +272,7 @@
 
 	{{-- Justified Grid --}}
 
-		<script src=" {{ asset('vendor/justified-gallery/jquery.justifiedGallery.min.js') }} "> </script>
+		<script src=" {{ asset('vendor/justified-gallery/jquery.justifiedGallery.js') }} "> </script>
 
 
 

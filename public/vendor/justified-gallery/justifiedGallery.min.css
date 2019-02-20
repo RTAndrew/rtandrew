@@ -82,6 +82,7 @@
 }
 .justified-gallery > .spinner {
   position: absolute;
+  margin: 3em 0;
   bottom: 0;
   margin-left: -24px;
   padding: 10px 0 10px 0;
@@ -94,9 +95,10 @@
   display: inline-block;
   filter: "alpha(opacity=0)";
   opacity: 0;
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   margin: 0 4px 0 4px;
-  background-color: #000;
+  background-color: #67DDD1;
   border-radius: 6px;
 }
+
