@@ -1,0 +1,264 @@
+.sobre-page {
+
+	// background-color: $light-gray;
+
+	padding-bottom: 6rem;
+	
+	.hero-section {
+		color: $white;
+		padding: 3rem 0;
+		background-color: $black;
+	}
+
+	.hero-content {
+		width: 80%;
+
+		@media (min-width: 650px) {
+			width: 60%;
+		}
+
+		@media (min-width: 1200px) {
+			width: 40%;
+			margin-left: 8em;
+		}
+
+	}
+		.hero-background {
+			transform: rotate(-180deg);
+
+			path {
+				fill: black;
+			}
+
+			@media (max-width: 176px) {
+				position: relative;
+				top: -8px;
+			}
+		}
+
+
+	section {
+		padding: 1em 0 0;
+	}
+
+	.background-text {
+		width: auto;
+		height: auto;
+		line-height: 1;
+		opacity: 0.1;
+
+		top: 32.5%;
+		// bottom: 10%;
+		left: -1.27em;	
+		z-index: -1;
+		overflow: hidden;
+		position: fixed;
+		display: inline-block;
+		
+		color: $black--40;
+		font-weight: bold;
+		font-size: ms(34);
+		font-family: $sans-serif;
+		
+		transform: rotate(-90deg);
+
+		@media (max-width: 650px) {
+			display: none;
+		}
+
+	}
+
+}
+
+
+
+.hero__entrevista {
+	color: $black;
+	padding: 0.5em 1em;
+	font-weight: bold;
+	background-color: $white;
+}
+
+.hero__title {
+	font-size: ms(20);
+	line-height: 100%;
+	margin: 0.1em 0;
+	
+	@media (min-width: 700px) {
+		font-size: ms(22);
+	}
+	@media (min-width: 810px) {
+		font-size: ms(23);
+	}
+	@media (min-width: 950px) {
+		// font-size: ms(25);
+	}
+
+}
+
+.hero__description {
+	opacity: 0.7;
+
+	@media (min-width: 700px) {
+		font-size: ms(5);
+	}
+}
+
+.entrevista {
+
+	@media (min-width: 650px) {
+		margin-top: 2em;
+	}
+}
+
+.entrevista__estatistica {
+	margin-bottom: 3em;
+
+	.data {
+		font-size: ms(4);
+		color: $black--40;
+		font-weight: bold;
+		margin-bottom: 0.3em;
+	}
+
+	.social-media-share__text {
+		display: none;
+	}
+	@media (max-width: 649px) {
+		
+		.social-media-share :nth-child(2){
+			margin-left: 0em;
+			padding-left: 0;
+		}
+	}
+	
+	@media (min-width: 650px) {
+		width: 10%;
+		left: -40px;
+		position: absolute;
+		
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		
+		.data {
+			text-align: right
+		}
+
+		.social-media-share {
+			display: flex;
+			align-items: flex-end !important;
+			flex-direction: column !important;
+
+				&__icon {
+					padding: 0.8em 0;
+				}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		left: 0;
+	}
+
+	@media (min-width: 1500px) {
+		left: 50px;
+	}
+}
+
+.entrevista__conteudo {
+	width: 90%;
+	
+	h1 {
+		font-size: ms(9);
+		line-height: 1.2;
+		margin-bottom: 0.5em;
+
+
+		@media (min-width: 950px) {
+			font-size: ms(10);
+		}
+	}
+
+	p {
+		line-height: 1.6;
+
+		@media (min-width: 600px) {
+			font-size: ms(4);
+		}
+	}
+
+	p + h1 {
+		margin-top: 1.5em;
+	}
+
+	@media (min-width: 650px) {
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+	@media (min-width: 950px) {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1200px) {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1500px) {
+		width: 55%;
+		margin: 0 auto;
+	}
+}
+
+
+.entrevista__blockquote {
+	display: flex;
+	align-items: center;
+	margin: 3rem auto;
+
+	font-size: ms(7);
+	line-height: 1.3;
+	font-weight: $fw-regular;
+	font-style: italic;
+	color: $black--70;
+	font-family: $serif;
+
+	blockquote {
+		margin: 0 auto;
+		padding: 10px 0 10px 20px;
+		border-left: 5px solid $acent-normal;
+
+		@media (min-width: 650px) {
+			padding-left: 35px;
+		}
+	}
+
+	@media (min-width: 650px) {
+		font-size: ms(9);
+	}
+
+	@media (min-width: 950px) {
+		width: 80%;
+	}
+
+	@media (min-width: 1200px) {
+		width: 65%;
+	}
+}
+
+.entrevista__imagem {
+	width: 100%;
+	margin: 1em 0;	
+	img {
+		display: block;
+		margin: 0 auto;
+
+			min-width: auto;
+			max-width: 100%;
+		min-height: 200px;	
+		max-height: 550px;
+	}
+}
+
