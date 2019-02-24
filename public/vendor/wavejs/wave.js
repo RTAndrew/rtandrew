@@ -87,6 +87,7 @@ var Wave = (function () {
       Wave.prototype.init = function () {
           if (this.container.querySelector('canvas') === null) {
               var canvas = document.createElement('canvas');
+              canvas.setAttribute("id", "canvas");
               this.container.appendChild(canvas);
           }
           this.canvas = this.container.querySelector('canvas');
