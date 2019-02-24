@@ -365,13 +365,13 @@ function navToggle() {
 
 
 	<!-- RECEBER OS SCRIPTS NECESSARIOS DE CADA PAGINA -->
-
 	<script>
 		@yield('script')
 	</script>
 
 
-
+	<!-- Receber Scripts únicos -->
+		@yield('script-full')
 
      
 
