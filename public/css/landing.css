@@ -1753,6 +1753,93 @@ button {
   vertical-align: middle;
 }
 
+blockquote {
+  z-index: 0;
+  font-size: 1.65056338em;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  padding: 30px 0 30px 30px;
+  -webkit-transition: .2s border ease-in-out;
+  transition: .2s border ease-in-out;
+  border-left: 3px solid #00CC8F;
+}
+
+@media (min-width: 650px) {
+  blockquote {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 950px) {
+  blockquote {
+    padding: 40px 0 40px 30px;
+    line-height: 1.4;
+  }
+}
+
+blockquote:before {
+  content: "";
+  top: 50%;
+  left: -4px;
+  width: 5px;
+  height: 2em;
+  margin-top: -1em;
+  position: absolute;
+  background-color: #fff;
+}
+
+blockquote:after {
+  content: url(/images/quote-icon.svg?7dcd45326902d573ee83cdd4a4c260ac);
+  width: 1em;
+  margin-top: -0.5em;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: -0.5em;
+  color: #00CC8F;
+  font-size: 0.7em;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-indent: -2px;
+  -webkit-transition: .2s all ease-in-out, .4s transform ease-in-out;
+  transition: .2s all ease-in-out, .4s transform ease-in-out;
+}
+
+blockquote.format:before,
+blockquote.format:after {
+  display: none;
+}
+
+blockquote.book:after {
+  content: "\F12E";
+}
+
+blockquote.podcast:after {
+  content: "\F32D";
+}
+
+blockquote.lyrics:after {
+  content: "\F333";
+}
+
+blockquote.favorite:after {
+  content: "\F384";
+}
+
+blockquote:active:after {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 1em;
+  font-size: 0.75em;
+  line-height: 1.8em;
+}
+
 .landing-page {
   color: #000000;
   background-color: #fff !important;

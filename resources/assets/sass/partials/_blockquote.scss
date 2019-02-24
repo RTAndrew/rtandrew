@@ -1,0 +1,84 @@
+blockquote {
+	z-index: 0;
+	font-size: ms(8);
+	margin: 0 auto;
+	line-height: 1.6;
+	position: relative;
+	padding: 30px 0 30px 30px;
+	transition: .2s border ease-in-out;
+	border-left: 3px solid $acent-normal;
+
+	@media (min-width: 650px) {
+		
+		padding-left: 40px;	
+	}
+
+	@media (min-width: 950px) {
+		padding: 40px 0 40px 30px;
+		line-height: 1.4;
+	}
+
+		&:before {
+			content: "";
+			top: 50%;
+			left: -4px;
+			width: 5px;
+			height: 2em;
+			margin-top: -1em;
+			position: absolute;
+			background-color: $white;
+		}
+
+		&:after {
+			content: url('../img/quote-icon.svg');
+
+			width: 1em;
+			margin-top: -0.5em;
+			
+			position: absolute;
+			top: 50%;
+			bottom: 50%;
+			left: -0.5em;
+			
+			color: $acent-normal;
+			font-size: ms(-1);
+			line-height: 1em;
+			font-style: normal;
+			text-align: center;
+			text-indent: -2px;
+			transition: .2s all ease-in-out, .4s transform ease-in-out;
+		}
+
+		&.format:before, 
+		&.format:after {
+			display: none;
+		}
+
+		&.book:after {
+			content: "\f12e";
+		}
+
+		&.podcast:after {
+			content: "\f32d";
+		}
+
+		&.lyrics:after {
+			content: "\f333";
+		}
+
+		&.favorite:after {
+			content: "\f384";
+		}
+
+		&:active:after {
+			transform: rotateY(360deg);
+		}
+
+		cite {
+			display: block;
+			margin-top: 1em;
+			font-size: 0.75em;
+			line-height: 1.8em;
+		}
+
+	}
