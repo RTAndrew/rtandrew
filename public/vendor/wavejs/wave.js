@@ -84,10 +84,13 @@ var Wave = (function () {
           this.init();
           this.draw();
       }
+
       Wave.prototype.init = function () {
           if (this.container.querySelector('canvas') === null) {
               var canvas = document.createElement('canvas');
-              canvas.setAttribute("id", "canvas");
+              // Set an unique ID
+              var canvasID = "canvasWaveJs";
+                canvas.setAttribute("id", canvasID);  
               this.container.appendChild(canvas);
           }
           this.canvas = this.container.querySelector('canvas');
@@ -95,6 +98,22 @@ var Wave = (function () {
           this.canvas.height = this.container.offsetHeight;
           this.ctx = this.canvas.getContext('2d');
           this.setLines();
+
+          // Get the Canvas element by ID
+            var getCanvasElement = document.getElementById(canvasID);
+          
+          // Save window width 
+            var actualWindowWidth = getCanvasElement.parentNode.offsetWidth;
+
+            // Watch if the width changes 
+              window.onresize = function(){
+                var canvasParentNodeWidth = getCanvasElement.parentNode.offsetWidth;
+                
+                //if it does, compare the saved Canvas width with the new  Canvas width
+                  if (canvasParentNodeWidth > actualWindowWidth) {
+                      getCanvasElement.width = canvasParentNodeWidth;
+                }
+              }
       };
       Wave.prototype.animate = function () {
           this.status = 'animating';
