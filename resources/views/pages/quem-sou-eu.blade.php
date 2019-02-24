@@ -177,7 +177,7 @@ Allicia Santos, Mauro Sérgio, Not Flavio, Jesseartes, Karlos Scesar, Adrian McD
 
 @section('script-full')
 
-<script src="{{ asset('vendor/wavejs/wave.js') }}"></script>
+<script src="{{ asset('vendor/wavejs/wave.min.js') }}"></script>
 <script>
 
 

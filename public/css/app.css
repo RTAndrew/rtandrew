@@ -2591,12 +2591,6 @@ blockquote cite {
   margin-bottom: 0.5em;
 }
 
-@media (min-width: 950px) {
-  .entrevista__conteudo h1 {
-    font-size: 1.99718169em;
-  }
-}
-
 .entrevista__conteudo p {
   line-height: 1.6;
 }
