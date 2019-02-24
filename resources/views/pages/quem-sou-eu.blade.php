@@ -180,22 +180,9 @@ Allicia Santos, Mauro Sérgio, Not Flavio, Jesseartes, Karlos Scesar, Adrian McD
 <script src="{{ asset('vendor/wavejs/wave.min.js') }}"></script>
 <script>
 
+	var wave = new Wave('#wavejs');
+	wave.animate();  
 
-	var wave = new Wave('#wavejs')
-	wave.animate()
-
-// //Native javascript solution
-
-	var actualWindowWidth = window.innerWidth;
-	var getCanvasElement = document.getElementById("canvas");
-	window.onresize = function(){
-	    
-	    if (window.innerWidth > actualWindowWidth) {
-	        getCanvasElement.width = window.innerWidth;
-	        // wave.animate()
-	        // console.log('Document width has changed');
-		}
-	}
 </script>
 
 @endsection
