@@ -1,10 +1,42 @@
 @extends('layouts.main')
 
+
 @section('titulo-pagina')
 
 Quem Sou Eu - 
 
 @endsection
+
+
+
+
+@section('metatags')
+
+	<meta name="description" content="Eis a oportunidade de conhecer um pouco sobre o Rtandrew Paul, as suas obras, o que lhe inspira, o seu trajecto e muito mais.">
+
+	<!--FACEBOOK-->
+	    <meta property="og:image" content="{{ asset('img/opengraph-image.png') }}">
+	    <meta property="og:image:type" content="image/png">
+	    <meta property="og:type" content="website" />
+	    <meta property="og:url" content="{{ route('landing-page') }}"/>
+	    <meta property="og:title" content="{{ config('app.name', 'Rtandrew Paul') }}" />
+		<meta property="og:description" content="Eis a oportunidade de conhecer um pouco sobre o Rtandrew Paul, as suas obras, o que lhe inspira, o seu trajecto e muito mais." />
+
+	<!-- TWITTER -->
+		<meta name="twitter:card" content="summary" />
+		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
+		<meta name="twitter:title" content="{{ config('app.name', 'Rtandrew Paul') }}" />
+		<meta name="twitter:description" content="Eis a oportunidade de conhecer um pouco sobre o Rtandrew Paul, as suas obras, o que lhe inspira, o seu trajecto e muito mais." />
+		<meta name="twitter:image" content="{{ asset('img/opengraph-image.png') }}" />
+
+
+@endsection
+
+
+
+
+
+
 
 @section('main')
 
