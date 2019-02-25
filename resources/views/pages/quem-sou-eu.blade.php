@@ -71,6 +71,10 @@ Quem Sou Eu -
 	<span class="background-text">
 		Nosce	
 	</span>
+
+	<span class="background-text">
+		Te Ipsum	
+	</span>
 	
 
 	<section class="entrevista container">
@@ -133,11 +137,13 @@ A fotografia surgiu quando passei a ter um gosto por eletrónicos, no qual a fot
 		
 		</div>
 
-		<div class="entrevista__blockquote">
-			<blockquote>
-				“Por isso é que ela vem e vai, no vaivém, <br> tal como as ondas do mar, sem planos de ficar.”
-			</blockquote>
-		</div>
+		<span class="align-blockquote">
+			<div class="entrevista__blockquote">
+				<blockquote>
+					“Por isso é que ela vem e vai, no vaivém, <br> tal como as ondas do mar, sem planos de ficar.”
+				</blockquote>
+			</div>
+		</span>
 
 		<div class="entrevista__conteudo">
 			<p>Já a foto, primordialmente por ser uma das minhas melhores fotos à cor, e a experiência ao fotografar. Digo sempre que uma das melhores coisas em fotografar é a experiência sendo vivida, e a capacidade que a imagem tem de contar uma história. </p>
@@ -162,11 +168,13 @@ Claro, nem todos os artistas são aprovados ou recebidos porque (com as palavras
 			<p>O universo, tal como ele é, já é uma grande fonte de inspiração. Por isso, acredito que não é fácil acordar todos os dias com novos olhos para apreciar a beleza colateral que o universo tem a oferecer. </p>
 		</div>
 
-		<div class="entrevista__blockquote">
-			<blockquote>
-				“Olhar para um defeito e achar algo belo nele requer um nível extremo de loucura.”
-			</blockquote>
-		</div>
+		<span class="align-blockquote">
+			<div class="entrevista__blockquote">
+				<blockquote>
+					“Olhar para um defeito e achar algo belo nele requer um nível extremo de loucura.”
+				</blockquote>
+			</div>
+		</span>
 
 		<div class="entrevista__conteudo">
 			<p> É muito complicado e injusto, dos artistas que sigo, nomear apenas alguns, mas prontos… <br>
@@ -179,12 +187,15 @@ Allicia Santos, Mauro Sérgio, Not Flavio, Jesseartes, Karlos Scesar, Adrian McD
 			<h1>Qual é a parte mais difícil em fotografar e escrever? </h1>
 			<p>Para mim, escrever é muito mais difícil, isso devido a nostalgia. Escrever sobre lugares em que nunca estiveste, recriar cenas que aconteceram, voltar no tempo e escrever o que poderia ter acontecido, criar um mundo onde habitam pessoas…epah, um monte coisas. Enquanto que na fotografia, é sempre tentar fazer o melhor e diferente, ou seja um hit and miss. Mas não é só isto. Poder fazer uma foto que por si só conta uma história é simplesmente magnífico e incrivelmente difícil de conseguir… por vezes ela simplesmente acontece.</p>
 		</div>
+		
+		<span class="align-blockquote">
+			<div class="entrevista__blockquote">
+				<blockquote>
+					“Loucura está nos olhos de quem vê a beleza.”
+				</blockquote>
+			</div>
+		</span>
 
-		<div class="entrevista__blockquote">
-			<blockquote>
-				“Loucura está nos olhos de quem vê a beleza.”
-			</blockquote>
-		</div>
 
 		<div class="entrevista__conteudo">
 			<h1>Por que intitular a sua exposição de <i>“Ex Umbra In Solem”</i> ? Qual é o seu significado?</h1>

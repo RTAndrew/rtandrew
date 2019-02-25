@@ -1777,7 +1777,6 @@ button {
 blockquote {
   z-index: 0;
   font-size: 1.65056338em;
-  margin: 0 auto;
   line-height: 1.6;
   position: relative;
   padding: 30px 0 30px 30px;
@@ -2423,19 +2422,30 @@ blockquote cite {
   width: auto;
   height: auto;
   line-height: 1;
-  opacity: 0.1;
-  top: 32.5%;
-  left: -1.27em;
+  opacity: 0.15;
   z-index: -1;
   overflow: hidden;
   position: fixed;
   display: inline-block;
   color: #8b8b8b;
   font-weight: bold;
-  font-size: 19.67170579em;
   font-family: Source Sans Pro, sans-serif;
+}
+
+.sobre-page .background-text:nth-child(odd) {
+  left: -1.0em;
+  bottom: 2em;
+  font-size: 5.18017496em;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.sobre-page .background-text:nth-child(even) {
+  right: -1.3em;
+  top: 0.75em;
+  font-size: 16.25760809em;
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
 }
 
 @media (max-width: 650px) {
@@ -2633,13 +2643,30 @@ blockquote cite {
   }
 }
 
+.align-blockquote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 950px) {
+  .align-blockquote:nth-child(odd) {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .align-blockquote:nth-child(even) {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .entrevista__blockquote {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 3rem auto;
   color: #5c5c5c;
   font-style: italic;
@@ -2650,6 +2677,7 @@ blockquote cite {
 @media (min-width: 950px) {
   .entrevista__blockquote {
     width: 80%;
+    margin: 3rem 0;
     font-size: 1.2400927em;
   }
 }

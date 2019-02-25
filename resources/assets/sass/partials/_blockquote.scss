@@ -1,7 +1,7 @@
 blockquote {
 	z-index: 0;
 	font-size: ms(8);
-	margin: 0 auto;
+	// margin: 0 auto;
 	line-height: 1.6;
 	position: relative;
 	padding: 30px 0 30px 30px;
@@ -9,7 +9,6 @@ blockquote {
 	border-left: 3px solid $acent-normal;
 
 	@media (min-width: 650px) {
-		
 		padding-left: 40px;	
 	}
 
