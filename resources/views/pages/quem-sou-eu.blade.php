@@ -41,7 +41,7 @@ Quem Sou Eu -
 @section('main')
 
 
-<div class="sobre-page">
+<div class="about-page">
 	
 
 	<div class="hero-section">
@@ -64,9 +64,6 @@ Quem Sou Eu -
 
 	<div id="wavejs" class="wavejs"></div>
 
-	{{-- <div class="canvas-wrap">
-		<canvas id="canvas"></canvas>
-	</div> --}}
 
 	<span class="background-text">
 		Nosce	
