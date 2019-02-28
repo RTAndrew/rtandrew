@@ -1784,10 +1784,14 @@ button {
 
 blockquote {
   z-index: 0;
-  font-size: 1.65056338em;
-  line-height: 1.6;
+  margin: 3rem auto;
   position: relative;
   padding: 30px 0 30px 30px;
+  line-height: 1.6;
+  font-size: 1.65056338em;
+  font-style: italic;
+  font-family: Alegreya, serif;
+  font-weight: 400;
   -webkit-transition: .2s border ease-in-out;
   transition: .2s border ease-in-out;
   border-left: 3px solid #00CC8F;
@@ -2598,8 +2602,36 @@ blockquote cite {
   }
 }
 
-.entrevista__conteudo {
-  width: 90%;
+@media (min-width: 650px) {
+  .entrevista__conteudo h1,
+  .entrevista__conteudo p {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 950px) {
+  .entrevista__conteudo h1,
+  .entrevista__conteudo p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .entrevista__conteudo h1,
+  .entrevista__conteudo p {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1500px) {
+  .entrevista__conteudo h1,
+  .entrevista__conteudo p {
+    width: 55%;
+    margin: 0 auto;
+  }
 }
 
 .entrevista__conteudo h1 {
@@ -2623,87 +2655,29 @@ blockquote cite {
   margin-top: 1.5em;
 }
 
-@media (min-width: 650px) {
-  .entrevista__conteudo {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 950px) {
-  .entrevista__conteudo {
-    width: 70%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .entrevista__conteudo {
-    width: 60%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1500px) {
-  .entrevista__conteudo {
-    width: 55%;
-    margin: 0 auto;
-  }
-}
-
-.align-blockquote {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (min-width: 950px) {
-  .align-blockquote:nth-child(odd) {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-
-  .align-blockquote:nth-child(even) {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-}
-
-.entrevista__blockquote {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 3rem auto;
+.entrevista__conteudo blockquote {
   color: #5c5c5c;
-  font-style: italic;
-  font-family: Alegreya, serif;
-  font-weight: 400;
+  position: relative;
 }
 
 @media (min-width: 950px) {
-  .entrevista__blockquote {
+  .entrevista__conteudo blockquote {
     width: 80%;
     margin: 3rem 0;
-    font-size: 1.2400927em;
   }
 }
 
 @media (min-width: 1200px) {
-  .entrevista__blockquote {
-    width: 65%;
+  .entrevista__conteudo blockquote {
+    width: 60%;
   }
 }
 
-.entrevista__imagem {
+.entrevista__conteudo img {
   width: 100%;
-  margin: 1em 0;
-}
-
-.entrevista__imagem img {
+  height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 2em auto;
   min-width: auto;
   max-width: 100%;
   min-height: 200px;
