@@ -1,4 +1,4 @@
-.sobre-page {
+.about-page {
 
 	// background-color: $light-gray;
 
@@ -53,11 +53,12 @@
 		position: fixed;
 		display: inline-block;
 		
+		@extend %background-text;
+
 		color: $black--40;
 		font-weight: bold;
 		font-family: $sans-serif;
-		
-		
+
 		
 		&:nth-child(odd){
 			left: -1.0em;
@@ -209,8 +210,31 @@
 }
 
 .entrevista__conteudo {
-	width: 90%;
-	
+
+	h1, 
+	p {
+		@media (min-width: 650px) {
+		width: 80%;
+		margin: 0 auto;
+		}
+		
+		@media (min-width: 950px) {
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		@media (min-width: 1200px) {
+			width: 60%;
+			margin: 0 auto;
+		}
+
+		@media (min-width: 1500px) {
+			width: 55%;
+			margin: 0 auto;
+		}
+	}
+
+
 	h1 {
 		font-size: ms(9);
 		line-height: 1.2;
@@ -229,67 +253,26 @@
 	p + h1 {
 		margin-top: 1.5em;
 	}
-
-	@media (min-width: 650px) {
-		width: 80%;
-		margin: 0 auto;
-	}
 	
-	@media (min-width: 950px) {
-		width: 70%;
-		margin: 0 auto;
-	}
+	blockquote {
+		color: $black--70;
+		position: relative;
 
-	@media (min-width: 1200px) {
-		width: 60%;
-		margin: 0 auto;
-	}
-
-	@media (min-width: 1500px) {
-		width: 55%;
-		margin: 0 auto;
-	}
-}
-
-.align-blockquote {
-	display: flex;
-
-	@media (min-width: 950px) {
-		&:nth-child(odd){
-			justify-content: flex-end;
+		@media (min-width: 950px) {
+			width: 80%;
+			margin: 3rem 0;
 		}
 
-		&:nth-child(even){
-			justify-content: flex-start;
+		@media (min-width: 1200px) {
+			width: 60%;
 		}
 	}
-}
 
-.entrevista__blockquote {
-	display: flex;
-	margin: 3rem auto;
-	color: $black--70;
-	font-style: italic;
-	font-family: $serif;
-	font-weight: $fw-regular;
-
-	@media (min-width: 950px) {
-		width: 80%;
-		margin: 3rem 0;
-		font-size: ms(5);
-	}
-
-	@media (min-width: 1200px) {
-		width: 65%;
-	}
-}
-
-.entrevista__imagem {
-	width: 100%;
-	margin: 1em 0;	
 	img {
+		width: 100%;
+		height: auto;
 		display: block;
-		margin: 0 auto;
+		margin: 2em auto;	
 
 			min-width: auto;
 			max-width: 100%;
@@ -297,6 +280,8 @@
 		max-height: 550px;
 	}
 }
+
+
 
 #wavejs {
 	max-width: 100%;
