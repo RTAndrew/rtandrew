@@ -19,7 +19,7 @@
   }
 }
 
-.sobre-page .background-text {
+.about-page .background-text {
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2379,54 +2379,54 @@ blockquote cite {
   background-color: #eaeaea;
 }
 
-.sobre-page {
+.about-page {
   padding-bottom: 6rem;
 }
 
-.sobre-page .hero-section {
+.about-page .hero-section {
   color: #fff;
   padding: 3rem 0 2rem;
   background-color: #000000;
 }
 
-.sobre-page .hero-content {
+.about-page .hero-content {
   width: 80%;
 }
 
 @media (min-width: 650px) {
-  .sobre-page .hero-content {
+  .about-page .hero-content {
     width: 60%;
   }
 }
 
 @media (min-width: 1200px) {
-  .sobre-page .hero-content {
+  .about-page .hero-content {
     width: 40%;
     margin-left: 8em;
   }
 }
 
-.sobre-page .hero-background {
+.about-page .hero-background {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
 
-.sobre-page .hero-background path {
+.about-page .hero-background path {
   fill: black;
 }
 
 @media (max-width: 286px) {
-  .sobre-page .hero-background {
+  .about-page .hero-background {
     position: relative;
     top: -7px;
   }
 }
 
-.sobre-page section {
+.about-page section {
   padding: 1em 0 0;
 }
 
-.sobre-page .background-text {
+.about-page .background-text {
   width: auto;
   height: auto;
   line-height: 1;
@@ -2440,7 +2440,7 @@ blockquote cite {
   font-family: Source Sans Pro, sans-serif;
 }
 
-.sobre-page .background-text:nth-child(odd) {
+.about-page .background-text:nth-child(odd) {
   left: -1.0em;
   bottom: 2em;
   font-size: 5.18017496em;
@@ -2448,7 +2448,7 @@ blockquote cite {
           transform: rotate(-90deg);
 }
 
-.sobre-page .background-text:nth-child(even) {
+.about-page .background-text:nth-child(even) {
   right: -0.8em;
   top: 1.2em;
   font-size: 8.34272358em;
@@ -2457,18 +2457,18 @@ blockquote cite {
 }
 
 @media (max-width: 650px) {
-  .sobre-page .background-text {
+  .about-page .background-text {
     display: none;
   }
 }
 
-.sobre-page .canvas-wrap {
+.about-page .canvas-wrap {
   max-width: 100%;
   overflow: hidden;
   position: absolute;
 }
 
-.sobre-page canvas {
+.about-page canvas {
   display: block;
 }
 
