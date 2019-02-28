@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya:400,700|Source+Sans+Pro:400,600);.button {
+@import url(https://fonts.googleapis.com/css?family=Alegreya:400,700|Source+Sans+Pro:400,600);.coisas-existentes__blocks .block__bold {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.button {
   border-radius: 0px;
   padding: 14px 36px;
   margin-bottom: 1em;
@@ -611,7 +619,7 @@ header {
   margin: 0 0.7em;
 }
 
-.menu__link:last-child() {
+.menu__link:last-child {
   margin: 0 0;
 }
 
@@ -2051,11 +2059,6 @@ blockquote cite {
   font-size: 16.25760809em;
   font-weight: bold;
   letter-spacing: -17px;
-  cursor: default;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   position: absolute;
 }
 

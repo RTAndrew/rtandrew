@@ -53,11 +53,12 @@
 		position: fixed;
 		display: inline-block;
 		
+		@extend %background-text;
+
 		color: $black--40;
 		font-weight: bold;
 		font-family: $sans-serif;
-		
-		
+
 		
 		&:nth-child(odd){
 			left: -1.0em;

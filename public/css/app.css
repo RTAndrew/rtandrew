@@ -19,6 +19,14 @@
   }
 }
 
+.sobre-page .background-text {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .button {
   border-radius: 0px;
   padding: 14px 36px;
