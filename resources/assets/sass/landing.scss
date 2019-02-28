@@ -240,8 +240,8 @@
 			font-weight: bold;
 			letter-spacing: -17px;
 			
-			cursor: default;
-			user-select: none; 
+			@extend %background-text;
+			 
 			position: absolute;
 			@media (max-width: 650px) {
 				left: -0.28em;
