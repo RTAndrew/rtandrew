@@ -1,0 +1,18 @@
+.newpost-tag {
+	color: $acent;
+	z-index: 1;
+	position: absolute;
+	padding: 0.2em 0.7em;
+	// background-color: green;
+	background: linear-gradient(
+		      rgba(0, 0, 0, 0.50),
+		      rgba(0, 0, 0, 0.50)
+		    );
+	
+	font-size: ms(0);
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	vertical-align: middle;
+	font-family: $sans-serif;
+	text-transform: uppercase;
+}
