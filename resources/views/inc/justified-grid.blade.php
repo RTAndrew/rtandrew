@@ -7,8 +7,10 @@
 				@foreach ($fotos as $foto)
 					<a href=" {{ route('foto', $foto->slug)}} ">
 
-						@if (getDiffPostData($foto->created_at) != "")
-							<span class="newpost-tag">New</span>
+						@if ($foto->featured != 0)
+							<span class="newpost-tag"> 
+								<img class="newpost-tag__icon" src="{{ asset('img/icons/star--green.svg') }}" alt="star-destacado"> 
+							</span>
 						@endif
 
 				        <img src="{{ cloudinaryImagePath($foto->image_url, '20') }}" alt="{{ $foto->titulo }}" title="{{ $foto->titulo }}">
