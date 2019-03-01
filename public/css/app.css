@@ -1872,6 +1872,21 @@ blockquote cite {
   line-height: 1.8em;
 }
 
+.newpost-tag {
+  color: #67DDD1;
+  z-index: 1;
+  position: absolute;
+  padding: 0.2em 0.7em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  font-size: 0.77em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  font-family: Source Sans Pro, sans-serif;
+  text-transform: uppercase;
+}
+
 .landing-page {
   color: #fff;
   background-color: #000000;

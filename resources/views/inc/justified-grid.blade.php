@@ -6,6 +6,11 @@
 				
 				@foreach ($fotos as $foto)
 					<a href=" {{ route('foto', $foto->slug)}} ">
+
+						@if (getDiffPostData($foto->created_at) != "")
+							<span class="newpost-tag">New</span>
+						@endif
+
 				        <img src="{{ cloudinaryImagePath($foto->image_url, '20') }}" alt="{{ $foto->titulo }}" title="{{ $foto->titulo }}">
 				    </a>
 				@endforeach
