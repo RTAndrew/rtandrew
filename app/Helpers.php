@@ -1,5 +1,21 @@
 <?php
 
+use Carbon\Carbon;
+
+
+// Saber a diferenca de dias entre 
+// a data que do post publicado e o dia actual
+    function getDiffPostData($data){
+        $created = new Carbon($data);
+        $now = Carbon::now();
+
+        $difference = ($created->diff($now)->days < 40)
+            ? 'novo'
+            : "";
+        return $difference;
+    }
+
+
 // Default delay time 
 // To save the view count
 function viewDelayTime() {
