@@ -1854,16 +1854,19 @@ blockquote cite {
 .newpost-tag {
   color: #67DDD1;
   z-index: 1;
+  top: 0em;
+  left: 0.5em;
   position: absolute;
-  padding: 0.2em 0.7em;
+  padding: 0.7em 0.5em;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  font-size: 0.77em;
-  font-weight: bold;
-  letter-spacing: 0.5px;
+}
+
+.newpost-tag__icon {
+  width: 1em;
+  height: auto;
+  margin: 0 auto;
   vertical-align: middle;
-  font-family: Source Sans Pro, sans-serif;
-  text-transform: uppercase;
 }
 
 .landing-page {
