@@ -1,0 +1,19 @@
+.newpost-tag {
+	color: $acent;
+	z-index: 1;
+	top: 0em;
+	left: 0.5em;
+	position: absolute;
+	padding: 0.7em 0.5em;
+	background: linear-gradient(
+		      rgba(0, 0, 0, 0.50),
+		      rgba(0, 0, 0, 0.50)
+		    );
+
+	&__icon {
+		width: 1em;
+		height: auto;
+		margin: 0 auto;
+		vertical-align: middle;
+	}
+}

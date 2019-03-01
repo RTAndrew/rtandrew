@@ -91,6 +91,8 @@ class PagesController extends Controller
 			->paginate(15);
 		}
 
+		// return $fotos;
+
         return view('pages.fotografia.index')
         ->with('fotos', $fotos)
         ->with('albuns', $albuns);
