@@ -27,7 +27,9 @@ Rtandrew is my personal blog/site, where I publish all my work - from texts, pho
     - [ ] Create vertical line as background
     - [ ] Block Text CSS Transition Effect
     - [ ] Parallax with Relax
-
+- [ ] Improve footer section
+- [ ] Add tag to show new posts
+ 
 ## Built With
 * [Laravel](http://laravel.com/)
 * [Cloudninary](http://cloudinary.com/)
