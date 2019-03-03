@@ -5,7 +5,7 @@
 			<div id="justified-grid" class="justified-gallery justified-grid">
 				
 				@foreach ($fotos as $foto)
-					<a href=" {{ route('foto', $foto->slug)}} ">
+					<a  class="foto__wrapper" href=" {{ route('foto', $foto->slug)}} ">
 
 						@if ($foto->featured != 0)
 							<span class="newpost-tag"> 
@@ -14,6 +14,8 @@
 						@endif
 
 				        <img src="{{ cloudinaryImagePath($foto->image_url, '20') }}" alt="{{ $foto->titulo }}" title="{{ $foto->titulo }}">
+
+				        <span class="foto__titulo"> <p> {{ $foto->titulo }} </p> </span>
 				    </a>
 				@endforeach
 				
