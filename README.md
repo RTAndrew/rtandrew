@@ -1,7 +1,6 @@
-![Logo](https://res.cloudinary.com/db9ha9ox6/image/upload/v1551351148/rtandrew-site/logo-black.png)
+<p align="center"> <img src="https://res.cloudinary.com/db9ha9ox6/image/upload/v1551351148/rtandrew-site/logo-black.png"> </p> 
 
-# Rtandrew - Textos, Fotografias, Experiências...
-Rtandrew is my personal blog/site, where I publish all my work - from texts, photographs, adventures...
+<p align="center"> Rtandrew is my personal blog/site, where I publish all my creating work - from texts, photographs, adventures... </p>
 
 ## Main Pages
 - [x] Textos
@@ -27,10 +26,15 @@ Rtandrew is my personal blog/site, where I publish all my work - from texts, pho
     - [ ] Create vertical line as background
     - [ ] Block Text CSS Transition Effect
     - [ ] Parallax with Relax
-- [ ] Add tag to show featured posts
+- [x] Add tag to show featured posts
+- [x] Add photo title for the Justified Grid
  
 ## Built With
-* [Laravel](http://laravel.com/)
-* [Cloudninary](http://cloudinary.com/)
-* [Justified Grid](http://miromannino.github.io/Justified-Gallery/)
+* [Laravel](http://laravel.com/) - PHP Framework
+* [Cloudinary](http://cloudinary.com/) - Image as a Service
+* [TCG Voyager](https://laravelvoyager.com/) - Laravel Admin Panel
+* [Justified Grid](http://miromannino.github.io/Justified-Gallery/) - Photo Gallery
+* [Modular Scale](https://www.modularscale.com/) - Responsive Typography
+* [Pushbar.js](https://oncebot.github.io/pushbar.js/) - 
+* [WOW.js](https://wowjs.uk/) - Reveal On Scroll
 * And many other packages
