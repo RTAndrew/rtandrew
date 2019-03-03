@@ -35,6 +35,6 @@
 * [TCG Voyager](https://laravelvoyager.com/) - Laravel Admin Panel
 * [Justified Grid](http://miromannino.github.io/Justified-Gallery/) - Photo Gallery
 * [Modular Scale](https://www.modularscale.com/) - Responsive Typography
-* [Pushbar.js](https://oncebot.github.io/pushbar.js/) - 
+* [Pushbar.js](https://oncebot.github.io/pushbar.js/) - Reveal Menu
 * [WOW.js](https://wowjs.uk/) - Reveal On Scroll
 * And many other packages
