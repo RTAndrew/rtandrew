@@ -2822,7 +2822,6 @@ blockquote cite {
 
 @media (min-width: 600px) {
   .foto__descricao p {
-    line-height: 1.8;
     font-size: 1.127357em;
   }
 }
