@@ -2820,7 +2820,7 @@ blockquote cite {
 
 .foto__album {
   max-width: 100%;
-  margin: 1em 0 3em;
+  margin: 1em 0 0 0;
   font-family: Source Sans Pro, sans-serif;
 }
 
@@ -2863,6 +2863,7 @@ blockquote cite {
 
 .foto__titulo {
   font-size: 1.99718169em;
+  margin-top: 1em;
   text-transform: capitalize;
 }
 

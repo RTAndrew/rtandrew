@@ -73,7 +73,7 @@
 
 .foto__album {
 	max-width: 100%;
-	margin: 1em 0 3em;
+	margin: 1em 0 0 0;
 	font-family: $sans-serif;
 	
 	
@@ -87,10 +87,11 @@
 	}
 
 	.foto__album-link,
-	span {
-		transition: 0.3s;
-		opacity: $is-inactive;
-	}
+
+		span {
+			transition: 0.3s;
+			opacity: $is-inactive;
+		}
 
 }
 
@@ -115,6 +116,7 @@
 
 .foto__titulo {
 	font-size: ms(10);
+	margin-top: 1em;
 	text-transform: capitalize;
 }
 
