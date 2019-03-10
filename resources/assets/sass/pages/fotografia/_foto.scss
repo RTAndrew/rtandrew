@@ -51,16 +51,19 @@
 	padding: $section-padding+-1 0;
 
 	.container {
-		width: 90%;
 		
-		@media (min-width: 550px) {
-			max-width: 80%;
-			// padding: $section-padding;
+		@media (min-width: 700px) {
+			max-width: 70%;
+			padding: $section-padding;
 		}
 
-		@media (min-width: 900px) {
+		@media (min-width: 1100px) {
 			max-width: 55%;
 			padding-bottom: $section-padding;
+		}
+
+		@media (min-width: 1400px) {
+			max-width: 45%;
 		}
 	}
 }
@@ -73,7 +76,7 @@
 
 .foto__album {
 	max-width: 100%;
-	margin: 1em 0 3em;
+	margin: 1em 0 0 0;
 	font-family: $sans-serif;
 	
 	
@@ -87,10 +90,11 @@
 	}
 
 	.foto__album-link,
-	span {
-		transition: 0.3s;
-		opacity: $is-inactive;
-	}
+
+		span {
+			transition: 0.3s;
+			opacity: $is-inactive;
+		}
 
 }
 
@@ -115,6 +119,7 @@
 
 .foto__titulo {
 	font-size: ms(10);
+	margin-top: 1em;
 	text-transform: capitalize;
 }
 
@@ -127,7 +132,6 @@
 		line-height: 1.6;
 
 		@media (min-width: 600px) {
-			line-height: 1.8;
 			font-size: ms(4);
 		}
 

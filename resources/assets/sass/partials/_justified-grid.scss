@@ -1,13 +1,58 @@
 #justified-grid {
 	// margin: 0 auto;
 	padding-bottom: $section-padding;
+  
+  .foto__wrapper {
+      &:hover {
+      .foto__titulo {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.80)
+          );
+        transition-duration: 1s;
+        animation-timing-function: ease-in;
+         
+          p {
+            opacity: 1;
+            transition-delay: 0s;
+            transition-duration: 1s;
+            animation-timing-function: ease-in;
+          }
+      }
+    }
+  }
+
+  .foto__titulo {
+    z-index: 1;
+    width: 100%;
+    bottom: 0em;
+    font-size: ms(2);
+    position: absolute;
+    padding: 0.7em 0.5em;
+    transition-duration: .5s;
+    animation-timing-function: ease-out;
+
+    p {      
+      color: $white;
+      font-weight: bold;
+      letter-spacing: .2px;
+      
+      opacity: 0;
+      transition: 0.1s;
+      transition-duration: .5s;
+      transition-delay: 0.03s;
+      animation-timing-function: ease-out;
+      // text-shadow: 0 1px 1px #000;
+      @include truncate(90%);  
+    }
+  }
 
 	@media (min-width: 550px) {
 		img {
 			transition: .3s;
 				filter: brightness(100%);
 			&:hover {
-				filter: brightness(80%);
+				filter: brightness(90%);
 			}
 		}
 	}
@@ -20,7 +65,7 @@
 // Spinner Loading
 
 $offset: 187;
-$duration: 1.4s;
+$duration: 1.7s;
 
 .justified-gallery > .spinner > .justified-gallery__spinner {
   width: 45px;

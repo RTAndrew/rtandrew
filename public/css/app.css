@@ -1578,6 +1578,57 @@ button {
   padding-bottom: 3rem;
 }
 
+#justified-grid .foto__wrapper:hover .foto__titulo {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+#justified-grid .foto__wrapper:hover .foto__titulo p {
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+#justified-grid .foto__titulo {
+  z-index: 1;
+  width: 100%;
+  bottom: 0em;
+  font-size: 0.9317em;
+  position: absolute;
+  padding: 0.7em 0.5em;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+#justified-grid .foto__titulo p {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: .2px;
+  opacity: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-delay: 0.03s;
+          transition-delay: 0.03s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (min-width: 550px) {
   #justified-grid img {
     -webkit-transition: .3s;
@@ -1587,16 +1638,16 @@ button {
   }
 
   #justified-grid img:hover {
-    -webkit-filter: brightness(80%);
-            filter: brightness(80%);
+    -webkit-filter: brightness(90%);
+            filter: brightness(90%);
   }
 }
 
 .justified-gallery > .spinner > .justified-gallery__spinner {
   width: 45px;
   height: 45px;
-  -webkit-animation: rotator 1.4s linear infinite;
-          animation: rotator 1.4s linear infinite;
+  -webkit-animation: rotator 1.7s linear infinite;
+          animation: rotator 1.7s linear infinite;
 }
 
 @-webkit-keyframes rotator {
@@ -1628,8 +1679,8 @@ button {
   stroke-dashoffset: 0;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-          animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+  -webkit-animation: dash 1.7s ease-in-out infinite, colors 6.8s ease-in-out infinite;
+          animation: dash 1.7s ease-in-out infinite, colors 6.8s ease-in-out infinite;
 }
 
 @-webkit-keyframes colors {
@@ -1875,10 +1926,10 @@ blockquote cite {
 .newpost-tag {
   color: #67DDD1;
   z-index: 1;
-  top: 0em;
+  top: -0.2em;
   left: 0.5em;
   position: absolute;
-  padding: 0.7em 0.5em;
+  padding: 0.7em 0.4em;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
@@ -2644,7 +2695,7 @@ blockquote cite {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1400px) {
   .entrevista__conteudo h1,
   .entrevista__conteudo p {
     width: 55%;
@@ -2680,14 +2731,8 @@ blockquote cite {
 
 @media (min-width: 950px) {
   .entrevista__conteudo blockquote {
-    width: 80%;
+    width: 50%;
     margin: 3rem 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .entrevista__conteudo blockquote {
-    width: 60%;
   }
 }
 
@@ -2750,26 +2795,29 @@ blockquote cite {
   padding: 2rem 0;
 }
 
-.foto__content .container {
-  width: 90%;
-}
-
-@media (min-width: 550px) {
+@media (min-width: 700px) {
   .foto__content .container {
-    max-width: 80%;
+    max-width: 70%;
+    padding: 3rem;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   .foto__content .container {
     max-width: 55%;
     padding-bottom: 3rem;
   }
 }
 
+@media (min-width: 1400px) {
+  .foto__content .container {
+    max-width: 45%;
+  }
+}
+
 .foto__album {
   max-width: 100%;
-  margin: 1em 0 3em;
+  margin: 1em 0 0 0;
   font-family: Source Sans Pro, sans-serif;
 }
 
@@ -2812,6 +2860,7 @@ blockquote cite {
 
 .foto__titulo {
   font-size: 1.99718169em;
+  margin-top: 1em;
   text-transform: capitalize;
 }
 
@@ -2822,7 +2871,6 @@ blockquote cite {
 
 @media (min-width: 600px) {
   .foto__descricao p {
-    line-height: 1.8;
     font-size: 1.127357em;
   }
 }
