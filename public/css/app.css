@@ -2695,7 +2695,7 @@ blockquote cite {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1400px) {
   .entrevista__conteudo h1,
   .entrevista__conteudo p {
     width: 55%;
@@ -2731,14 +2731,8 @@ blockquote cite {
 
 @media (min-width: 950px) {
   .entrevista__conteudo blockquote {
-    width: 80%;
+    width: 50%;
     margin: 3rem 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .entrevista__conteudo blockquote {
-    width: 60%;
   }
 }
 
@@ -2801,20 +2795,23 @@ blockquote cite {
   padding: 2rem 0;
 }
 
-.foto__content .container {
-  width: 90%;
-}
-
-@media (min-width: 550px) {
+@media (min-width: 700px) {
   .foto__content .container {
-    max-width: 80%;
+    max-width: 70%;
+    padding: 3rem;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   .foto__content .container {
     max-width: 55%;
     padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .foto__content .container {
+    max-width: 45%;
   }
 }
 

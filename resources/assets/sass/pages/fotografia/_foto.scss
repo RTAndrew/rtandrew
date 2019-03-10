@@ -51,16 +51,19 @@
 	padding: $section-padding+-1 0;
 
 	.container {
-		width: 90%;
 		
-		@media (min-width: 550px) {
-			max-width: 80%;
-			// padding: $section-padding;
+		@media (min-width: 700px) {
+			max-width: 70%;
+			padding: $section-padding;
 		}
 
-		@media (min-width: 900px) {
+		@media (min-width: 1100px) {
 			max-width: 55%;
 			padding-bottom: $section-padding;
+		}
+
+		@media (min-width: 1400px) {
+			max-width: 45%;
 		}
 	}
 }

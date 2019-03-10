@@ -228,7 +228,7 @@
 			margin: 0 auto;
 		}
 
-		@media (min-width: 1500px) {
+		@media (min-width: 1400px) {
 			width: 55%;
 			margin: 0 auto;
 		}
@@ -259,12 +259,8 @@
 		position: relative;
 
 		@media (min-width: 950px) {
-			width: 80%;
+			width: 50%;
 			margin: 3rem 0;
-		}
-
-		@media (min-width: 1200px) {
-			width: 60%;
 		}
 	}
 
