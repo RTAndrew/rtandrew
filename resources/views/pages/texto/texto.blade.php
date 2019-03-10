@@ -75,7 +75,7 @@
 
 	    <meta property="og:title" content="{{ $texto->titulo }}" />
 		<meta property="og:description" content="{!! truncarMetaDescription($texto->descricao) !!}">
-	    <meta property="og:url" content="{{ route('textos.notas', $texto->slug) }}"/>
+	    <meta property="og:url" content="{{ route('texto', $texto->slug) }}"/>
 
 
 			<meta property="article:author" content="Rtandrew Paul" />
