@@ -53,7 +53,8 @@
             "@php artisan key:generate"
         ],
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "php artisan sitemap:generate"
         ]
     },
     "config": {
