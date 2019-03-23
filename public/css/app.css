@@ -2453,6 +2453,7 @@ blockquote cite {
 }
 
 .about-page {
+  overflow-x: hidden;
   padding-bottom: 6rem;
 }
 
@@ -2599,7 +2600,9 @@ blockquote cite {
 }
 
 .entrevista__estatistica {
-  margin-bottom: 3em;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2em;
 }
 
 .entrevista__estatistica .data {
@@ -2623,7 +2626,7 @@ blockquote cite {
 @media (min-width: 650px) {
   .entrevista__estatistica {
     width: 10%;
-    left: -40px;
+    left: 0px;
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2659,22 +2662,30 @@ blockquote cite {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 950px) {
   .entrevista__estatistica {
-    left: 0;
+    left: 60px;
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1400px) {
   .entrevista__estatistica {
-    left: 50px;
+    left: 220px;
+  }
+}
+
+@media (max-width: 650px) {
+  .entrevista__conteudo h1,
+  .entrevista__conteudo p {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 650px) {
   .entrevista__conteudo h1,
   .entrevista__conteudo p {
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
   }
 }
@@ -2682,7 +2693,7 @@ blockquote cite {
 @media (min-width: 950px) {
   .entrevista__conteudo h1,
   .entrevista__conteudo p {
-    width: 70%;
+    width: 55%;
     margin: 0 auto;
   }
 }
@@ -2690,7 +2701,7 @@ blockquote cite {
 @media (min-width: 1200px) {
   .entrevista__conteudo h1,
   .entrevista__conteudo p {
-    width: 60%;
+    width: 45%;
     margin: 0 auto;
   }
 }
@@ -2698,7 +2709,7 @@ blockquote cite {
 @media (min-width: 1400px) {
   .entrevista__conteudo h1,
   .entrevista__conteudo p {
-    width: 55%;
+    width: 40%;
     margin: 0 auto;
   }
 }
@@ -2725,6 +2736,7 @@ blockquote cite {
 }
 
 .entrevista__conteudo blockquote {
+  width: 80%;
   color: #5c5c5c;
   position: relative;
 }
@@ -2732,7 +2744,7 @@ blockquote cite {
 @media (min-width: 950px) {
   .entrevista__conteudo blockquote {
     width: 50%;
-    margin: 3rem 0;
+    margin: 3rem auto;
   }
 }
 
@@ -2744,7 +2756,19 @@ blockquote cite {
   min-width: auto;
   max-width: 100%;
   min-height: 200px;
-  max-height: 550px;
+  max-height: 650px;
+}
+
+@media (min-width: 650px) {
+  .entrevista__conteudo img {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .entrevista__conteudo img {
+    width: 70%;
+  }
 }
 
 #wavejs {
