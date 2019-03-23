@@ -44,6 +44,18 @@
 				</li>
 
 
+				<li class="animate-header"> 
+					<a class="menuitems
+						@if (Request::is('quem-sou-eu'))
+						is-active
+						@else
+						is-inactive
+						@endif " 
+						href="{{ route('quem-sou-eu') }}"> Quem Sou Eu 
+					</a> 
+				</li>
+
+
 				{{-- <li class="animate-header"> 
 					<a class="menuitems
 						@if (Request::is('quem-sou-eu') or Request::is('quem-sou-eu/*'))
@@ -81,6 +93,16 @@
 					is-inactive
 				@endif
 			"> <a href="{{ route('fotografia') }}"> Fotografia </a> </li>
+
+
+
+			<li class="menu__link 
+				@if (Request::is('quem-sou-eu'))
+					is-active
+				@else
+					is-inactive
+				@endif
+			"> <a href="{{ route('quem-sou-eu') }}"> Quem Sou Eu </a> </li>
 			
 
 			
