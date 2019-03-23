@@ -62,7 +62,7 @@
 						Porque palavras constrõem pontes em lugares inexplorados, e a criatividade é um meio crucial para a sobrevivência.
 					</h1>
 
-					{{-- <center> <a href="" class="button primary wow animated fadeInUp" data-wow-duration="1.8s" data-wow-delay="2.5s"> Quem Sou Eu </a> <center> --}}
+					<center> <a href="{{ route('quem-sou-eu') }}" class="button primary wow animated fadeInUp" data-wow-duration="1.8s" data-wow-delay="2.5s"> Quem Sou Eu </a> <center>
 				</div>
 			</div>
 
