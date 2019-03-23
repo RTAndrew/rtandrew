@@ -74,7 +74,7 @@ Quem Sou Eu -
 	</span>
 	
 
-	<section class="entrevista container">
+	<section class="entrevista">
 
 		<div class="entrevista__estatistica">
 			<div class="data"> 2019 </div>
@@ -141,8 +141,7 @@ A fotografia surgiu quando passei a ter um gosto por eletrónicos, no qual a fot
 			<p>Já a foto, primordialmente por ser uma das minhas melhores fotos à cor, e a experiência ao fotografar. Digo sempre que uma das melhores coisas em fotografar é a experiência sendo vivida, e a capacidade que a imagem tem de contar uma história. </p>
 
 	
-
-			<img src="{{ asset('img/foto/IMAG0010.jpg') }}" alt="">
+			<img src="https://res.cloudinary.com/db9ha9ox6/image/upload/v1553336863/rtandrew-site/fotos/Luanda/encontro-de-dois-mundos.jpg" alt="">
 	
 		
 			<h1>Como artista, qual é o seu papel na sociedade? E o que acontece quando a sociedade não tem uma recepção esperada ou chega a ter uma recepção pejorativa do seu trabalho? </h1>
@@ -158,7 +157,7 @@ Claro, nem todos os artistas são aprovados ou recebidos porque (com as palavras
 				</blockquote>
 
 			<p> É muito complicado e injusto, dos artistas que sigo, nomear apenas alguns, mas prontos… <br>
-Allicia Santos, Mauro Sérgio, Not Flavio, Jesseartes, Karlos Scesar, Adrian McDonald, Kali Arstistry, Pedro Belgio, Luis da Silva, Widralino, Janeth Oliveira, Ylson Menezes, Hermes Knox, João Lando, Molhado Poeta, O Poeta das Profundezas, O poeta dos pés descalços, Maria Rokapa, Cesar Acosta, Vuh Landes, Aaron Ball, Alex Bailey, Renata Leão e tantos outros.  </p>
+Allicia Santos, Mauro Sérgio, Not Flavio, Jesseartes, Karlos Scesar, Adrian McDonald, Kali Arstistry, Pedro Belgio, Luis da Silva, Widralino, Janeth Oliveira, Ylson Menezes, Hermes Knox, João Lando, Molhado Poeta, O Poeta das Profundezas, O poeta dos pés descalços, Maria Rokapa, Cesar Acosta, Vuh Landes, Aaron Ball, Alex Bailey, Renata Leão, Storitellah e tantos outros.  </p>
 
 			<h1>O que gostarias de alcançar/fazer no mundo da escrita e fotografia? 
 			</h1>
