@@ -1,5 +1,7 @@
 .about-page {
-
+	// Hide the overflow, 
+	// because of the full image
+	overflow-x: hidden;
 	// background-color: $light-gray;
 
 	padding-bottom: 6rem;
@@ -149,14 +151,17 @@
 
 .entrevista {
 	// background-color: $white;
-
 	@media (min-width: 650px) {
 		margin-top: 2em;
 	}
 }
 
 .entrevista__estatistica {
-	margin-bottom: 3em;
+
+	width: 90%;
+	margin: 0 auto;
+
+	margin-bottom: 2em;
 
 	.data {
 		font-size: ms(4);
@@ -169,6 +174,8 @@
 		display: none;
 	}
 	@media (max-width: 649px) {
+
+
 		
 		.social-media-share :nth-child(2){
 			margin-left: 0em;
@@ -178,7 +185,7 @@
 	
 	@media (min-width: 650px) {
 		width: 10%;
-		left: -40px;
+		left: 0px;
 		position: absolute;
 		
 		display: flex;
@@ -200,36 +207,41 @@
 		}
 	}
 
-	@media (min-width: 1200px) {
-		left: 0;
+	@media (min-width: 950px) {
+		left: 60px;
 	}
 
-	@media (min-width: 1500px) {
-		left: 50px;
+	@media (min-width: 1400px) {
+		left: 220px;
 	}
 }
 
 .entrevista__conteudo {
-
+	
 	h1, 
 	p {
+		@media (max-width: 650px) {
+		width: 90%;
+		margin: 0 auto;
+		}
+
 		@media (min-width: 650px) {
-		width: 80%;
+		width: 65%;
 		margin: 0 auto;
 		}
 		
 		@media (min-width: 950px) {
-			width: 70%;
+			width: 55%;
 			margin: 0 auto;
 		}
 
 		@media (min-width: 1200px) {
-			width: 60%;
+			width: 45%;
 			margin: 0 auto;
 		}
 
 		@media (min-width: 1400px) {
-			width: 55%;
+			width: 40%;
 			margin: 0 auto;
 		}
 	}
@@ -255,12 +267,13 @@
 	}
 	
 	blockquote {
+		width: 80%;
 		color: $black--70;
 		position: relative;
 
 		@media (min-width: 950px) {
 			width: 50%;
-			margin: 3rem 0;
+			margin: 3rem auto;
 		}
 	}
 
@@ -273,7 +286,19 @@
 			min-width: auto;
 			max-width: 100%;
 		min-height: 200px;	
-		max-height: 550px;
+		max-height: 650px;
+
+		@media (min-width: 650px) {
+			width: 90%;
+			// max-height: 750px;
+			// object-fit: cover;
+		}
+
+		@media (min-width: 1400px) {
+			width: 70%;
+			// max-height: 750px;
+			// object-fit: cover;
+		}
 	}
 }
 

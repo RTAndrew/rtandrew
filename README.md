@@ -6,7 +6,7 @@
 - [x] Textos
 - [x] Fotografias
 - [ ] Exposição Virtual
-- [ ] Quem Sou Eu
+- [x] Quem Sou Eu
 - [ ] Ritmos N' Poetry
 
 ## Features 
