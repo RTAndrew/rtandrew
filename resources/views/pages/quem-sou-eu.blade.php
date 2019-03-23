@@ -107,9 +107,9 @@ Respondendo à pergunta, sou um personagem fictício trazido à realidade para a
 			<p>Depois de ter feito alguns textos e decidir postá-los no Facebook, eu queria usar algo como <i>fingerprint ou signature</i>. Foi então que surgiram nomes como Poeta Tesudo, Poeta Nostálgico, Anderson Rodax e entre outros. Porém, senti que nenhum desses nomes tinha alguma personalidade. Passar algum tempo, o Rtandrew nasce como uma mistura de <b>RT</b> + <b>Andrew</b>. E para ser sincero, não há uma tradução literal. </p>
 
 
-			<h1>Agora, antes de falar sobre a fotografia e a escrita, há que se saber o que lhe fez começar, o seu trajecto e o que fazia antes disso tudo. Como tudo começou? </h1>
-			<p>Wow. Uma questão intrigante (risos). <br>
-Apesar de nunca ter sido um ávido leitor, sempre tive um gosto pelas letras musicais. Havia vezes que gostava de criticar as letras, as métricas ou ainda as rimas das músicas que ouvia (rap na maioria das vezes), e, claro, sempre gostei de um bom texto. Então, acho que nunca estive muito distante da escrita em si.  <br>
+			<h1>Agora, antes de falar sobre a fotografia e a escrita, há que se saber o que lhe fez começar, o seu trajecto e o que fazia antes disso tudo.</h1>
+			<p>
+Apesar de nunca ter sido um ávido leitor, sempre tive um gosto pelas letras musicais. Havia vezes que gostava de criticar as letras, as métricas ou ainda as rimas das músicas que ouvia (rap na maioria das vezes), e, claro, sempre gostei de um bom texto e poemas. Então, acho que nunca estive muito distante da escrita em si.  <br>
 Agora, para realmente escrever, isso foi incentivo de uma paixão. E foi também por intermédio desta que nasceu a minha nota <b>“…Quem Ela Era…Quem Ela Foi…”</b>, uma nota dedicada inteiramente às mulheres. <br> <br>
 A fotografia surgiu quando passei a ter um gosto por eletrónicos, no qual a fotografia era uma boa forma de qualificar a qualidade de um smartphone. E foi exactamente o que fiz quando obtive o meu segundo smartphone em 2014, o HTC One M8 (considerado o melhor smartphone daquele ano. I don’t wanna brag about it. Lol).
  </p>
@@ -172,7 +172,7 @@ Allicia Santos, Mauro Sérgio, Not Flavio, Jesseartes, Karlos Scesar, Adrian McD
 
 
 			<h1>Por que intitular a sua exposição de <i>“Ex Umbra In Solem”</i> ? Qual é o seu significado?</h1>
-			<p><i>Ex Umbra In Solem</i>, do latim, significa <i>Da Sombra Para Luz</i>. Escolhi esse nome porque foi na infelicidade e em momento de caos que comecei a questionar quem realmente era, a minha origem e o meu propósito. Foi naquele tempo que procurei por lugares que me faziam sentir confortável, e procurei fazer o máximo de coisas até descobrir qual seria a minha capacidade de adaptação e endurance. E dentre tudo isto, a escrita e fotografia nasceram quase que de forma sequencial.  </p>
+			<p><i>Ex Umbra In Solem</i>, do latim, significa <i>Da Sombra Para Luz</i>. Escolhi esse nome porque foi na infelicidade e em momento de caos que comecei a questionar quem realmente era. Foi naquele tempo que procurei por lugares que me faziam sentir confortável, e procurei fazer o máximo de coisas até descobrir qual seria a minha capacidade de adaptação e endurance. E dentre tudo isto, a escrita e fotografia nasceram quase que de forma sequencial.  </p>
 
 			<h1>E por fim, a última, mas não menos importante, qual é o seu conselho para as outras pessoas? </h1>
 			<p>Tu és quem tu és. E se não sabes, deverias começar a te questionar. <br>
