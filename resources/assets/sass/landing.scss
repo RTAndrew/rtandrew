@@ -259,6 +259,8 @@
 			color: $black--70;
 			// margin-top: 1em;
 			font-family: $sans-serif;
+			position: relative;
+			z-index: 9;
 		}
 
 		.block__descricao {
