@@ -313,7 +313,7 @@
 	var anim = document.getElementsByClassName("animate-header");
 
 	var navDefaultSize = "30px";
-	var navExtendedSize = "170px";
+	var navExtendedSize = "205px";
 //default to measure if/else from
 nav.style.height = navDefaultSize;
 
@@ -343,7 +343,7 @@ function navToggle() {
 	} 
 	
 	//to open
-	else if (nav.style.height <= "30px") {
+	else if (nav.style.height <= navDefaultSize) {
 		menulist.classList.remove("is-inactive");
 		for (i = 0; i < anim.length; i++){anim[i].classList.add("anim");};
 		nav.style.height = navExtendedSize;
