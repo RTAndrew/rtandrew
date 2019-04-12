@@ -204,6 +204,10 @@
 		margin-bottom: 7em;
 		padding: 0.7em 2em;
 
+		&:last-child(){
+			margin-bottom: 0em;
+		}
+		
 		@media (min-width: 650px) {
 			width: 27%;
 			

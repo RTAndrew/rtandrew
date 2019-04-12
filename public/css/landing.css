@@ -2095,6 +2095,10 @@ blockquote cite {
   padding: 0.7em 2em;
 }
 
+.coisas-existentes__blocks .block:last-child {
+  margin-bottom: 0em;
+}
+
 @media (min-width: 650px) {
   .coisas-existentes__blocks .block {
     width: 27%;
