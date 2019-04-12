@@ -64,12 +64,12 @@
 
 // Spinner Loading
 
-$offset: 187;
-$duration: 1.7s;
+$offset: 196;
+$duration: 1.5s;
 
 .justified-gallery > .spinner > .justified-gallery__spinner {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   animation: rotator $duration linear infinite;
 }
 

@@ -75,8 +75,11 @@ section {
 .site-logo {
 	width: 9em;
 	height: auto;
-	// height: 60px;
 	filter: brightness(100%);
+
+	@media (min-width: 550px) {
+		width: 10em;
+	}
 }
 
 .site-logo--side-nav {
