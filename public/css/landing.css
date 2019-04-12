@@ -2151,6 +2151,8 @@ blockquote cite {
 .coisas-existentes__blocks .block__titulo {
   color: #5c5c5c;
   font-family: Source Sans Pro, sans-serif;
+  position: relative;
+  z-index: 9;
 }
 
 .coisas-existentes__blocks .block__descricao {
