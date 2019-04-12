@@ -841,7 +841,7 @@ header {
   padding-bottom: 8px;
   list-style: none;
   text-decoration: none;
-  font-size: 1.50051217em;
+  font-size: 1.36410197em;
   display: inline-block;
   text-align: right !important;
   opacity: 0.0;
@@ -1644,10 +1644,10 @@ button {
 }
 
 .justified-gallery > .spinner > .justified-gallery__spinner {
-  width: 45px;
-  height: 45px;
-  -webkit-animation: rotator 1.7s linear infinite;
-          animation: rotator 1.7s linear infinite;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: rotator 1.5s linear infinite;
+          animation: rotator 1.5s linear infinite;
 }
 
 @-webkit-keyframes rotator {
@@ -1675,12 +1675,12 @@ button {
 }
 
 .path {
-  stroke-dasharray: 187;
+  stroke-dasharray: 196;
   stroke-dashoffset: 0;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: dash 1.7s ease-in-out infinite, colors 6.8s ease-in-out infinite;
-          animation: dash 1.7s ease-in-out infinite, colors 6.8s ease-in-out infinite;
+  -webkit-animation: dash 1.5s ease-in-out infinite, colors 6s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite, colors 6s ease-in-out infinite;
 }
 
 @-webkit-keyframes colors {
@@ -1705,17 +1705,17 @@ button {
 
 @-webkit-keyframes dash {
   0% {
-    stroke-dashoffset: 187;
+    stroke-dashoffset: 196;
   }
 
   50% {
-    stroke-dashoffset: 46.75;
+    stroke-dashoffset: 49;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
 
   100% {
-    stroke-dashoffset: 187;
+    stroke-dashoffset: 196;
     -webkit-transform: rotate(450deg);
             transform: rotate(450deg);
   }
@@ -1723,17 +1723,17 @@ button {
 
 @keyframes dash {
   0% {
-    stroke-dashoffset: 187;
+    stroke-dashoffset: 196;
   }
 
   50% {
-    stroke-dashoffset: 46.75;
+    stroke-dashoffset: 49;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
 
   100% {
-    stroke-dashoffset: 187;
+    stroke-dashoffset: 196;
     -webkit-transform: rotate(450deg);
             transform: rotate(450deg);
   }
@@ -3089,6 +3089,12 @@ section {
   height: auto;
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
+}
+
+@media (min-width: 550px) {
+  .site-logo {
+    width: 10em;
+  }
 }
 
 .site-logo--side-nav {

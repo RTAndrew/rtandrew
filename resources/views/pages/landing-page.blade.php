@@ -112,7 +112,6 @@
 						<p class="block__bold">03</p>
 						<h1 class="block__titulo wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s"> Entrevista & Exposição Virtual </h1>
 						<p class="block__descricao wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="1.9s">Em uma entrevista, cheia de gargalos e pensamentos profundos, esforço-me para descrever quem realmente é o Rtandrew. E por fim, uma exposição virtual, intitulada <i>Ex Umbra In Solem</i>, com trabalhos que de alguma forma me embarcam para uma reminiscência divina. </p>
-						<span class="coming-soon wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="2s"> Brevemente... </span>
 					</div>
 				</div>
 
