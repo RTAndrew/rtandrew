@@ -3091,6 +3091,12 @@ section {
           filter: brightness(100%);
 }
 
+@media (min-width: 550px) {
+  .site-logo {
+    width: 11em;
+  }
+}
+
 .site-logo--side-nav {
   width: 4em;
   height: auto;
