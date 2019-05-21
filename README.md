@@ -1,6 +1,6 @@
 <p align="center"> <img src="https://res.cloudinary.com/db9ha9ox6/image/upload/v1551351148/rtandrew-site/logo-black.png"> </p> 
 
-<p align="center"> Rtandrew is my personal blog/site, where I publish all my creating work - from texts, photographs, adventures... </p>
+<p align="center"> Rtandrew is my personal blog/site, where I publish all my creative work - from texts, photographs, adventures... </p>
 
 ## Main Pages
 - [x] Textos
