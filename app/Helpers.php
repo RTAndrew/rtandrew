@@ -22,7 +22,15 @@ function viewDelayTime() {
     return 3;
 }
 
-// Numeros Romanos
+
+
+
+
+
+
+
+// Trocar os numeros inteiros 
+// por numeros romanos
 function romanNumerals($num) {
     $n = intval($num);
     $res = '';
@@ -59,113 +67,104 @@ function romanNumerals($num) {
     return $res;
 }
 
+
+
+
+
+
+
+
+
+
+//Convert to UTF-8
+function convert2utf8($text){
+    return html_entity_decode($text, ENT_QUOTES, "utf-8");
+}
+
+    //Convert Text to HTML UTF-8
+    function convertText2UTF($text) {
+        $html_markup_array = array("\r", "\n", '"', '<div>', '</div>', '<p>', '</p>');
+        $strip_html_markup = str_replace($html_markup_array, '', convert2utf8($text));
+        return $strip_html_markup;
+    }
+
+
+
+    // Truncar a descricao para o uso no METATAG
+    // 150 Maximum Characters
+    function truncarMetaDescription($descricao) {
+        $strip_html_markup = strip_tags($descricao, '<br>');
+        $truncar = str_limit($strip_html_markup, 150);
+        $result_utf8 = convert2utf8($truncar);
+        return str_replace("<br />", " ", $result_utf8);
+    }
+
+
+
+    // Remover HTML Markup
+    // Truncar a descricao dos textos
+    // Retornar String em formato UTF-8
+    function truncarDescricao($descricao) {
+        $strip_html_markup = strip_tags($descricao, '');
+        $truncar = str_limit($strip_html_markup, 340);
+        // $result_utf8 = html_entity_decode($truncar, ENT_QUOTES, "utf-8");
+        return $truncar;
+    }
+
+
+
+
+
+
+
+
+// Atribuir diferentes tamanhos do titulo do Texto
+// Baseado no tamanho da descricao
+function determineFontSize($quote, $descricao) {
+
+    $numWords=strlen ($quote);
+    $numDescricao=strlen ($descricao);
+    $tamanho = 0;
+   
+    // Condicao apenas para o Titulo
+    if (($numWords > 1) && ($numWords < 10)) {
+        $tamanho = 65;
+    } elseif (($numWords >= 10) && ($numWords < 20)) {
+        $tamanho = 55;
+    } elseif (($numWords >= 20) && ($numWords < 30)) {
+        $tamanho = 42;
+    } elseif ( (($numWords >= 30) && ($numWords < 40)) && ($numDescricao <= 100)) {
+        $tamanho = 35;
+    } else {
+        $tamanho = 25;
+    }
+
+    return $tamanho;    
+}
+
+
+
+
+
+
+
+
+// Opengraph Image Path
 function getSiteIdentityImage() {
     $image = 'img/opengraph-image.jpg';
     return $image;
 }
 
 
-//Convert Text to HTML UTF-8
-function convertText2UTF($text) {
-    $convertion = html_entity_decode($text, ENT_QUOTES, "utf-8");
-    $arrayOfChars = array("\r", "\n", '"', '<div>', '</div>', '<p>', '</p>');
-    $removeChar = str_replace($arrayOfChars, '', $convertion);
-    return $removeChar;
-}
+    // Atribuir a qualidade das imagens do Cloudinary
+    function cloudinaryImagePath($image, $quality) {
 
+        $cloudinary_url = "https://res.cloudinary.com/db9ha9ox6/image/upload/";
+        
+            if($quality != null ?? $quality != "") {
+                $quality_of_transformation = "q_" . '' . $quality . '/';
+                return $cloudinary_url . '' . $quality_of_transformation . '' . $image; 
+            }
 
-
-// Truncar a descricao para o uso no METATAG
-// 150 Characteres allowed
-function truncarMetaDescription($descricao) {
-    $strip_html_markup = strip_tags($descricao, '<br>');
-    $truncar = str_limit($strip_html_markup, 150);
-    $result_utf8 = html_entity_decode($truncar, ENT_QUOTES, "utf-8");
-    return str_replace("<br />", " ", $result_utf8);
-}
-
-
-
-// Remover HTML Markup
-// Truncar a descricao dos textos
-// Retornar String em formato UTF-8
-function truncarDescricao($descricao) {
-    $strip_html_markup = strip_tags($descricao, '');
-    $truncar = str_limit($strip_html_markup, 340);
-    // $result_utf8 = html_entity_decode($truncar, ENT_QUOTES, "utf-8");
-    return $truncar;
-}
-
-
-
-
-// Tamanho das Letras
-function determineFontSize($quote, $descricao) {
-
-$numWords=strlen ($quote);
-$numDescricao=strlen ($descricao);
-$tamanho = 0;
-
-   
-
-    // Condicao apenas para o Titulo
-    if (($numWords > 1) && ($numWords < 10)) {
-        $tamanho = 65;
-
-    } elseif (($numWords >= 10) && ($numWords < 20)) {
-        $tamanho = 55;
-
-    } elseif (($numWords >= 20) && ($numWords < 30)) {
-        $tamanho = 42;
-
-    } elseif ( (($numWords >= 30) && ($numWords < 40)) && ($numDescricao <= 100)) {
-        $tamanho = 35;
-
-    } else {
-        $tamanho = 25;
-
+        return $cloudinary_url . '' . $image;
     }
-
-
-
-
-    // if ($numDescricao < 50) {
-    //     $tamanho = 50;
-    // } if (($numDescricao < 50) && ($numWords > 20)) {
-    //     $tamanho = 35;
-    // }
-
-
-
-    // if ($numDescricao >= 320) {
-    //     $tamanho = 30;
-    // } if ( ($numDescricao >= 300) && (($numWords > 1) && ($numWords < 10)) )  {
-    //     $tamanho = 65;
-    // }
-
-
-
-
-
-    return $tamanho;
-
-    
-
-}
-
-
-
-function cloudinaryImagePath($image, $quality) {
-
-    $cloudinary_url = "https://res.cloudinary.com/db9ha9ox6/image/upload/";
-    
-        if($quality != null ?? $quality != "") {
-            $quality_of_transformation = "q_" . '' . $quality . '/';
-            return $cloudinary_url . '' . $quality_of_transformation . '' . $image; 
-        }
-
-    return $cloudinary_url . '' . $image;
-
-
-}
-
