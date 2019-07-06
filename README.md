@@ -20,7 +20,7 @@
 
 ## To do
 - [x] Improve the HEADER awareness
-- [ ] Optimize Font (FOUT / FOIT)
+- [x] ~~Optimize Font (FOUT / FOIT)~~ Thankfully Google already supports it
 - [ ] Optimize Justified Grid to use the image height and reduce visually the waiting time
 - [ ] Create Exposição Virtual
     - [ ] Create vertical line as background
