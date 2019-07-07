@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya:400,700|Source+Sans+Pro:400,600);.texto__content .texto__descricao-wrapper,
+@import url(https://fonts.googleapis.com/css?&display=swap&family=Alegreya:400,700|Source+Sans+Pro:400,600);.texto__content .texto__descricao-wrapper,
 .container {
   width: 90%;
   margin: 0 auto;
@@ -2888,14 +2888,30 @@ blockquote cite {
   text-transform: capitalize;
 }
 
+.foto__descricao {
+  position: relative;
+}
+
 .foto__descricao p {
   margin: 1.3em 0;
   line-height: 1.6;
 }
 
-@media (min-width: 600px) {
-  .foto__descricao p {
-    font-size: 1.127357em;
+.foto__descricao blockquote {
+  margin: 0px;
+  font-size: 1.2400927em;
+  padding: 5px 0 5px 15px;
+}
+
+.foto__descricao blockquote:before {
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 750px) {
+  .foto__descricao blockquote {
+    width: 50%;
+    left: -20%;
+    position: relative;
   }
 }
 
@@ -2907,6 +2923,12 @@ blockquote cite {
   color: #2f655f;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+@media (min-width: 600px) {
+  .foto__descricao {
+    font-size: 1.127357em;
+  }
 }
 
 .texto__hero {
@@ -3027,6 +3049,16 @@ blockquote cite {
 .texto__descricao p {
   line-height: 1.6;
   margin: 1.3em 0;
+}
+
+.texto__descricao blockquote {
+  margin: 0px;
+  font-size: 1.2400927em;
+  padding: 5px 0 5px 15px;
+}
+
+.texto__descricao blockquote:before {
+  background-color: #f7f7f7;
 }
 
 @media (min-width: 550px) {
