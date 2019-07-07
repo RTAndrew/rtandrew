@@ -126,15 +126,27 @@
 
 
 .foto__descricao {
-
+	position: relative;
+		
 	p {
 		margin: 1.3em 0;
 		line-height: 1.6;
+	}
 
-		@media (min-width: 600px) {
-			font-size: ms(4);
+	blockquote {
+		margin: 0px;
+		font-size: ms(5);
+		padding: 5px 0 5px 15px;
+
+		&:before{
+			background-color: $light-gray;
 		}
 
+		@media (min-width: 750px) {
+			width: 50%;
+			left: -20%;
+			position: relative;
+		}
 	}
 
 	a {
@@ -143,6 +155,10 @@
 			color: $acent-strong;
 			transition: 0.2s;
 		}
+	}
+
+	@media (min-width: 600px) {
+		font-size: ms(4);
 	}
 }
 
