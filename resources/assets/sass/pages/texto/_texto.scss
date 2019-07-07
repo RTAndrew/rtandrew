@@ -133,6 +133,16 @@
 		margin: 1.3em 0;
 	}
 
+	blockquote {
+		margin: 0px;
+		font-size: ms(5);
+		padding: 5px 0 5px 15px;
+
+		&:before{
+			background-color: $light-gray;
+		}
+	}
+
 	@media (min-width: 550px) {
 		padding: 0;
 	}
