@@ -19,16 +19,6 @@ class DatabaseSeeder extends Seeder
             
             $this->call(Texto_NotaTableSeeder::class);
 
-        
-        
-
-
-        $this->call(Texto_ProjectoTableSeeder::class);
-        
-        $this->call(Projecto_TxtTableSeeder::class);
-        
-       
-
         $this->call(AlbunsTableSeeder::class);
         
         $this->call(FotosTableSeeder::class);
@@ -41,7 +31,9 @@ class DatabaseSeeder extends Seeder
         
         
 
+        // $this->call(Texto_ProjectoTableSeeder::class);
 
+        // $this->call(Projecto_TxtTableSeeder::class);
 
         // $this->call(UsersTableSeeder::class);
         
