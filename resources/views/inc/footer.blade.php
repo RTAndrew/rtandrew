@@ -20,8 +20,8 @@
 		  			<img src=" {{ asset('img/icons/social-midia/instagram.svg') }} " alt="Instagram Icon">	
 				</a>
 				
-				<a rel="me" href="https://dribbble.com/Rtandrew">
-		  			<img src=" {{ asset('/img/icons/social-midia/dribbble.svg') }} " alt="Dribbble Icon">	
+				<a rel="me" href="https://github.com/RTAndrew">
+		  			<img src=" {{ asset('/img/icons/social-midia/github.svg') }} " alt="Github Icon">	
 				</a>
 				
 				<a rel="me" href="https://www.pinterest.com/anderson_rodax/">
@@ -36,7 +36,7 @@
   		</div>
 		<p class="footer__word"> ©2015 - {{ date('Y') }} <br> Todos os Direitos Reservados.</p>
 		
-		<p class="footer__word">Este site foi à mão pelo Rtandrew. 😎</p>
+		<p class="footer__word">Este site foi feito à mão pelo Rtandrew. 😎</p>
 		<p class="footer__word"> <a href="" title="DMCA"> DMCA </a>  </p>
 
 	</div>
@@ -55,7 +55,7 @@
 		<div class="footer__left-block">
 
 			<div class="footer__word">
-				<p>Este site foi à mão pelo Rtandrew. 😎</p>
+				<p>Este site foi feito à mão pelo Rtandrew. 😎</p>
 				<p> ©2015 - {{ date('Y') }}. Todos os Direitos Reservados.</p>
 				<p class="footer__word--dmca"> For copyright infrigment, please use the <a href="" title="DMCA"> DMCA </a>.  </p>
 			</div>
@@ -89,9 +89,9 @@
 				
 				<div class="social-midia__block">
 					
-					<img class="social-midia__icon" src="{{ asset('img/icons/social-midia/dribbble.svg') }}" alt="Dribbble Icon">	
+					<img class="social-midia__icon" src="{{ asset('img/icons/social-midia/github.svg') }}" alt="Dribbble Icon">	
 					<p class="social-midia__nome"> Dribbble </p>
-					<a rel="me" class="social-midia__link" href="https://dribbble.com/Rtandrew">Rtandrew</a>
+					<a rel="me" class="social-midia__link" href="https://github.com/RTAndrew">Rtandrew</a>
 				</div>
 				
 			</div>	
