@@ -3,7 +3,7 @@
     <ul class="pagination" role="navigation">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <li class="page-item icon disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
+            <li class="page-item icon disabled" aria-disabled="true" aria-label="previous">
                 <span class="page-link"> <img src="{{ asset('img/icons/arrow-left.svg') }}" alt="arrow-left"> </span>
             </li>
         @else
@@ -41,7 +41,7 @@
                 </a>
             </li>
         @else
-            <li class="page-item disabled icon" aria-disabled="true" aria-label="@lang('pagination.next')">
+            <li class="page-item disabled icon" aria-disabled="true" aria-label="next">
                 <span class="page-link"> <img src="{{ asset('img/icons/arrow-right.svg') }}" alt="arrow-right"> </span>
             </li>
         @endif
