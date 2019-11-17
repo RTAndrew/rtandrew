@@ -168,3 +168,14 @@ function getSiteIdentityImage() {
 
         return $cloudinary_url . '' . $image;
     }
+
+    // Return Textos Image custom image
+    function getTextoImage($texto_image){
+        // Remove all white space, tabs, a line breaks
+        $texto_with_no_space = preg_replace('/\s+/', '', $texto_image);
+
+        if ($texto_with_no_space != null)
+            return cloudinaryImagePath($texto_with_no_space, '');
+        else
+            return asset(getSiteIdentityImage());
+    }
