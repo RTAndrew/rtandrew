@@ -5,8 +5,15 @@
 	<script type="application/ld+json">
 		{
 		    "@context":"http://schema.org",
-		    "@type": ["BlogPosting", "CreativeWork"],
-		    "image": "http://rtandrew.com/img/opengraph-image.jpg",
+		    "@type": ["BlogPosting", "CreativeWork", "ImageObject"],
+		    "image": "
+		    {{-- Remove all white space, tabs, a line breaks --}}
+		    	@if (preg_replace('/\s+/', '', $texto->image_url) != null)
+		    		{{ cloudinaryImagePath($texto->image_url, '') }}
+		    	@else
+		    		http://rtandrew.com/img/opengraph-image.jpg
+		    	@endif
+		    ",
 		    "url": "{{ route('textos.texto', $texto->slug) }}",
 		    "headline": "{{ $texto->titulo }}",
 		    "dateCreated": "{{ $texto->created_at }}",
@@ -52,7 +59,13 @@
 		    "interactionStatistic": {
 			    "@type": "InteractionCounter",
 			    "userInteractionCount": "{{ $texto->view_count }}"
-			}
+			},
+			"primaryImageOfPage": {
+			    "@type": "ImageObject",
+			    "thumbnail": "{{ cloudinaryImagePath($texto->image_url, '') }}"
+			},
+			"thumbnailUrl": "{{ cloudinaryImagePath($texto->image_url, '') }}",
+			"thumbnail": "{{ cloudinaryImagePath($texto->image_url, '') }}"
 		}
 	</script>
 
