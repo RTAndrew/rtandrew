@@ -89,8 +89,8 @@
 				
 				<div class="social-midia__block">
 					
-					<img class="social-midia__icon" src="{{ asset('img/icons/social-midia/github.svg') }}" alt="Dribbble Icon">	
-					<p class="social-midia__nome"> Dribbble </p>
+					<img class="social-midia__icon" src="{{ asset('img/icons/social-midia/github.svg') }}" alt="Github Icon">	
+					<p class="social-midia__nome"> Github </p>
 					<a rel="me" class="social-midia__link" href="https://github.com/RTAndrew">Rtandrew</a>
 				</div>
 				
