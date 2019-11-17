@@ -6,14 +6,7 @@
 		{
 		    "@context":"http://schema.org",
 		    "@type": ["BlogPosting", "CreativeWork", "ImageObject"],
-		    "image": "
-		    {{-- Remove all white space, tabs, a line breaks --}}
-		    	@if (preg_replace('/\s+/', '', $texto->image_url) != null)
-		    		{{ cloudinaryImagePath($texto->image_url, '') }}
-		    	@else
-		    		http://rtandrew.com/img/opengraph-image.jpg
-		    	@endif
-		    ",
+		    "image": "{{ getTextoImage($texto->image_url) }}",
 		    "url": "{{ route('textos.texto', $texto->slug) }}",
 		    "headline": "{{ $texto->titulo }}",
 		    "dateCreated": "{{ $texto->created_at }}",
@@ -62,10 +55,10 @@
 			},
 			"primaryImageOfPage": {
 			    "@type": "ImageObject",
-			    "thumbnail": "{{ cloudinaryImagePath($texto->image_url, '') }}"
+			    "thumbnail": "{{ getTextoImage($texto->image_url) }}"
 			},
-			"thumbnailUrl": "{{ cloudinaryImagePath($texto->image_url, '') }}",
-			"thumbnail": "{{ cloudinaryImagePath($texto->image_url, '') }}"
+			"thumbnailUrl": "{{ getTextoImage($texto->image_url) }}",
+			"thumbnail": "{{ getTextoImage($texto->image_url) }}"
 		}
 	</script>
 
@@ -81,7 +74,7 @@
 
 
 	<!--FACEBOOK-->
-	    <meta property="og:image" content="{{ asset(getSiteIdentityImage()) }}">
+	    <meta property="og:image" content="{{ getTextoImage($texto->image_url) }}">
 	    <meta property="og:image:type" content="image/png">
 	    
 	    <meta property="og:type" content="article" />
@@ -102,7 +95,7 @@
 		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
 		<meta name="twitter:title" content="{{ $texto->titulo }}" />
 		<meta name="twitter:description" content="{!! truncarMetaDescription($texto->descricao) !!}" />
-		<meta name="twitter:image" content="{{ asset(getSiteIdentityImage()) }}" />
+		<meta name="twitter:image" content=""{{ getTextoImage($texto->image_url) }}"" />
 @endsection
 
 
