@@ -95,7 +95,7 @@
 		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
 		<meta name="twitter:title" content="{{ $texto->titulo }}" />
 		<meta name="twitter:description" content="{!! truncarMetaDescription($texto->descricao) !!}" />
-		<meta name="twitter:image" content=""{{ getTextoImage($texto->image_url) }}"" />
+		<meta name="twitter:image" content="{{ getTextoImage($texto->image_url) }}" />
 @endsection
 
 
@@ -119,11 +119,7 @@
 						@endslot
 						
 						@slot('icon')
-							<svg class="icon icon-align" width="26" height="26" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<rect width="26" height="3" fill="white"/>
-								<rect width="13" height="3" transform="translate(0 8)" fill="white"/>
-								<rect width="26" height="3" transform="translate(0 16)" fill="white"/>
-							</svg>
+
 						@endslot
 
 

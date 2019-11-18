@@ -7,13 +7,22 @@
 	.middot-spacer {
 		margin: 0 1em;
 	}
+
+	.nav-categoria {
+		// background-color: green;
+		width: 100%;
+		.pulse-awareness {
+			// animation: none;
+		}
+		.nav-categoria__left {
+			opacity: 1 !important;
+		}
+	}
 }
 
 
 
 .album__hero {
-	
-		
 	display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -33,25 +42,19 @@
     -ms-flex-align: center;
     align-items: center;
 	
-	// background-image: url('../img/landscape.jpg');
-
-	height: 30em;
+	height: 20em;
 	text-shadow: 0 1px 1px #000;
-	
 	
 	
 	@media (min-width: 650px) {
 		height: 35em;
 	}
 		
-
 	.social-media-share__text {
 		display: none;
 	}
 
 	.container {
-	
-		
 		display: -ms-flexbox;
 	    display: -webkit-flex;
 	    display: flex;
@@ -70,8 +73,6 @@
 	    -webkit-align-items: center;
 	    -ms-flex-align: center;
 	    align-items: center;
-
-
 
 	    @media (min-width: 650px) {
 	    	width: 70%;
@@ -94,7 +95,6 @@
 	line-height: 1.2;
 	margin-bottom: 0.5em;
 	text-transform: capitalize;
-	// letter-spacing: -0.5px !important;
 
 	@media (min-width: 1200px) {
 		font-size: ms(14);
@@ -113,7 +113,6 @@
 	margin: 2em 0 2em;
 
 	.icon {
-		with: 18px;
 		height: 18px;
 		margin-right: 0.5em;
 	}

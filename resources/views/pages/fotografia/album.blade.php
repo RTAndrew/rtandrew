@@ -89,38 +89,7 @@
 @section('content')
 
 
-	<div class="container">
-		@component('components.nav-categoria--full')
-		
-		{{-- Lado Esquerdo --}}					
-			@slot('categoria')
-				 Menu
-			@endslot
-			
-			@slot('icon')
-				<svg class="icon icon-align" width="26" height="26" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect width="26" height="3" fill="white"/>
-					<rect width="13" height="3" transform="translate(0 8)" fill="white"/>
-					<rect width="26" height="3" transform="translate(0 16)" fill="white"/>
-				</svg>
-			@endslot
-
-
-
-
-
-		{{-- Lado Direito --}}
-			@slot('categoria2')
-				
-			@endslot
-			
-			@slot('icon2')
-				
-			@endslot
-
-
-		@endcomponent
-	</div>
+	
 
 
 
@@ -200,7 +169,38 @@
 
 	</div>
 
+	<div class="container">
+		@component('components.nav-categoria--full')
+		
+		{{-- Lado Esquerdo --}}					
+			@slot('categoria')
+				 Menu
+			@endslot
+			
+			@slot('icon')
+				<svg class="icon icon-align" width="26" height="26" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="26" height="3" fill="white"/>
+					<rect width="13" height="3" transform="translate(0 8)" fill="white"/>
+					<rect width="26" height="3" transform="translate(0 16)" fill="white"/>
+				</svg>
+			@endslot
 
+
+
+
+
+		{{-- Lado Direito --}}
+			@slot('categoria2')
+				
+			@endslot
+			
+			@slot('icon2')
+				
+			@endslot
+
+
+		@endcomponent
+	</div>
 
 
 	<div class="container">
