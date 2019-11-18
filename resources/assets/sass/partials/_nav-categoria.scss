@@ -10,6 +10,9 @@
 		font-size: ms(4);
 	}
 
+	.pulse-awareness {
+		animation: pulse2 1.5s infinite;
+	}
 
 	.icon {
 		width: 26px;
@@ -23,9 +26,8 @@
 	@include truncate(90%);
 	
 }
-
+.nav-categoria__left,
 .nav-categoria__right {
-
 	span {
 		margin: 0 0.5em;
 		opacity: $is-inactive;
@@ -34,15 +36,15 @@
 
 
 
-				.nav-categoria__left,
-				.nav-categoria__right--full-opacity {
-					transition: 0.3s;
-					opacity: $is-inactive;
+				// .nav-categoria__left,
+				// .nav-categoria__right--full-opacity {
+				// 	transition: 0.3s;
+				// 	opacity: $is-inactive;
 
-					&:hover {
-						opacity: 1;
-					}
-				}
+				// 	&:hover {
+				// 		opacity: 1;
+				// 	}
+				// }
 
 
 
@@ -82,4 +84,21 @@
 
 .nav-categoria--double-padding {
 	padding: $section-padding+-1 0;
+}
+
+
+
+
+
+// CSS Animation already has
+// a pulse animation
+// To avoid conflict, this
+// one is named "pulse2"
+@-webkit-keyframes pulse2 {
+  0% {
+	color: $acent-strong;
+  }
+  100% {
+    color: $acent;
+  }
 }

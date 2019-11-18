@@ -42,6 +42,16 @@
 	.nav-categoria--simple {
 		padding: 0;
 	}
+
+	.nav-categoria__left,
+	.nav-categoria__right--full-opacity {
+		transition: 0.3s;
+		opacity: $is-inactive;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
 	
 }
 

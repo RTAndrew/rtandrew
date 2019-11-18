@@ -188,7 +188,7 @@
 
 			<meta property="og:site_name" content="{{ config('app.name', 'Rtandrew Paul') }}" />
 			<meta property="og:see_also" content="https://www.instagram.com/alkhemy.zavua/" />
-			<meta property="og:see_also" content="https://dribbble.com/Rtandrew" />
+			<meta property="og:see_also" content="https://github.com/Rtandrew" />
 			<meta property="og:see_also" content="https://www.pinterest.com/anderson_rodax/" />
 			<meta property="og:see_also" content="https://www.strava.com/athletes/13278283" />
 

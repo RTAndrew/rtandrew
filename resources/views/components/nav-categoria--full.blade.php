@@ -6,9 +6,9 @@
 					
 	<div class="nav-categoria__left align-left" data-pushbar-target="side-nav">
 		{{-- Adicionar sempre a classe "icon-align" no svg --}}
-		{{ $icon }}
+		{{-- {{ $icon }} --}}
 		
-		<h3 class="nav-categoria__nome"> {{ $categoria }} </h3>
+		<h3 class="nav-categoria__nome pulse-awareness"> {{ $categoria }} </h3>
 		
 	</div>
 
