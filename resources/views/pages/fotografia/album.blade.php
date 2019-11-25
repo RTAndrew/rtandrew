@@ -20,14 +20,11 @@
 					"@type": "ImageGallery",
 					"image": [
 						@foreach ($fotos as $foto)
-							@if ($loop->first)
-								{
-									"@type": "ImageObject",
-									"name": "{{ $foto->titulo }}",
-									"url": "{{ route('foto', $foto->slug)}}",
-									"thumbnailUrl": "{{ cloudinaryImagePath($foto->image_url, '') }}"
-								},
-							@elseif ($loop->last)
+						{{-- The last iteration does not
+							contain comma. Otherwise, 
+							it will break the JSON-LD
+						--}}
+							@if ($loop->last)
 								{
 									"@type": "ImageObject",
 									"name": "{{ $foto->titulo }}",
