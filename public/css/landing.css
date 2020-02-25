@@ -1138,7 +1138,6 @@ button {
 }
 
 .nav-categoria__nome {
-  margin-left: 0.5em;
   font-family: Source Sans Pro, sans-serif;
 }
 
@@ -1151,6 +1150,16 @@ button {
 }
 
 @-webkit-keyframes pulse2 {
+  0% {
+    color: #2f655f;
+  }
+
+  100% {
+    color: #67DDD1;
+  }
+}
+
+@keyframes pulse2 {
   0% {
     color: #2f655f;
   }
@@ -1452,10 +1461,6 @@ button {
 .album {
   color: #fff;
   margin: 0 auto;
-}
-
-.album .middot-spacer {
-  margin: 0 1em;
 }
 
 .album .nav-categoria {
@@ -1825,6 +1830,8 @@ button {
 
 blockquote {
   z-index: 0;
+  color: #5c5c5c;
+  max-width: 60%;
   margin: 3rem auto;
   position: relative;
   padding: 30px 0 30px 30px;
