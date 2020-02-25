@@ -47,37 +47,12 @@
 
 
 @section('content')
-
 		<div class="container">
-			
 			@include('inc.navigation.nav-categoria')			
-
-
 		</div>
 
 		<div class="container">
-
 			{{-- Grid Card --}}
 			@include('components.cards.fullcard')
-
-			
-			{{-- Button for the Infinite Scrolling --}}
-						{{-- <div class="page-load-status">
-							<p class="infinite-scroll-request">Loading...</p>
-							<p class="infinite-scroll-last">End of content</p>
-							<p class="infinite-scroll-error">No more pages to load</p>
-						</div>
-			
-						<center> 
-							<p> 
-								<button class="view-more-button button button--cta" style="margin-bottom: 5em;"> Carregar 
-								</button> 
-							</p>
-						</center> --}}
-			
-
 		</div>
-			
-
-
 @endsection

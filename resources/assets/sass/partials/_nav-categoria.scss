@@ -73,7 +73,6 @@
 
 
 .nav-categoria__nome {
-	margin-left: 0.5em;
 	font-family: $sans-serif;
 }
 
@@ -94,7 +93,7 @@
 // a pulse animation
 // To avoid conflict, this
 // one is named "pulse2"
-@-webkit-keyframes pulse2 {
+@keyframes pulse2 {
   0% {
 	color: $acent-strong;
   }
