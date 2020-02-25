@@ -6,7 +6,16 @@
 					
 	<div class="nav-categoria__left align-left" data-pushbar-target="side-nav">
 		
-		<a class="nav-categoria__nome pulse-awareness"> Menu </a>
+		<a class="nav-categoria__nome pulse-awareness"> 
+			{{-- Check if the route is Text or Photo --}}
+			@if (Request::is('texto/*'))
+				Notas
+			@endif
+
+			@if (Request::is('fotografia/*'))
+				Álbuns
+			@endif 
+		</a>
 
 	</div>
 
