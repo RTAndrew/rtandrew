@@ -1,6 +1,6 @@
 
 {{-- If text has no image 
-	load a different file
+	to load a different file
 --}}
 	@if ($texto->image_url == null)
 		@include('pages.texto.texto--no-image')

@@ -2,7 +2,7 @@
 	{{-- Somente para Fotografias --}}
 		@isset ($fotos)
 		    
-			<div id="justified-grid" class="justified-gallery justified-grid infinite-scroll-container">
+			<div id="justified-grid" class="justified-gallery justified-grid">
 				
 				@foreach ($fotos as $foto)
 					<a  class="foto__wrapper" href=" {{ route('foto', $foto->slug)}} ">

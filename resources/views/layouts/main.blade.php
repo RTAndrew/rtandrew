@@ -314,17 +314,17 @@
 
 	var navDefaultSize = "30px";
 	var navExtendedSize = "205px";
-//default to measure if/else from
-nav.style.height = navDefaultSize;
+	//default to measure if/else from
+	nav.style.height = navDefaultSize;
 
-// for (i = 0; i < menu.length; i++){menu[i].style.marginTop="100px";};
+	// for (i = 0; i < menu.length; i++){menu[i].style.marginTop="100px";};
 
-close.addEventListener("click", function(){
-  var menuIcon = close.children;
-  for (i = 0; i < menuIcon.length; i++){
-  menuIcon[i].classList.toggle("active");
-  }   
-});
+	close.addEventListener("click", function(){
+	var menuIcon = close.children;
+	for (i = 0; i < menuIcon.length; i++){
+	menuIcon[i].classList.toggle("active");
+	}   
+	});
 
 function navToggle() {
 	

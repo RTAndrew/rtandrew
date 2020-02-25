@@ -174,7 +174,7 @@
 		
 		{{-- Lado Esquerdo --}}					
 			@slot('categoria')
-				 Menu
+				 Álbuns
 			@endslot
 			
 			@slot('icon')
