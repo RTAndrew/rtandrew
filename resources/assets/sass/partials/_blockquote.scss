@@ -81,6 +81,15 @@ blockquote {
 			transform: rotateY(360deg);
 		}
 
+		p {
+			font-family: $serif;
+
+			a {
+				font-style: normal;
+				font-family: $sans-serif;
+			}
+		}
+
 		cite {
 			display: block;
 			margin-top: 1em;

@@ -99,7 +99,7 @@
 }
 
 .foto__album > * {
-	@include truncate(55%)
+	@include truncate(55%);
 
 	display: inline-block;
 	vertical-align: middle;

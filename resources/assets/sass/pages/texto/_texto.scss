@@ -130,28 +130,28 @@
 
 
 .texto__image {
-	width: 220px;
-	height: 220px;
-	border: 1px solid;
-	position: relative;
+	z-index: 100;
+	margin: auto;
 	left: -2em;
 	top: 2.5em;
-	z-index: 100;
-	margin: 0 auto;
+	position: relative;
+
 
 	img {
-		width: 100%;
-		height: 100%;
-	}
-
-	@media (min-width: 550px) {
-		width: 150px;
-		height: 150px;		
-	}
-
-	@media (min-width: 800px) {
-		width: 300px;
-		height: 300px;		
+		min-width: auto;
+			max-width: 100%;
+		min-height: auto;
+			max-height: 155px;	
+		
+		margin: auto;
+		border: 1px solid;
+		
+		@media (min-width: 800px) {
+			min-width: auto;
+				max-width: 100%;
+			min-height: 300px;
+				max-height: 320px;			
+		}
 	}
 }
 
@@ -186,7 +186,6 @@
 	margin-bottom: 1em;
 	font-family: $sans-serif;
 	text-transform: capitalize;
-	// justify-content: space-between;
 
 	.texto__categoria, .texto__views {
 		opacity: 0.8;
@@ -233,11 +232,8 @@
 	}
 
 	blockquote {
-		margin: 0px;
 		font-size: ms(5);
-		font-weight: bold;
 		font-family: $serif;
-		padding: 5px 0 5px 15px;
 
 		&:before{
 			background-color: $light-gray;
