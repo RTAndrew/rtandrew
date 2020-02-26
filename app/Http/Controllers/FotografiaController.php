@@ -48,7 +48,7 @@ class FotografiaController extends Controller
 				->get();
 			
 			
-			// Empty Array Inicialization
+			// Empty Array Initialization
 			$fotoAlbum_arrayOfIds = array();
 				foreach ($fotoAlbumFetch as $ph) {
 					array_push($fotoAlbum_arrayOfIds, $ph->id);
@@ -68,7 +68,9 @@ class FotografiaController extends Controller
 		    ->record();
 
 		    $album->view_count = views($album)->count();
-		    $album->save();
+			$album->save();
+			
+			
         return view('pages.fotografia.album')
         ->with('fotos', $fotos)
         ->with('album', $album)

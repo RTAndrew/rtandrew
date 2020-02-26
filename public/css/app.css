@@ -1159,7 +1159,6 @@ button {
 }
 
 .nav-categoria__nome {
-  margin-left: 0.5em;
   font-family: Source Sans Pro, sans-serif;
 }
 
@@ -1172,6 +1171,16 @@ button {
 }
 
 @-webkit-keyframes pulse2 {
+  0% {
+    color: #2f655f;
+  }
+
+  100% {
+    color: #67DDD1;
+  }
+}
+
+@keyframes pulse2 {
   0% {
     color: #2f655f;
   }
@@ -1473,10 +1482,6 @@ button {
 .album {
   color: #fff;
   margin: 0 auto;
-}
-
-.album .middot-spacer {
-  margin: 0 1em;
 }
 
 .album .nav-categoria {
@@ -1846,6 +1851,8 @@ button {
 
 blockquote {
   z-index: 0;
+  color: #5c5c5c;
+  max-width: 60%;
   margin: 3rem auto;
   position: relative;
   padding: 30px 0 30px 30px;
@@ -2942,33 +2949,56 @@ blockquote cite {
   }
 }
 
-.texto__hero {
-  height: 350px;
+.texto__hero .wrapper {
+  height: 330px;
   color: #fff;
   margin: 0 auto;
-  padding: 1rem 1rem;
+  padding: 0.1em 1em;
 }
 
 @media (min-width: 550px) {
-  .texto__hero {
+  .texto__hero .wrapper.texto-with-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+}
+
+@media (max-width: 550px) {
+  .texto__hero .wrapper .left-side {
+    display: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .texto__hero .wrapper {
     max-width: 80%;
+    height: 380px;
   }
 }
 
 @media (min-width: 800px) {
-  .texto__hero {
+  .texto__hero .wrapper {
     max-width: 70%;
   }
 }
 
 @media (min-width: 1100px) {
-  .texto__hero {
+  .texto__hero .wrapper {
     max-width: 60%;
   }
 }
 
 @media (min-width: 1400px) {
-  .texto__hero {
+  .texto__hero .wrapper {
     max-width: 45%;
   }
 }
@@ -3061,10 +3091,41 @@ blockquote cite {
   }
 }
 
+.texto__image {
+  width: 220px;
+  height: 220px;
+  border: 1px solid;
+  position: relative;
+  left: -2em;
+  top: 2.5em;
+  z-index: 100;
+  margin: 0 auto;
+}
+
+.texto__image img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 550px) {
+  .texto__image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 800px) {
+  .texto__image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 .texto__titulo {
   color: #fff;
-  margin-top: 1em;
+  margin: 1em 0;
   line-height: 1.2;
+  text-align: center;
   letter-spacing: 0.5px;
   word-spacing: 3px;
   font-size: 1.99718169em;
@@ -3072,13 +3133,57 @@ blockquote cite {
 }
 
 @media (min-width: 550px) {
-  .texto__titulo {
-    text-align: center;
+  .texto__titulo.texto-with-image {
+    text-align: left;
   }
 }
 
 .texto__titulo--small {
   opacity: 0.3;
+}
+
+.texto__details {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin-bottom: 1em;
+  font-family: Source Sans Pro, sans-serif;
+  text-transform: capitalize;
+}
+
+.texto__details .texto__categoria,
+.texto__details .texto__views {
+  opacity: 0.8;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.texto__details .texto__categoria {
+  margin-right: 2em;
+}
+
+.texto__details .texto__categoria p {
+  max-width: 99%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.texto__details .icon {
+  width: 1em;
+  margin-right: 4px;
+  color: white;
 }
 
 .texto__relacionados {
@@ -3103,6 +3208,8 @@ blockquote cite {
 .texto__descricao blockquote {
   margin: 0px;
   font-size: 1.2400927em;
+  font-weight: bold;
+  font-family: Alegreya, serif;
   padding: 5px 0 5px 15px;
 }
 
@@ -3113,6 +3220,16 @@ blockquote cite {
 @media (min-width: 550px) {
   .texto__descricao {
     padding: 0;
+  }
+
+  .texto__descricao.texto-with-image {
+    margin-top: 2em;
+  }
+}
+
+@media (min-width: 800px) {
+  .texto__descricao.texto-with-image {
+    margin-top: 8em;
   }
 }
 
@@ -3151,6 +3268,10 @@ h5 {
 a {
   text-decoration: inherit;
   color: inherit;
+}
+
+.middot-spacer {
+  margin: 0 1em;
 }
 
 .is-active,

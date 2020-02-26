@@ -65,6 +65,8 @@ class PagesController extends Controller
 			->paginate(9);
 		}
 
+		abort_if($textos->isEmpty(), 204);
+
         return view('pages.texto.index')
 	        ->with('textos', $textos)
 	        ->with('notas', $notas)

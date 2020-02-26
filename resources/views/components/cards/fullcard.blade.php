@@ -1,5 +1,5 @@
 	{{-- APRESENTAR A GRID DOS CARDS --}}
-				<div class="grid-card">
+				<div class="grid-card infinite-scroll-container">
 					
 					{{-- CARDS --}}
 

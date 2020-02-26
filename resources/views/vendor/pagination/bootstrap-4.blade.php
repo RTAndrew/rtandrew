@@ -36,7 +36,7 @@
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
             <li class="page-item icon">
-                <a class="page-link" href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">
+                <a class="page-link pagination__next" href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">
                     <img src="{{ asset('img/icons/arrow-right--acent.svg') }}" alt="arrow-right">
                 </a>
             </li>
