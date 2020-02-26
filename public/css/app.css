@@ -1934,6 +1934,15 @@ blockquote:active:after {
           transform: rotateY(360deg);
 }
 
+blockquote p {
+  font-family: Alegreya, serif;
+}
+
+blockquote p a {
+  font-style: normal;
+  font-family: Source Sans Pro, sans-serif;
+}
+
 blockquote cite {
   display: block;
   margin-top: 1em;
