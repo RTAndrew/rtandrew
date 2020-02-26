@@ -118,7 +118,7 @@
 
 				<div class="wrapper texto-with-image">
 						<div class="left-side">
-							<div class="texto__image">
+							<div class="texto__image wow animated fadeIn" data-wow-duration="1.4s" data-wow-delay="0.8s">
 								<img src="{{ getTextoImage($texto->image_url) }}" alt="{{ $texto->titulo }}" srcset="">
 							</div>
 						</div>
