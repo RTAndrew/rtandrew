@@ -67,9 +67,6 @@
 @endsection
 
 
-
-
-
 @section('script')
 
 		{{-- Change the Grid based on View Port Width --}}

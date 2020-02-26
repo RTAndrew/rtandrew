@@ -47,22 +47,12 @@
 
 
 @section('content')
-
 		<div class="container">
-			
 			@include('inc.navigation.nav-categoria')			
-
-
 		</div>
 
 		<div class="container">
-
 			{{-- Grid Card --}}
 			@include('components.cards.fullcard')
-
-
 		</div>
-
-
-
 @endsection
