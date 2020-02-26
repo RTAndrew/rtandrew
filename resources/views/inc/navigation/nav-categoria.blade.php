@@ -8,11 +8,11 @@
 		
 		<a class="nav-categoria__nome pulse-awareness"> 
 			{{-- Check if the route is Text or Photo --}}
-			@if (Request::is('texto/*'))
+			@if (Request::is('texto') || Request::is('texto/*'))
 				Notas
 			@endif
 
-			@if (Request::is('fotografia/*'))
+			@if (Request::is('fotografia') || Request::is('fotografia/*'))
 				Álbuns
 			@endif 
 		</a>

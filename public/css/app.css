@@ -2953,7 +2953,7 @@ blockquote cite {
   height: 330px;
   color: #fff;
   margin: 0 auto;
-  padding: 0.1em 2em;
+  padding: 0.1em 1em;
 }
 
 @media (min-width: 550px) {
@@ -3144,7 +3144,6 @@ blockquote cite {
 
 .texto__details {
   color: #fff;
-  font-family: Source Sans Pro, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3157,23 +3156,16 @@ blockquote cite {
   -ms-flex-direction: row;
       flex-direction: row;
   margin-bottom: 1em;
+  font-family: Source Sans Pro, sans-serif;
   text-transform: capitalize;
 }
 
 .texto__details .texto__categoria,
 .texto__details .texto__views {
   opacity: 0.8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .texto__details .texto__categoria {

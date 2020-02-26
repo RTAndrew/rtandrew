@@ -4,7 +4,7 @@
 		height: 330px;
 		color: $white;
 		margin: 0 auto;
-		padding: 0.1em 2em;			  
+		padding: 0.1em 1em;			  
 		
 		&.texto-with-image {
 			@media(min-width: 550px){
@@ -179,20 +179,18 @@
 
 .texto__details {
 	color: $white;
-	font-family: $sans-serif;
 	display: flex;
 	flex-flow: row;
 	flex-wrap: nowrap;
 	flex-direction: row;
 	margin-bottom: 1em;
+	font-family: $sans-serif;
 	text-transform: capitalize;
+	// justify-content: space-between;
 
 	.texto__categoria, .texto__views {
 		opacity: 0.8;
-		display: flex;
-		flex-flow: row;
-		flex-wrap: nowrap;
-		flex-direction: row;
+		display: inline-flex;
 	}
 
 	.texto__categoria {
