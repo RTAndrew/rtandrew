@@ -539,13 +539,13 @@ html.pushbar_locked .pushbar_overlay {
 }
 
 @media (min-width: 450px) {
-  .pushbar.from_left {
+  .pushbar.from_left.fotografia-sideBar {
     width: 50vw;
   }
 }
 
 @media (min-width: 1240px) {
-  .pushbar.from_left {
+  .pushbar.from_left.fotografia-sideBar {
     padding: 0 2em;
   }
 }
