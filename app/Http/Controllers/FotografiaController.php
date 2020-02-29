@@ -15,6 +15,7 @@ class FotografiaController extends Controller
 
 	public function fotografia($slug) {
 		$albuns = Album::all();
+			$numberOfPhotos = $albuns->count();
 
 		$foto = Foto::where('slug', $slug)->with('album')->firstOrFail();
 
@@ -31,7 +32,8 @@ class FotografiaController extends Controller
 
         return view('pages.fotografia.foto')
         ->with('foto', $foto)
-        ->with('albuns', $albuns);
+        ->with('albuns', $albuns)
+        ->with('numberOfPhotos', $numberOfPhotos);
 
 	}
 
