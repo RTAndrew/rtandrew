@@ -10,10 +10,7 @@
 		
 
 		@section('side-navigation')
-
 			@include('pages.fotografia.side-nav')
-
-
 		@endsection
 	
 
