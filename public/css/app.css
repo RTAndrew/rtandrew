@@ -546,7 +546,8 @@ html.pushbar_locked .pushbar_overlay {
 
 @media (min-width: 1240px) {
   .pushbar.from_left.fotografia-sideBar {
-    padding: 0 2em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
