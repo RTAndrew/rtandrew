@@ -181,7 +181,7 @@
 	color: $white;
 	display: flex;
 	flex-flow: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	flex-direction: row;
 	margin-bottom: 1em;
 	font-family: $sans-serif;
@@ -189,6 +189,7 @@
 
 	.texto__categoria, .texto__views {
 		opacity: 0.8;
+		margin-bottom: 1em;
 		display: inline-flex;
 	}
 
