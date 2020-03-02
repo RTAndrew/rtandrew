@@ -3256,6 +3256,7 @@ blockquote cite {
       flex-wrap: wrap;
   -ms-flex-direction: row;
       flex-direction: row;
+  font-size: 1.02487em;
   margin-bottom: 1em;
   font-family: Source Sans Pro, sans-serif;
   text-transform: capitalize;
