@@ -3252,8 +3252,8 @@ blockquote cite {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-direction: row;
       flex-direction: row;
   margin-bottom: 1em;
@@ -3264,6 +3264,7 @@ blockquote cite {
 .texto__details .texto__categoria,
 .texto__details .texto__views {
   opacity: 0.8;
+  margin-bottom: 1em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
