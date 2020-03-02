@@ -86,7 +86,7 @@
 		width: 100%;
 		@extend %container;
 		
-		margin-top: -8em;
+		margin-top: -1em;
 		position: relative;
 		background-color: $light-gray;
 
@@ -95,6 +95,10 @@
 		// Textos Relacionados e cada Card
 		// Vai ter o seu proprio Box-Shadow e Background
 		@include box-shadow(0px, 3px, 5px, rgba(0, 0, 0, 0.25), $inset: false);
+
+		@media (min-width: 350px) {
+			margin-top: -8em;
+		}
 
 		@media (min-width: 550px) {
 			margin-top: -12em;
