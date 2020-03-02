@@ -75,7 +75,7 @@
 		{{-- <meta name="twitter:site" content="@PoetryFound" /> --}}
 		<meta name="twitter:title" content="{{ $album->titulo }}" />
 		<meta name="twitter:description" content="Veja este album de fotos e muito mais outros criados pelo Rtandrew Paul" />
-		<meta name="twitter:image" content="{{ cloudinaryImagePath($album->image_url, '') }}" />
+		<meta name="twitter:image" content="{{ cloudinaryImagePath($album->image_hero_url, '') }}" />
 
 
 @endsection

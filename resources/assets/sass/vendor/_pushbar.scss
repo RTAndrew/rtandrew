@@ -52,8 +52,15 @@ html.pushbar_locked .pushbar_overlay{
 	min-height: 100vh;
 	transform: translateZ(0) translateX(-100%);
 
-	@media (min-width: 450px) {
-		width: 310px;
+	&.fotografia-sideBar {
+		@media (min-width: 450px) {
+			width: 50vw;
+		}
+		
+		@media (min-width: 1240px) {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
 	}
 }
 

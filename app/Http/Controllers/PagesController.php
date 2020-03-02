@@ -82,6 +82,8 @@ class PagesController extends Controller
 	public function fotografia() {
 		
 		$albuns = Album::all();
+			$numberOfPhotos = $albuns->count();
+
         
         // Ordenar os resultados
 		// Caso o REQUEST for recent, nao fazer nada
@@ -97,7 +99,8 @@ class PagesController extends Controller
 
         return view('pages.fotografia.index')
         ->with('fotos', $fotos)
-        ->with('albuns', $albuns);
+		->with('albuns', $albuns)
+		->with('numberOfPhotos', $numberOfPhotos);
 
 	}
 
