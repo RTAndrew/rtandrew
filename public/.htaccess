@@ -1,6 +1,4 @@
 <IfModule mod_rewrite.c>
-    Redirect 301 / https://google.com
-
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
