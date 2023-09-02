@@ -1,8 +1,9 @@
 [phases.setup]
 nixPkgs = ['...', 'composer','npm']
 
-[phases.build]
-cmds = ['composer install', 'php artisan config:cache', 'php artisan route:cache', 'php artisan migrate --force']
+[phases.install]
+cmds = ['...', 'npm i']
 
-[start]
-cmd = 'php artisan serve'
+
+[phases.build]
+cmds = ['php artisan config:cache', 'php artisan route:cache', 'php artisan migrate --force', 'npm run prod']
