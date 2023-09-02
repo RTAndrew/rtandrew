@@ -1,31 +1,23 @@
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+FROM richarvey/nginx-php-fpm:1.7.2
 
-# Get latest Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# Set up node and npm
-
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash
-RUN apt-get update && apt-get -y install nodejs 
-
-# Set working directory
-WORKDIR /var/www
-
-RUN apt-get update && apt-get install -y \
-        libfreetype6-dev \
-        libjpeg62-turbo-dev \
-        libpng-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd
-
-WORKDIR /var/www/html
 COPY . .
 
-#Modify php.ini setings
+# Image config
+ENV SKIP_COMPOSER 1
+ENV WEBROOT /var/www/html/public
+ENV PHP_ERRORS_STDERR 1
+ENV RUN_SCRIPTS 1
+ENV REAL_IP_HEADER 1
 
-RUN touch /usr/local/etc/php/conf.d/uploads.ini \
-    && echo "upload_max_filesize = 10M;" >> /usr/local/etc/php/conf.d/uploads.ini
+# Laravel config
+ENV APP_ENV production
+ENV APP_DEBUG false
+ENV APP_KEY=base64:HXeh9MU8H9auFo9bVdLbvrWfjlKXm+IRb22OhALtA1E=
+ENV LOG_CHANNEL stderr
+
+# Allow composer to run as root
+ENV COMPOSER_ALLOW_SUPERUSER 1
 
 #Serve the application
 
