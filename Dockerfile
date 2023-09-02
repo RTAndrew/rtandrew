@@ -19,6 +19,12 @@ ENV LOG_CHANNEL stderr
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
+# Set up node and npm
+
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash
+RUN apt-get update && apt-get -y install nodejs 
+
+
 #Serve the application
 
 RUN composer install
