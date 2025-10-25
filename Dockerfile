@@ -1,21 +1,41 @@
-FROM richarvey/nginx-php-fpm:1.7.2
+FROM php:7.4-fpm
 
-COPY . .
+# Set working directory
+WORKDIR /var/www/html
 
-# Image config
-ENV SKIP_COMPOSER 1
-ENV WEBROOT /var/www/html/public
-ENV PHP_ERRORS_STDERR 1
-ENV RUN_SCRIPTS 1
-ENV REAL_IP_HEADER 1
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+  git \
+  curl \
+  libpng-dev \
+  libonig-dev \
+  libxml2-dev \
+  zip \
+  unzip \
+  nodejs \
+  npm \
+  python3 \
+  python3-pip \
+  build-essential
 
-# Laravel config
-ENV APP_ENV production
-ENV APP_DEBUG false
-ENV APP_KEY=base64:HXeh9MU8H9auFo9bVdLbvrWfjlKXm+IRb22OhALtA1E=
-ENV LOG_CHANNEL stderr
+# Install PHP extensions
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
-# Allow composer to run as root
-ENV COMPOSER_ALLOW_SUPERUSER 1
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-CMD ["/start.sh", "/scripts/00-laravel-deploy.sh"]
+# Copy existing application directory contents
+COPY . /var/www/html
+
+# Copy existing application directory permissions
+COPY --chown=www-data:www-data . /var/www/html
+
+# Install PHP dependencies
+RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
+
+# Change current user to www
+USER www-data
+
+# Expose port 9000 and start php-fpm server
+EXPOSE 9000
+CMD ["php-fpm"]

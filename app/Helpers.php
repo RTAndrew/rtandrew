@@ -179,3 +179,4 @@ function getSiteIdentityImage() {
         else
             return asset(getSiteIdentityImage());
     }
+// Auto-reload test - Sat Oct 25 23:24:34 CEST 2025
