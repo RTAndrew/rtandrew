@@ -1,5 +1,8 @@
-let mix = require('laravel-mix');
+const mix = require("laravel-mix");
+const path = require("path");
+
 mix.disableNotifications();
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,8 +15,17 @@ mix.disableNotifications();
  */
 
 // mix.js('resources/assets/js/app.js', 'public/js')
-   mix.sass('resources/assets/sass/app.scss', 'public/css')
-   .sass('resources/assets/sass/landing.scss', 'public/css');
+mix.sass("resources/assets/sass/app.scss", "public/css")
+    .sass("resources/assets/sass/landing.scss", "public/css")
+    .options({
+        processCssUrls: true,
+    })
+    .webpackConfig({
+        resolve: {
+            alias: {
+                "@": path.resolve(__dirname, "resources/assets"),
+            },
+        },
+    });
 
-
-mix.browserSync('http://rtandrew/');
+mix.browserSync("http://rtandrew/");
