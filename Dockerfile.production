@@ -3,7 +3,7 @@ FROM php:7.4-fpm
 # Set working directory
 WORKDIR /var/www/html
 
-# Install system dependencies
+# Install system dependencies including nginx
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
     unzip \
     nodejs \
     npm \
+    nginx \
+    supervisor \
     && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
@@ -46,14 +48,43 @@ RUN echo "opcache.enable=1" >> /usr/local/etc/php/conf.d/opcache.ini \
     && echo "opcache.fast_shutdown=1" >> /usr/local/etc/php/conf.d/opcache.ini
 
 # Fix PHP-FPM configuration for Docker networking
-RUN sed -i 's/listen = 127.0.0.1:9000/listen = 0.0.0.0:9000/' /usr/local/etc/php-fpm.d/www.conf \
+RUN sed -i 's/listen = 127.0.0.1:9000/listen = 127.0.0.1:9000/' /usr/local/etc/php-fpm.d/www.conf \
     && sed -i 's/;listen.owner = www-data/listen.owner = www-data/' /usr/local/etc/php-fpm.d/www.conf \
     && sed -i 's/;listen.group = www-data/listen.group = www-data/' /usr/local/etc/php-fpm.d/www.conf \
     && sed -i 's/;listen.mode = 0660/listen.mode = 0660/' /usr/local/etc/php-fpm.d/www.conf
 
-# Change current user to www-data
-USER www-data
+# Create nginx configuration
+RUN echo 'server {' > /etc/nginx/sites-available/default \
+    && echo '    listen 80;' >> /etc/nginx/sites-available/default \
+    && echo '    server_name _;' >> /etc/nginx/sites-available/default \
+    && echo '    root /var/www/html/public;' >> /etc/nginx/sites-available/default \
+    && echo '    index index.php;' >> /etc/nginx/sites-available/default \
+    && echo '' >> /etc/nginx/sites-available/default \
+    && echo '    location / {' >> /etc/nginx/sites-available/default \
+    && echo '        try_files $uri $uri/ /index.php?$query_string;' >> /etc/nginx/sites-available/default \
+    && echo '    }' >> /etc/nginx/sites-available/default \
+    && echo '' >> /etc/nginx/sites-available/default \
+    && echo '    location ~ \.php$ {' >> /etc/nginx/sites-available/default \
+    && echo '        include snippets/fastcgi-php.conf;' >> /etc/nginx/sites-available/default \
+    && echo '        fastcgi_pass 127.0.0.1:9000;' >> /etc/nginx/sites-available/default \
+    && echo '        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;' >> /etc/nginx/sites-available/default \
+    && echo '    }' >> /etc/nginx/sites-available/default \
+    && echo '}' >> /etc/nginx/sites-available/default
 
-# Expose port 9000 and start php-fpm server
-EXPOSE 9000
-CMD ["php-fpm"]
+# Create supervisor configuration
+RUN echo '[supervisord]' > /etc/supervisor/conf.d/supervisord.conf \
+    && echo 'nodaemon=true' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo '' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo '[program:php-fpm]' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo 'command=php-fpm' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo 'autostart=true' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo 'autorestart=true' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo '' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo '[program:nginx]' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo 'command=nginx -g "daemon off;"' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo 'autostart=true' >> /etc/supervisor/conf.d/supervisord.conf \
+    && echo 'autorestart=true' >> /etc/supervisor/conf.d/supervisord.conf
+
+# Expose port 80 for HTTP
+EXPOSE 80
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
