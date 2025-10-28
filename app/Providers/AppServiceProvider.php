@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\Database\CustomPostgresConnector;
+use Illuminate\Database\Connectors\ConnectionFactory;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        // Force HTTPS when on 
+        // Force HTTPS when on
         if(config('app.env') !== 'local') {
             \URL::forceScheme('https');
         }
@@ -30,6 +32,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('db.connector.pgsql', CustomPostgresConnector::class);
     }
 }

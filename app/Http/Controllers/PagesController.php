@@ -11,7 +11,7 @@ use App\Album;
 
 class PagesController extends Controller
 {
-    
+
 
 
 
@@ -74,17 +74,17 @@ class PagesController extends Controller
 
 	}
 
-	
+
 
 
 
 
 	public function fotografia() {
-		
+
 		$albuns = Album::all();
 			$numberOfPhotos = $albuns->count();
 
-        
+
         // Ordenar os resultados
 		// Caso o REQUEST for recent, nao fazer nada
 		if(request()->order == 'popular'){

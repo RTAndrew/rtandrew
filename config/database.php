@@ -63,8 +63,9 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'require',
+            'schema' => 'rtandrew',
+            'sslmode' => env('DB_SSLMODE', 'prefer'),
+            'dsnoptions' => env('DB_OPTIONS', ''),
         ],
 
         'sqlsrv' => [
