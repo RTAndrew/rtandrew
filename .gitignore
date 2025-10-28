@@ -11,3 +11,13 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 
+# Environment files
+.env
+.env.backup
+.env.production
+.env.local
+.env.*.local
+.env.bak
+*.bak
+variables
+
