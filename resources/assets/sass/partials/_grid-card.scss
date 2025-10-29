@@ -5,12 +5,12 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    align-items: center;
-	
+    align-items: normal;
+
     padding: $section-padding 0;
     padding-top: 0;
-		
-	// Mudar a animacao da 
+
+	// Mudar a animacao da
 	// entrada dos Cards
 
      .animated {
@@ -33,7 +33,7 @@
 	 text-overflow: fade;
 
 	background-color: $light-gray;
-		
+
 		.wrapper {
 			width: auto;
 			font-weight: normal;
@@ -76,7 +76,7 @@
 		height: 360px;
 		margin-bottom: 1em;
 
-		
+
 		&:hover {
 			background-color: $snow-flake;
 		}
@@ -85,7 +85,7 @@
 			height: 150px;
 			max-height: 240px;
 			padding: $global-gutter;
-			
+
 			@media (min-width: 400px) {
 				padding: $global-gutter+0.7;
 			}
@@ -128,31 +128,31 @@
 		position: relative;
 
 		.album__details {
-			
+
 			width: 100%;
 			color: $white;
-			
+
 			z-index: 1;
 			bottom: 0em;
 			position: absolute;
-			
+
 			padding: 0.7em 0.5em;
 			font-family: $sans-serif;
-			
+
 			background: linear-gradient(
             rgba(0, 0, 0, 0),
 			rgba(0, 0, 0, 0.80)
 			);
 		}
-		
-		.album__titulo {	
-			// Impedir que o width 
+
+		.album__titulo {
+			// Impedir que o width
 			// tenha overflow
-			width: 95%;		
+			width: 95%;
 			font-size: ms(3);
 			text-align: left;
 			letter-spacing: .2px;
-			
+
 			@media (min-width: 650px) {
 				font-size: ms(4);
 			}
@@ -208,7 +208,7 @@
 		@media (min-width: 1650px) {
 			height: 300px;
 		}
-		
+
 	}
 
 
@@ -217,7 +217,7 @@
 
 
 
-	
+
 	.grid-card--texto-small {
 		// 1em porque escala melhor
 		// Dos dispositivos moveis
@@ -239,8 +239,8 @@
 		}
 
 
-		// Atingir a perfeicao dos 
-		// Cards ocuparem todo o 
+		// Atingir a perfeicao dos
+		// Cards ocuparem todo o
 		// Espaco disponivel
 		// Usando percentagens
 		@media (min-width: 650px) {
@@ -286,7 +286,7 @@
 
 .view-count,
 .grid-card__descricao {
-	font-size: ms(3);	
+	font-size: ms(3);
 }
 
 
@@ -319,7 +319,7 @@ padding-bottom: 5px;
 	margin-top: 1em;
 	opacity: 0.8;
 	line-height: 1.35;
-	
+
 	white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis;
